@@ -1,0 +1,40 @@
+(function($) {
+	var cache = [];
+	// Arguments are image paths relative to the current page.
+	$.preLoadImages = function() {
+		var args_len = arguments.length;
+		for (var i = args_len; i--;) {
+			var cacheImage = document.createElement('img');
+			cacheImage.src = arguments[i];
+			cache.push(cacheImage);
+		}
+	};
+
+	$.createOverlay = function() {
+		var de = document.documentElement, db = document.body;
+		var size = {
+			clientWidth: de.clientWidth || db.clientHeight,
+			clientHeight: de.clientHeight || db.clientHeight,
+			scrollTop: de.scrollTop + db.scrollTop,
+			scrollLeft: de.scrollLeft + db.scrollLeft,
+			scrollWidth: db.scrollWidth,
+			scrollHeight: db.scrollHeight
+		};
+		size.fullWidth = (size.scrollWidth > size.clientWidth) ? size.scrollWidth : size.clientWidth;
+		size.fullHeight = (size.scrollHeight > size.clientHeight) ? size.scrollHeight : size.clientHeight;
+		var overlay = document.createElement('div');
+		overlay.style.cssText = 'background: #000; opacity: 0.5; filter: alpha(opacity=50); position: absolute; top: 0; left: 0; z-index: 10000;';
+		overlay.style.width = size.fullWidth + 'px';
+		overlay.style.height = size.fullHeight + 'px';
+		document.body.appendChild(overlay);
+		return $(overlay);
+	};
+}) (jQuery);
+
+Function.prototype.bind = function() {
+	var mothed = this, args = Array.prototype.slice.call(arguments), object = args.shift();
+	return function() {
+		return mothed.apply(object, args);
+	};
+};
+

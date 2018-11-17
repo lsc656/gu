@@ -1,0 +1,131 @@
+
+(function () {
+
+    var labels = $('#Mnotice').find('.labels a'),
+		list = $('#Mnotice').find('.list');
+    labels.mouseover(function () {
+        var that = $(this), index = that.index();
+        that.addClass('current').siblings().removeClass('current');
+        list.hide();
+        list.eq(index).show();
+    });
+
+})();
+
+(function () {
+
+    var ss = $('#SliderShop');
+    if (ss.length == 0) {
+        return;
+    }
+    var options = {
+        width: 31,
+        wrapWidth: ss.get(0).offsetWidth - 2,
+        lock: false,
+        current: null
+    };
+
+    var section = ss.find('.ss-section');
+
+    var addCurrent = function (index) {
+        if (options.lock) return;
+        options.lock = true;
+        var width = options.wrapWidth - (options.width * (section.size() - 1));
+        options.current && options.current.removeClass('current').animate({ width: options.width }, 500);
+        options.current = section.eq(index);
+        options.current.addClass('current').animate({ 'width': width }, 500, function () {
+            options.lock = false;
+        });
+    };
+
+    section.css('width', options.width);
+
+    addCurrent(section.length - 1);
+
+    section.hover(function () {
+        var that = $(this);
+        if (!that.hasClass('current')) {
+            addCurrent(that.index());
+        }
+    });
+
+
+})();
+
+
+(function () {
+
+    var hzshops = $('#hzshops');
+    var addr = hzshops.find('.addr');
+
+    addr.hover(function () {
+        var that = $(this);
+        that.parent().addClass('hover');
+    }, function () {
+        var that = $(this);
+        that.parent().removeClass('hover');
+    });
+
+
+})();
+
+if ($('.SliderPicture').length > 0) {
+    $('.SliderPicture').SliderPicture();
+}
+
+
+
+// 20131008 满足6条数据才开始滚动
+(function () {
+
+    var sc = $('#scrollComment'),
+		list = sc.find('.scrollCommentList'),
+		height = sc.height();
+    var comment = list.find('li');
+    if (comment.size() >= 6) {
+        var commentScrollTimer;
+        sc.hover(function () {
+            clearInterval(commentScrollTimer);
+        }, function () {
+            commentScrollTimer = setInterval(function () {
+                var $comment_ul = sc.find("ul");
+                $comment_ul.animate({
+                    "marginTop": -height + "px"
+                }, 600, function () {
+                    $comment_ul.css({
+                        marginTop: 0
+                    }).find("li:lt(6)").appendTo($comment_ul);
+                })
+            }, 5000);
+        }).trigger("mouseleave");
+    }
+})();
+
+(function () {
+
+    var notice = $('#shopNotice');
+    var hold = notice.find(".sn-hold");
+
+    if (hold.find('li').size() < 4) {
+        return;
+    }
+
+    var scrollTimer;
+    notice.hover(function () {
+        clearInterval(scrollTimer);
+    }, function () {
+        scrollTimer = setInterval(function () {
+            var $notice_ul = hold.find("ul");
+            var lineHeight = $notice_ul.find("li:first").height();
+            $notice_ul.animate({
+                "marginTop": -lineHeight + "px"
+            }, 600, function () {
+                $notice_ul.css({
+                    marginTop: 0
+                }).find("li:first").appendTo($notice_ul);
+            })
+        }, 2000);
+    }).trigger("mouseleave");
+
+
+})();

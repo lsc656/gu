@@ -1,0 +1,43 @@
+﻿
+function shopyuyue(d, c, a) {
+    if (d == "/shop/shopreser2.aspx") {
+        d = "https://www.yichao.cn/shop/AddReserve.aspx";
+        c = 390;
+        a = 524;
+    }
+    var b = '<div class="backdiv hide" data-h=\'' + a + '\'  style=\'position: fixed; top: 0px;left: 0px; width: 100%;height: 100%;  background-color: #000; opacity: 0.5;filter: alpha(opacity=50); z-index: 9999;display: none;\' ><input type="hidden" id="closediv" onclick=\'closebacdiv()\' /><input type="hidden" id="yyygssm" /></div>'; b += '<div class="iframbox hide"   style=\'position: fixed;top: 0px;left: 0px; width: 100%;height: 100%;z-index: 10000;display: none;\'><div style="margin: auto;background-color: #fff;"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" id="bigifram"  ></iframe></div></div>'; if ($(".backdiv").length == 0) { $("body").append(b) } $("#bigifram").attr("src", d);
+    $(".backdiv").fadeIn(300, function () { $(".iframbox").show() }); $(".iframbox div").width(c); $(".iframbox div").height(a); $("#bigifram").width(c); $("#bigifram").height(a); resetfix(a)
+}
+function resetfix(a) { var b = $(window).height(); $(".iframbox div").css("margin-top", (b - a) / 2) }
+function closebacdiv() { $("body").find(".iframbox").remove(); $(".backdiv").fadeOut(300, function () { $("body").find(".backdiv").remove() }) };
+
+window.onresize = function () {
+    var a = $(".backdiv").attr("data-h"); if (a) {
+        var b = $(window).height();
+        $(".iframbox div").css("margin-top", (b - a) / 2)
+    }
+};
+(function () {
+    var x = document.getElementsByTagName('script');
+    var floa = true;
+    for (i = 0; i < x.length; i++) {
+        if (x[i].outerHTML.match('src')) {
+            var y = x[i].outerHTML.toString();
+
+            if (y.indexOf("jquery") > 0) {
+                floa = false;
+            }
+        }
+    }
+    if (floa) {
+        var script = document.createElement("script");
+        script.src = "https://www.yichao.cn/js/jquery.js";
+        document.getElementsByTagName("head")[0].appendChild(script)
+    
+    }
+
+   
+})();
+(function () {
+    $(".close").click(function () { window.parent.closebacdiv() })
+})(jQuery);

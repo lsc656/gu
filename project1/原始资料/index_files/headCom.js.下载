@@ -1,0 +1,63 @@
+﻿function cityDrop() {
+    var $toggle = $('.toggle');
+    var $cityGroup = $toggle.find('#scroll-pane');
+    var over = $toggle.css('overflow');
+    if (over == 'hidden') {
+        $toggle.css('overflow', 'inherit');
+        $cityGroup.css('overflow-y', 'scroll');
+        $cityGroup.find('li').css('width','80%');
+    } else {
+        $toggle.css('overflow', 'hidden');
+    }
+}
+function headMenu() {
+  
+    $(".classify-body>div").hover(function () {
+        var thisIndex = $(this).index();
+        $(this).addClass('cl-hd-hover').siblings('div').removeClass('cl-hd-hover');
+        switch (thisIndex) {
+            case 0: $(this).find(".cl-content").css("top", "3px"); break;
+            case 1: $(this).find(".cl-content").css("top", "-48px"); break;
+            case 2: $(this).find(".cl-content").css("top", "-99px"); break;
+            case 3: $(this).find(".cl-content").css("top", "-150px"); break;
+            case 4: $(this).find(".cl-content").css("top", "-201px"); break;
+            case 5: $(this).find(".cl-content").css("top", "-252px"); break;
+            case 6: $(this).find(".cl-content").css("top", "-303px"); break;
+            default: break;
+        }
+        $(this).find(".cl-content").show();
+    });
+
+    $(".classify-body>div").mouseleave(function () {
+        $(this).find(".cl-content").hide();
+
+    });
+
+    $(".classify-body .cl-hd").mouseleave(function () {
+        $('.cl-hd').removeClass('cl-hd-hover');
+    });
+   
+}
+
+$(function () {
+  
+    headMenu();
+    $('.toggle').on('click', '.button', function () {
+        cityDrop();
+        setSlider($('#scroll-pane'));
+        $('#anchors a').click(function () {
+            var difference = $('.scroll-content').height() - $('#scroll-pane').height();//calculate the difference - not needed if within the main slider code
+            var targetclass = ($(this).attr('class'));//read the class of the clicked anchor
+            var position = $(".scroll-content ." + targetclass).position();//search for a div with matching class and read its position
+            var topValue = -(position.top);//content top is just the negative of the top position
+            if (topValue > 0) topValue = 0;//stop the content scrolling down too much
+            if (Math.abs(topValue) > difference) topValue = (-1) * difference;//stop the content scrolling up too much
+            sliderVal = (100 + (topValue * 100 / difference));//calculate the slider position from the content position
+            $(".slider-vertical").slider("value", sliderVal);//set the slider position
+            return false;
+        });
+    });
+    $('.citylist-close').click(function () {
+        $('.toggle').css('overflow', 'hidden');
+    });
+})

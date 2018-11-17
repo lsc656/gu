@@ -1,0 +1,796 @@
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+
+$(function () {
+
+    //$("#side_category dt.filter_type:contains(隐形眼镜)").hide();
+
+
+    if (location.href.indexOf("hd")>-1) {
+        $(".toggle .button").click(function () {
+            $(this).parent().css("position", "initial");
+            $(".scroll-pane").css("overflow", "auto");
+            $("#anchors a").each(function () {
+                $(this).attr("href", "javascript:void(0)");
+            }).click(function () {
+                var text = $(this).text();
+                var h = 0;
+                $(".scroll-content ul li b").each(function () {
+                   
+                    if ($(this).text() == text) {
+                        
+                        $(".scroll-content").parent().animate({ scrollTop: h }, 500);
+                    }
+                    h += $(this).parents("li").height();
+                })
+            })
+           
+        })
+        $("#citylist .citylist-close").click(function () {
+            $(this).parents(".toggle").css("position", "relative");
+        })
+    } 
+    $(".nav-cart").mouseover(function () {
+        GetCartNumber(1);
+    });
+    initColorBox();
+    init_header_hover();
+    GetCartNumber();
+    pro_list_hover_bd();
+    SearchKeyword();
+    //$.ajax({
+    //    type: "POST",
+    //    url: "/ajax/iplocation.ashx",
+    //    data: "",
+    //    dataType: "json",
+    //    success: function (json) {
+    //        if (json.status == 1) {
+    //            var yyhtml = [];
+    //            yyhtml.push('<div class="yyad">');
+    //            yyhtml.push('<div class="close" id="plno2ocolse"><img src="/images/o2o/adclose.jpg" alt="关闭" /></div>');
+    //            yyhtml.push('<div><a href="http://vip.yichao.cn" target="_blank"><img src="/images/o2o/ad.jpg" alt=""/></a></div>');
+    //            yyhtml.push('</div>');
+    //            var api = $.dialog({
+    //                id: 'lhgo2o',
+    //                title: false,
+    //                lock: true,
+    //                max: false,
+    //                min: false,
+    //                content: yyhtml.join(""),
+    //                zIndex: 99999,
+    //                padding: 0
+    //            });
+    //            $("#plno2ocolse").click(function () {
+    //                closeAllDialog();
+    //            });
+    //        }
+    //    }
+    //});
+
+    $(".nav-dropdown").each(function () {
+        var $this = $(this);
+        $this.hover(function () {
+            $this.addClass('nav-hover');
+        }, function () {
+            $this.removeClass('nav-hover');
+        });
+    });
+    $(".ad-full .ad-hide").on("click", function () {
+        $(this).closest(".ad-full").hide();
+    });
+    $(".help_center").hover(function () {
+        $(this).toggleClass("hover");
+        $(this).find(".show_help").toggle();
+    });
+    $('.shop_yuyue').click(function () {
+        shopyuyue('/shop/shopreser2.aspx', 350, 340);
+        //var api = $.dialog({
+        //    id: 'LHGYUYUE',
+        //    title: '门店预约',
+        //    width: '980px',
+        //    height: '610px',
+        //    top: '70%',
+        //    lock: true,
+        //    min: false,
+        //    max: false,
+        //    zIndex: 99999,
+        //    padding: 0
+        //});
+        //var goodsid = $(this).attr("data-goodsid");
+        //$.ajax({
+        //    url: '/shop/ShopReserve.aspx?goodsid=' + goodsid,
+        //    success: function (data) {
+        //        api.content(data);
+        //    },
+        //    cache: false
+        //});
+    });
+    $(".navs li").mouseover(function () {
+        $(this).addClass("current");
+        $(this).siblings().removeClass("current");
+    });
+})
+
+var isIE6 = jQuery.browser.msie && !window.XMLHttpRequest;
+
+// 搜索框焦点
+function searchBoxFocus(obj) {
+    var ref = obj.getAttribute('refvalue');
+    if (obj.value == ref) {
+        obj.value = '';
+        $(obj).addClass('ibox_focus');
+    }
+}
+// 搜索框失焦
+function searchBoxBlur(obj) {
+    var ref = obj.getAttribute('refvalue');
+    if (obj.value == '') {
+        obj.value = ref;
+        $(obj).removeClass('ibox_focus');
+    }
+}
+// 初始化头部下拉JS，迷你购物车下拉，线下体验店下拉
+function init_header_hover() {
+    // var mncart = $('#masthead').find('.mini_cart'),
+    // 	mncart_list = mncart.find('.mini_cart_list');
+    // mncart.hover(
+    // 	function() {
+    // 		mncart.addClass('mini_cart_show');
+    // 		mncart_list.show();
+    // 	},
+    // 	function() {
+    // 		mncart.removeClass('mini_cart_show');
+    // 		mncart_list.hide();
+    // 	}
+    // );
+
+    // var offshop = $('#navibar').find('.offline_shop'),
+    // 	offshop_list = offshop.find('.offline_shop_list');
+    // offshop.hover(
+    // 	function() {
+    // 		offshop.addClass('offline_shop_show');
+    // 		offshop_list.show();
+    // 	},
+    // 	function() {
+    // 		offshop.removeClass('offline_shop_show');
+    // 		offshop_list.hide();
+    // 	}
+    // );
+
+    // var other = $('#navibar').find('.nav_item_other'),
+    // 	list = other.find('.offline_shop_list');
+    // other.hover(
+    // 	function() {
+    // 		other.addClass('nav_item_other_show');
+    // 		list.show();
+    // 	},
+    // 	function() {
+    // 		other.removeClass('nav_item_other_show');
+    // 		list.hide();
+    // 	}
+    // );
+
+    var navibar = $('#navibar').find('.n-li');
+    var timer = null;
+    navibar.hover(function () {
+        clearTimeout(timer);
+        $(this).siblings('li').removeClass('n-li-hover').find('.sub-nav').css('display', 'none');
+        $(this).addClass('n-li-hover').find('.sub-nav').css('display', 'block');
+    }, function () {
+        var $this = $(this);
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+
+            $this.removeClass('n-li-hover').find('.sub-nav').css('display', 'none');
+        }, 500);
+    });
+
+    var subnav = $('#navibar').find('.sub-nav');
+    subnav.hover(function () {
+        clearTimeout(timer);
+        $(this).css('display', 'block');
+    }, function () {
+        var $this = $(this);
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            $this.css('display', 'none');
+        }, 500);
+    })
+}
+
+/**
+* 咨询留言
+*/
+function dialogMsg() {
+    $.dialog({
+        title: '咨询留言',
+        content: $('#dialog-msg-bin').html(),
+        lock: true,
+        button: [
+			{
+			    name: '取消',
+			    callback: function () {
+
+			    }
+			},
+			{
+			    name: '提交',
+			    callback: function () {
+
+			    },
+			    focus: true
+			}
+		]
+    });
+}
+
+function inputYGD() {
+    $.dialog({
+        title: '输入验光单',
+        content: $('#inputYGDBox').html(),
+        lock: true,
+        button: [
+			{
+			    name: '取消',
+			    callback: function () {
+
+			    }
+			},
+			{
+			    name: '确认验光单',
+			    callback: function () {
+
+			    },
+			    focus: true
+			}
+		]
+    });
+}
+
+function modifyYGD() {
+    inputYGD();
+}
+
+
+//度数选择说明
+function initColorBox() {
+    $("[colorbox]").each(function () {
+        var $this = $(this);
+        if (!$this.data("initColorBox")) {
+            $this.data("initColorBox", "1");
+            var param = {
+
+            };
+            var rel = $this.attr("colorbox-rel");
+            var options = $this.attr("colorbox-options");
+            if (options) {
+                options = $.parseJSON(options);
+                $.extend(param, options);
+            }
+            if (rel) {
+                $.extend(param, { rel: rel, photo: true });
+            }
+            $this.colorbox(param);
+        }
+    });
+}
+
+function getHighestZIndex() {
+    var index_highest = 1;
+    $("*").each(function () {
+        var index_current = parseInt($(this).css("zIndex"), 10);
+        if (index_current > index_highest && index_current < 999) {
+            index_highest = index_current;
+        }
+    });
+    return index_highest;
+}
+
+var pop = {
+    close: function () {
+        $.colorbox.close();
+    }
+};
+
+// 产品对比
+function proContrast(_left) {
+    var l = _left || 0;
+    $('.btn-contrast').click(function () {
+        if ($(this).hasClass('btn-contrast-selected')) {
+            $(this).removeClass('btn-contrast-selected');
+            var id = $(this).attr('proid');
+            // 移除对比 操作
+            removeProContrast(id);
+            if ($('.btn-contrast-selected').size()) {
+                $('#contrast').show();
+                $('#contrast').find('.content').show();
+            }
+        }
+        else {
+            $(this).addClass('btn-contrast-selected');
+            var id = $(this).attr('proid');
+            var img = $(this).attr('proimg');
+            var price = $(this).attr('proprice');
+            // 添加对比 操作
+            if ($('#contrast .list').find('li').size() < 3) {
+                addProContrast(id, img, price);
+            }
+            else {
+                $(this).removeClass('btn-contrast-selected');
+                dMessage.show("最多选择3个商品进行对比!", 1);
+            }
+        }
+    });
+
+    var win = {}, contrast = $('#contrast');
+    function winSize() {
+        win.width = document.documentElement.clientWidth || document.body.clientWidth;
+        win.height = document.documentElement.clientHeight || document.body.clientHeight;
+    }
+    function winScroll() {
+        win.scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
+        win.scrollLeft = document.documentElement.scrollLeft + document.body.scrollLeft;
+    }
+    function set() {
+        var top = win.height + win.scrollTop;
+        var left = (win.width - 950) / 2 + l + win.scrollLeft;
+        contrast.css({ top: top, left: left });
+    }
+    winSize();
+    winScroll();
+    set();
+    $(window).resize(function () {
+        winSize();
+        set();
+    });
+    $(window).scroll(function () {
+        winScroll();
+        set();
+    });
+}
+function addProContrast(id, img, price) {
+    $('#contrast').show();
+    $('#contrast .content').show();
+    var li = document.createElement('li');
+    li.id = 'pro-contrast-' + id;
+    li.innerHTML = '<a class="img" href=""><img src="' + img + '"></a><p class="price">' + price + '</p>';
+    $('#contrast .list').append(li);
+}
+function removeProContrast(id) {
+    $('#pro-contrast-' + id).remove();
+}
+function resetProContrast() {
+    $('#contrast .list').html('');
+    $('.btn-contrast').removeClass('btn-contrast-selected');
+}
+function showContrastContent() {
+    $('#contrast').find('.content').show();
+}
+
+function hideContrastContent() {
+    $('#contrast').find('.content').hide();
+}
+
+function closeContrast() {
+    $('#contrast').hide();
+}
+
+
+function filterSetPrice() {
+    var filter = $('.filter');
+    var price = filter.find('.price');
+    var sort_type = filter.find('.sort_type');
+    price.click(function () {
+        if (!price.hasClass('show-button')) {
+            price.addClass('show-button');
+        }
+    });
+    hidePrice = function (event) {
+        var event = event || window.event || arguments.callee.caller.arguments[0];
+        price.removeClass('show-button');
+        event.stopPropagation ? event.stopPropagation() : window.event.cancelBubble = true;
+    };
+
+    $(document).click(function (event) {
+        var event = event || window.event,
+			target = event.target || event.srcElement;
+        if (!$(target).parents('.price').size()) {
+            price.removeClass('show-button');
+        }
+    });
+
+    sort_type.find('li').click(function () {
+        $(this).addClass('focus').siblings('li').removeClass('focus');
+    });
+}
+
+// 首页产品展示鼠标经过其他显示黑色蒙板
+function index_col_display() {
+    var objects = $('.col_display');
+    objects.each(function () {
+        var items = $(this).find('.item');
+        items.hover(
+			function () {
+			    items.addClass('show_mask');
+			    $(this).removeClass('show_mask');
+			},
+			function () {
+			    items.removeClass('show_mask');
+			}
+		);
+    });
+}
+// 侧边栏产品分类焦点选中效果
+function side_category_list() {
+    var list = $('.sc_list');
+    list.each(function () {
+        var items = $(this).find('.i');
+        items.click(function () {
+            var $this = $(this),
+				$li = $this.parent('li'),
+				isFocus = $li.hasClass('focus');
+            if (!isFocus) {
+                $li.addClass('focus').siblings('li').removeClass('focus');
+            }
+            else {
+                $li.removeClass('focus');
+            }
+
+        });
+    });
+}
+
+// 产品列表鼠标经过显示边框（仅IE6）
+function pro_list_hover_bd() {
+    if (isIE6) {
+        $('.pro_list_base').find('.pro_list_li').hover(
+			function () {
+			    $(this).addClass('pro_list_li_hover');
+			},
+			function () {
+			    $(this).removeClass('pro_list_li_hover');
+			}
+		);
+    }
+}
+// 产品详细页选择颜色
+function chooseColor() {
+    var items = $('.detail_info').find('.color').find('li');
+    items.click(function () {
+        var $this = $(this);
+        $this.addClass('focus').siblings('li').removeClass('focus');
+    });
+}
+
+// 迷你购物车删除产品
+function del_minicart(object) {
+    var $this = $(object).parent('li');
+    $this.animate({ 'height': 0 }, 300, function () {
+        $this.remove();
+    });
+}
+
+function toggle_pro_info() {
+    var $this = $('#pro_info'),
+		tab = $this.find('.tb_tab li'),
+		box = $this.find('.tb_box_part');
+
+    tab.click(function () {
+        var $this = $(this),
+			index = $this.index();
+        $this.addClass('focus').siblings('li').removeClass('focus');
+        box.eq(index).show().siblings('.tb_box_part').hide();
+    });
+}
+
+function toggle_sm() {
+    var $this = $('#tabbox_sm'),
+		tab = $this.find('.tb_tab li'),
+		box = $this.find('.tb_box_part');
+    tab.mouseover(function () {
+        var $this = $(this),
+			index = $this.index();
+        $this.addClass('focus').siblings('li').removeClass('focus');
+        box.addClass('loading').html('');
+    });
+}
+
+function toggle_rv() {
+    var $this = $('#tabbox_rv'),
+		tab = $this.find('.tb_tab li'),
+		box = $this.find('.tb_box_part');
+    tab.mouseover(function () {
+        var $this = $(this),
+			index = $this.index();
+        $this.addClass('focus').siblings('li').removeClass('focus');
+        box.addClass('loading').html('');
+    });
+}
+function toggle_cs() {
+    var $this = $('#consult'),
+		tab = $this.find('.tb_tab li'),
+		box = $this.find('.tb_box_part');
+    tab.mouseover(function () {
+        var $this = $(this),
+			index = $this.index();
+        $this.addClass('focus').siblings('li').removeClass('focus');
+        box.addClass('loading').html('');
+    });
+}
+
+function cartRecommendToggle() {
+    var tb = $('.cart_recomm'),
+		tab = tb.find('.tab li'),
+		box = tb.find('.cart_recomm_list');
+    tab.mouseover(function () {
+        var $this = $(this),
+			index = $this.index();
+        $this.addClass('focus').siblings('li').removeClass('focus');
+        box.eq(index).show().siblings('.cart_recomm_list').hide();
+    });
+}
+
+function stringCut(str,lenght) {
+    return str.substring(0, lenght)
+}
+function linkblank(url) {
+    window.open(url, "_blank");
+}
+// 获得购物车商品数量及试戴商品html
+function GetCartNumber(isShow) {
+   
+    $.get("/ajax/CartList.ashx", function (data) {
+        var str = "<ul>";
+        for (var i = 0; i < data.Goodslist.length; i++) {
+            str += "<li> <div><a  href='" + data.Goodslist[i].GoodsUrl + "' target='_blank'><img class=\"cart-img\" src=\"" + data.Goodslist[i].GoodsImage + "\" width=\"62\" height=\"62\"></a></div>" +
+        "<div class=\"cart-shd-right\"><div><a  href='" + data.Goodslist[i].GoodsUrl + "' target='_blank'><span class=\"f-l\">" + data.Goodslist[i].GoodsName + "</span></a></div><br/><span class=\"f-r\">￥" + data.Goodslist[i].SalePrice + "×" + data.Goodslist[i].Qty + "</span></div></li>";
+
+        }
+        str += "</ul> <div class=\"cart-bottom\"><div class=\"btm-left\"><p>共" + data.GetTotalGoods + "件</p><p class=\"price-red\">" + data.GetTotalAmount + "元</p></div><div class=\"btm-right\"><button style=\"border:none\" onclick=\"linkblank('/cart.html')\" >去结算</button></div></div>  ";
+        $("#myCartQty").html(data.GetTotalGoods);
+        if (data.Goodslist.length == 0) {
+            str = " <div class=\"nothing-msg\"> <p>购物车中还没有商品,赶紧选购吧!</p></div>";
+        }
+        $(".cart-shd").html(str);
+       
+    }, "json");
+   
+    //$.post("/ajax/cart.ashx?GetCartNumber=1", function (data) {  
+    //    if (data != null) {
+    //        var getValues = data.split('|');
+    //        if (getValues.length == 2) {
+    //            $("#myCartQty").html(getValues[0]);
+    //            if (getValues[1] != null && getValues[1].length > 0) {
+    //                $("#footerCartGoods").html(getValues[1]);
+    //                if (isShow) {
+    //                    $("#footerCartGoods").show();
+    //                }
+    //            }
+    //            else {
+    //                $("#footerCartGoods").html('');
+    //                $("#footerCartGoods").hide();
+    //            }
+    //        }
+    //    }
+    //});
+    //$("#myCartQty").load("/ajax/cart.ashx?GetCartNumber=1");
+}
+
+function loginToFavorite(strGoodsID) {
+    var strUserName = $.trim($("#txtUserName").val());
+    var strPassword = $.trim($("#txtPassword").val());
+    $("#spanNameError").html("");
+    $("#spanPassError").html("");
+    //    var email = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+    var isSend = true;
+    if (strUserName == null || strUserName.length < 1) {
+        isSend = false;
+        $("#spanNameError").html("请输入账户");
+    }
+    //    else if (!email.test(strUserName)) {
+    //        isSend = false;
+    //        $("#spanNameError").html("账户输入错误!");
+    //    }
+
+    if (strPassword == null || strPassword.length < 1) {
+        isSend = false;
+        $("#spanPassError").html("请输入密码");
+    }
+    if (isSend) {
+        $.post("/Ajax/Favorite.ashx", { userName: strUserName, password: strPassword, GoodsID: strGoodsID },
+        function (data) {
+            if (data == 1) {
+                dMessage.show("成功收藏！", 4);
+            }
+            else if (data == "3") {
+                closeAllDialog();
+                dMessage.show("您已经收藏过当前商品！", 5);
+            }
+            else if (data == -1) {
+                $("#spanNameError").html("请输入账户!");
+            }
+            //            else if (data == -2) {
+            //                $("#spanNameError").html("账户输入错误!");
+            //            }
+            else if (data == -3) {
+                $("#spanNameError").html("账户不存在!");
+            }
+            else if (data == -4) {
+                $("#spanPassError").html("请输入密码!");
+            }
+            else if (data == -5) {
+                $("#spanPassError").html("密码错误!");
+            }
+            else {
+                closeAllDialog();
+                dMessage.show("商品收藏失败！", 5);
+            }
+        });
+    }
+}
+
+// 收藏商品
+function AddFavorite(goodsID) {
+    $.post("/ajax/UserLoginStatus.ashx", function (data) {
+        if (data == "1") {
+            $.post("/ajax/Favorite.ashx?GoodsID=" + goodsID, function (data) {
+                if (data == "1") {
+                    dMessage.show("成功收藏！", 4);
+                }
+                else if (data == "3") {
+                    dMessage.show("您已经收藏过当前商品！", 5);
+                } else {
+                    dMessage.show("商品收藏失败！", 5);
+                }
+            });
+        }
+        else {
+            showNewLogin("#newLogin");
+            //            loginToFavorite(goodsID);
+        }
+    });
+}
+
+// 收藏商品
+function AddGoodsFavorite() {
+    if (document.all)
+    { window.external.AddFavorite(document.URL, document.title); }
+    else if (window.sidebar)
+    { window.sidebar.addPanel(document.title, document.URL, ""); }
+    else {
+        alert("对不起，您的浏览器不支持此操作!\n请您使用菜单栏或Ctrl+D收藏本站。")
+    }
+}
+
+
+function SearchKeyword() {
+    var serchControl = $("#site_top_search");
+    if (serchControl != null&&$("#site_top_search").autocomplete) {
+        $("#site_top_search").autocomplete("/Ajax/SearchKeyword.ashx");
+    }
+}
+
+function EnterSearch() {
+    var event = window.event || arguments.callee.caller.arguments[0];
+    if (event.keyCode == 13) {
+        Search();
+    }
+}
+
+
+function GetUserLoginStatus() {
+    var loginStatus = false;
+    $.get("/ajax/UserLoginStatus.ashx", function (data) {
+        if (data == "1") {
+            loginStatus = true;
+        }
+    });
+    return loginStatus;
+}
+
+// 显示登录框
+function ShowLoginBox() {
+    $.dialog({ title: '会员登录', content: 'url:/loginDialog.aspx', max: false, min: false, lock: true, width: 600, height: 330, fixed: true, resize: false });
+}
+
+function CloseLoginBox() {
+    document.location.reload();
+}
+
+
+function AdvClickUrl(advID) {
+    $.post("/Ajax/AdvClickUrl.ashx", { AdvID: advID });
+}
+
+
+
+
+function openGoods(goodsID, defalutUrl) {
+
+    $("#iptGoodsID").val(goodsID);
+    $("#formDefault").attr("action", defalutUrl);
+    $("#formDefault").submit();
+
+}
+
+function addToFav() {
+    if (document.all)
+    { window.external.AddFavorite('https://www.yichao.cn', '亿超眼镜'); }
+    else if (window.sidebar)
+    { window.sidebar.addPanel('亿超眼镜', 'https://www.yichao.cn', ""); }
+    else {
+        alert("对不起，您的浏览器不支持此操作!\n请您使用菜单栏或Ctrl+D收藏本站。")
+    }
+}
+
+// 显示登录框
+function showNewLogin(divID) {
+    $.dialog({
+        title: '会员登录',
+        content: $(divID).html(),
+        max: false,
+        min: false,
+        lock: true,
+        width: 600,
+        height: 330,
+        fixed: true,
+        resize: false
+    });
+}
+
+
+
+
+
+
+
+/**** ling ****/
+// 头部fixed
+function listenScroll(element) {
+    var obj_top = element.position().top;
+    $(window).scroll(function () {
+        var window_top = $(this).scrollTop();
+        if (window_top >= obj_top) {
+            if (!$.browser.msie || ($.browser.msie && $.browser.version >= 7)) {
+                element.css({
+                    position: "fixed",
+                    top: 36,
+                    zIndex: 9999
+                });
+            } else {
+                element.css({
+                    position: "absolute",
+                    top: window_top,
+                    zIndex: 9999
+                });
+            }
+        } else {
+            element.css("position", "static");
+        }
+    });
+}
+//加入收藏
+function addfavorite() {
+    if (document.all) {
+        window.external.addFavorite('https://www.yichao.cn/', '收藏夹');
+    }
+    else if (window.sidebar) {
+        window.sidebar.addPanel('百度一下', 'http://www.baidu.com', "");
+    }
+}
+
+function auto() {
+}
+
+$(function () {
+    window.onresize = function () {
+        var a = $(".backdiv").attr("data-h"); if (a) {
+            var b = $(window).height();
+            $(".iframbox div").css("margin-top", (b - a) / 2)
+        }
+    }; $(".close").click(function () { $(window.parent.window.document).find(".iframbox")[0].click() })
+}); function shopyuyue(d, c, a) { var b = '<div class="backdiv hide" data-h=\'' + a + '\'  style=\'position: fixed; top: 0px;left: 0px; width: 100%;height: 100%;  background-color: #000; opacity: 0.5;filter: alpha(opacity=50); z-index: 9999;display: none;\' ><input type="hidden" id="closediv" onclick=\'closebacdiv()\' /><input type="hidden" id="yyygssm" /></div>'; b += '<div class="iframbox hide" onclick=\'closebacdiv()\'  style=\'position: fixed;top: 0px;left: 0px; width: 100%;height: 100%;z-index: 10000;display: none;\'><div style="margin: auto;background-color: #fff;"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" id="bigifram"  ></iframe></div></div>'; if ($(".backdiv").length == 0) { $("body").append(b) } $("#bigifram").attr("src", d); $(".backdiv").fadeIn(300, function () { $(".iframbox").show() }); $(".iframbox div").width(c); $(".iframbox div").height(a); $("#bigifram").width(c); $("#bigifram").height(a); resetfix(a) } function resetfix(a) { var b = $(window).height(); $(".iframbox div").css("margin-top", (b - a) / 2) } function closebacdiv() { $("body").find(".iframbox").remove(); $(".backdiv").fadeOut(300, function () { $("body").find(".backdiv").remove() }) };

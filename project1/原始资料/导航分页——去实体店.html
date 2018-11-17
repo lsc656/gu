@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://city.yichao.cn/shop/shop-10155.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	亿超杭州余杭眼镜店-闲林竹海水韵眼镜店,精准验光,专注配镜_亿超眼镜网
+</title><meta name="renderer" content="webkit|ie-stand"><meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"><meta name="keywords" content="亿超眼镜闲林竹海水韵店"><meta name="description" content="买眼镜上杭州余杭眼镜店-闲林竹海水韵眼镜店,提供正品实惠的眼镜,镜架+镜片=199元起"><link href="./导航分页——去实体店_files/common.css" rel="stylesheet"><link rel="shortcut icon" href="https://city.yichao.cn/favicon.ico" type="image/x-icon">
+     <script src="./导航分页——去实体店_files/hm.js.下载"></script><script async="" src="./导航分页——去实体店_files/gdtevent.min.js.下载"></script><script src="./导航分页——去实体店_files/jquery.js.下载"></script>
+    <script src="./导航分页——去实体店_files/common.js.下载"></script>
+   <script>
+	!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.queue=[];n=d.createElement(t);n.async=!0;n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script','//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');
+	gdt('init','1106553697');
+	gdt('track','PAGE_VIEW');
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1106553697&action_type=PAGE_VIEW&noscript=1"/>
+</noscript>
+     <script src="./导航分页——去实体店_files/alertiframe.js.下载"></script>
+     <script src="./导航分页——去实体店_files/Default.js.下载"></script>
+    <script src="./导航分页——去实体店_files/vertical.slider.standard.js.下载"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?44ab056710063e7a9bec172f5fc717ee";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <script>
+        
+        function Search() {
+            var keyword = $("#site_top_search").val();
+            var url = "https://www.yichao.cn/search.aspx?keyword=" + keyword;
+            url = encodeURI(url);
+            location.href = url;
+        }
+    </script>
+    <style>
+        #site_top_search {
+        text-indent:1em;
+        }
+        .sitesearch .button img {
+    padding: 7px 7px;
+    margin-top: -3px;
+}
+    </style>
+    
+    <link href="./导航分页——去实体店_files/findShop.css" rel="stylesheet">
+    <script type="text/javascript" src="./导航分页——去实体店_files/api"></script><script type="text/javascript" src="./导航分页——去实体店_files/getscript"></script>
+    <script type="text/javascript" src="./导航分页——去实体店_files/SearchInfoWindow_min.js.下载"></script>
+    <link rel="stylesheet" href="./导航分页——去实体店_files/SearchInfoWindow_min.css">
+    <link rel="stylesheet" type="text/css" href="./导航分页——去实体店_files/store_distribution.min.css">
+       <script src="./导航分页——去实体店_files/jquery-ui-1.9.0.custom.js.下载"></script>
+    <script src="./导航分页——去实体店_files/vertical.slider.standard.js.下载"></script>
+   
+    <script>
+        
+        $(function () {
+            $("img:not(.firstload)").each(function () {
+                $(this).attr("data-img", $(this).attr("src"));
+                $(this).attr("src", "/img/lazyload-225-225.gif");
+            });
+            $(window).load(function () {
+                $("img:not(.firstload)").each(function () {
+                    $(this).attr("src", $(this).attr("data-img"));
+                });
+            })
+            $(".classify").attr("data-ishome", false);
+            $(".store").css('line-height', $('.storeList').height() + 'px');
+            $(".findStore .right button").click(function () {
+                $this = $(this);
+                var para = "?city=" + $this.attr("data-city") + "&id=" + $this.attr("id");
+                shopyuyue('/shop/Addreserve.aspx' + para, 390, 556);
+            })
+            var right = $('.findStore .right');
+            var offTop = right.offset().top;
+            var rightWidth = ($(window).width() - $('.main').width()) / 2;
+            
+            $(window).scroll(function () {
+                var windowT = $(window).scrollTop();
+                if (windowT >= offTop) {
+                    right.css({
+                        'position': 'fixed',
+                        'top': '0',
+                        'right': rightWidth
+                    });
+                } else {
+                    right.css('position', 'inherit');
+                }
+            });
+
+      
+            $('.toggle').on('click', '.button', function () {
+                cityDrop();
+                setSlider($('#scroll-pane'));
+                $('#anchors a').click(function () {
+                    var difference = $('.scroll-content').height() - $('#scroll-pane').height();//calculate the difference - not needed if within the main slider code
+                    var targetclass = ($(this).attr('class'));//read the class of the clicked anchor
+                    var position = $(".scroll-content ." + targetclass).position();//search for a div with matching class and read its position
+                    var topValue = -(position.top);//content top is just the negative of the top position
+                    if (topValue > 0) topValue = 0;//stop the content scrolling down too much
+                    if (Math.abs(topValue) > difference) topValue = (-1) * difference;//stop the content scrolling up too much
+                    sliderVal = (100 + (topValue * 100 / difference));//calculate the slider position from the content position
+                    $(".slider-vertical").slider("value", sliderVal);//set the slider position
+                    return false;
+                });
+            });
+            $('.citylist-close').click(function () {
+                $('.toggle').css('overflow', 'hidden');
+            });
+            function cityDrop() {
+                var $toggle = $('.toggle');
+                var $cityGroup = $toggle.find('#scroll-pane');
+                var over = $toggle.css('overflow');
+                if (over == 'hidden') {
+                    $toggle.css('overflow', 'inherit');
+                    $cityGroup.css('overflow-y', 'scroll');
+                    $cityGroup.find('li').css('width', '80%');
+                } else {
+                    $toggle.css('overflow', 'hidden');
+                }
+            }
+        })
+
+    </script>
+   
+<style type="text/css">.BMap_mask{background:transparent url(https://api.map.baidu.com/images/blank.gif);}.BMap_noscreen{display:none;}.BMap_button{cursor:pointer;}.BMap_zoomer{background-image:url(https://api.map.baidu.com/images/mapctrls1d3.gif);background-repeat:no-repeat;overflow:hidden;font-size:1px;position:absolute;width:7px;height:7px;}.BMap_stdMpCtrl div{position:absolute;}.BMap_stdMpPan{width:44px;height:44px;overflow:hidden;background:url(https://api.map.baidu.com/images/mapctrls2d0.png) no-repeat;}.BMap_ie6 .BMap_stdMpPan{background:none;}.BMap_ie6 .BMap_smcbg{left:0;width:44px;height:464px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://api.map.baidu.com/images/mapctrls2d0.png");}.BMap_ie6 .BMap_stdMpPanBg{z-index:-1;}.BMap_stdMpPan .BMap_button{height:15px;width:15px;}.BMap_panN,.BMap_panW,.BMap_panE,.BMap_panS{overflow:hidden;}.BMap_panN{left:14px;top:0;}.BMap_panW{left:1px;top:12px;}.BMap_panE{left:27px;top:12px;}.BMap_panS{left:14px;top:25px;}.BMap_stdMpZoom{top:45px;overflow:hidden;}.BMap_stdMpZoom .BMap_button{width:22px;height:21px;left:12px;overflow:hidden;background-image:url(https://api.map.baidu.com/images/mapctrls2d0.png);background-repeat:no-repeat;z-index:10;}.BMap_ie6 .BMap_stdMpZoom .BMap_button{background:none;}.BMap_stdMpZoomIn{background-position:0 -221px;}.BMap_stdMpZoomOut{background-position:0 -265px;}.BMap_ie6 .BMap_stdMpZoomIn div{left:0;top:-221px;}.BMap_ie6 .BMap_stdMpZoomOut div{left:0;top:-265px;}.BMap_stdMpType4 .BMap_stdMpZoom .BMap_button{left:0;overflow:hidden;background:-webkit-gradient(linear,50% 0,50% 100%,from(rgba(255,255,255,0.85)),to(rgba(217,217,217,0.85)));z-index:10;-webkit-border-radius:22px;width:34px;height:34px;border:1px solid rgba(255,255,255,0.5);-webkit-box-shadow:0 2px 3.6px #CCC;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;-webkit-box-sizing:border-box;}.BMap_stdMpType4 .BMap_smcbg{position:static;background:url(https://api.map.baidu.com/images/mapctrls2d0_mb.png) 0 0 no-repeat;-webkit-background-size:24px 32px;}.BMap_stdMpType4 .BMap_stdMpZoomIn{background-position:0 0;}.BMap_stdMpType4 .BMap_stdMpZoomIn .BMap_smcbg{width:24px;height:24px;background-position:0 0;}.BMap_stdMpType4 .BMap_stdMpZoomOut{background-position:0 0;}.BMap_stdMpType4 .BMap_stdMpZoomOut .BMap_smcbg{width:24px;height:6px;background-position:0 -25px;}.BMap_stdMpSlider{width:37px;top:18px;}.BMap_stdMpSliderBgTop{left:18px;width:10px;overflow:hidden;background:url(https://api.map.baidu.com/images/mapctrls2d0.png) no-repeat -23px -226px;}.BMap_stdMpSliderBgBot{left:19px;height:8px;width:10px;top:124px;overflow:hidden;background:url(https://api.map.baidu.com/images/mapctrls2d0.png) no-repeat -33px bottom;}.BMap_ie6 .BMap_stdMpSliderBgTop,.BMap_ie6 .BMap_stdMpSliderBgBot{background:none;}.BMap_ie6 .BMap_stdMpSliderBgTop div{left:-23px;top:-226px;}.BMap_ie6 .BMap_stdMpSliderBgBot div{left:-33px;bottom:0;}.BMap_stdMpSliderMask{height:100%;width:24px;left:10px;cursor:pointer;}.BMap_stdMpSliderBar{height:11px;width:19px;left:13px;top:80px;overflow:hidden;background:url(https://api.map.baidu.com/images/mapctrls2d0.png) no-repeat 0 -309px;}.BMap_stdMpSliderBar.h{background:url(https://api.map.baidu.com/images/mapctrls2d0.png) no-repeat 0 -320px;}.BMap_ie6 .BMap_stdMpSliderBar,.BMap_ie6 .BMap_stdMpSliderBar.h{background:none;}.BMap_ie6 .BMap_stdMpSliderBar div{top:-309px;}.BMap_ie6 .BMap_stdMpSliderBar.h div{top:-320px;}.BMap_zlSt,.BMap_zlCity,.BMap_zlProv,.BMap_zlCountry{position:absolute;left:34px;height:21px;width:28px;background-image:url(https://api.map.baidu.com/images/mapctrls2d0.png);background-repeat:no-repeat;font-size:0;cursor:pointer;}.BMap_ie6 .BMap_zlSt,.BMap_ie6 .BMap_zlCity,.BMap_ie6 .BMap_zlProv,.BMap_ie6 .BMap_zlCountry{background:none;overflow:hidden;}.BMap_zlHolder{display:none;position:absolute;top:0;}.BMap_zlHolder.hvr{display:block;}.BMap_zlSt{background-position:0 -380px;top:21px;}.BMap_zlCity{background-position:0 -401px;top:52px;}.BMap_zlProv{background-position:0 -422px;top:76px;}.BMap_zlCountry{background-position:0 -443px;top:100px;}.BMap_ie6 .BMap_zlSt div{top:-380px;}.BMap_ie6 .BMap_zlCity div{top:-401px;}.BMap_ie6 .BMap_zlProv div{top:-422px;}.BMap_ie6 .BMap_zlCountry div{top:-443px;}.BMap_stdMpType1 .BMap_stdMpSlider,.BMap_stdMpType2 .BMap_stdMpSlider,.BMap_stdMpType3 .BMap_stdMpSlider,.BMap_stdMpType4 .BMap_stdMpSlider,.BMap_stdMpType2 .BMap_stdMpZoom,.BMap_stdMpType3 .BMap_stdMpPan,.BMap_stdMpType4 .BMap_stdMpPan{display:none;}.BMap_stdMpType3 .BMap_stdMpZoom{top:0;}.BMap_stdMpType4 .BMap_stdMpZoom{top:0;}.BMap_cpyCtrl a{font-size:11px;color:#7979CC;}.BMap_scaleCtrl{height:23px;overflow:hidden;}.BMap_scaleCtrl div.BMap_scaleTxt{font-size:11px;font-family:Arial,sans-serif;}.BMap_scaleCtrl div{position:absolute;overflow:hidden;}.BMap_scaleHBar img,.BMap_scaleLBar img,.BMap_scaleRBar img{position:absolute;width:37px;height:442px;left:0;}.BMap_scaleHBar{width:100%;height:5px;font-size:0;bottom:0;}.BMap_scaleHBar img{top:-437px;width:100%;}.BMap_scaleLBar,.BMap_scaleRBar{width:3px;height:9px;bottom:0;font-size:0;z-index:1;}.BMap_scaleLBar img{top:-427px;left:0;}.BMap_scaleRBar img{top:-427px;left:-5px;}.BMap_scaleLBar{left:0;}.BMap_scaleRBar{right:0;}.BMap_scaleTxt{text-align:center;width:100%;cursor:default;line-height:18px;}.BMap_omCtrl{background-color:#fff;overflow:hidden;}.BMap_omOutFrame{position:absolute;width:100%;height:100%;left:0;top:0;}.BMap_omInnFrame{position:absolute;border:1px solid #999;background-color:#ccc;overflow:hidden;}.BMap_omMapContainer{position:absolute;overflow:hidden;width:100%;height:100%;left:0;top:0;}.BMap_omViewMv{border-width:1px;border-style:solid;border-left-color:#84b0df;border-top-color:#adcff4;border-right-color:#274b8b;border-bottom-color:#274b8b;position:absolute;z-index:600;}.BMap_omViewInnFrame{border:1px solid #3e6bb8;}.BMap_omViewMask{width:1000px;height:1000px;position:absolute;left:0;top:0;background-color:#68c;opacity:.2;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);}.BMap_omBtn{height:13px;width:13px;position:absolute;cursor:pointer;overflow:hidden;background:url(https://api.map.baidu.com/images/mapctrls1d3.gif) no-repeat;z-index:1210;}.anchorBR .BMap_omOutFrame{border-top:1px solid #999;border-left:1px solid #999;}.quad4 .BMap_omBtn{background-position:-26px -27px;}.quad4 .BMap_omBtn.hover{background-position:0 -27px;}.quad4 .BMap_omBtn.BMap_omBtnClosed{background-position:-39px -27px;}.quad4 .BMap_omBtn.BMap_omBtnClosed.hover{background-position:-13px -27px;}.anchorTR .BMap_omOutFrame{border-bottom:1px solid #999;border-left:1px solid #999;}.quad1 .BMap_omBtn{background-position:-39px -41px;}.quad1 .BMap_omBtn.hover{background-position:-13px -41px;}.quad1 .BMap_omBtn.BMap_omBtnClosed{background-position:-26px -41px;}.quad1 .BMap_omBtn.BMap_omBtnClosed.hover{background-position:0 -41px;}.anchorBL .BMap_omOutFrame{border-top:1px solid #999;border-right:1px solid #999;}.quad3 .BMap_omBtn{background-position:-27px -40px;}.quad3 .BMap_omBtn.hover{background-position:-1px -40px;}.quad3 .BMap_omBtn.BMap_omBtnClosed{background-position:-40px -40px;}.quad3 .BMap_omBtn.BMap_omBtnClosed.hover{background-position:-14px -40px;}.anchorTL .BMap_omOutFrame{border-bottom:1px solid #999;border-right:1px solid #999;}.quad2 .BMap_omBtn{background-position:-40px -28px;}.quad2 .BMap_omBtn.hover{background-position:-14px -28px;}.quad2 .BMap_omBtn.BMap_omBtnClosed{background-position:-27px -28px;}.quad2 .BMap_omBtn.BMap_omBtnClosed.hover{background-position:-1px -28px;}.anchorR .BMap_omOutFrame{border-bottom:1px solid #999;border-left:1px solid #999;border-top:1px solid #999;}.anchorL .BMap_omOutFrame{border-bottom:1px solid #999;border-right:1px solid #999;border-top:1px solid #999;}.anchorB .BMap_omOutFrame{border-top:1px solid #999;border-left:1px solid #999;border-right:1px solid #999;}.anchorT .BMap_omOutFrame{border-bottom:1px solid #999;border-right:1px solid #999;border-left:1px solid #999;}.anchorNon .BMap_omOutFrame,.withOffset .BMap_omOutFrame{border:1px solid #999;}.BMap_zoomMask0,.BMap_zoomMask1{position:absolute;left:0;top:0;width:100%;height:100%;background:transparent url(https://api.map.baidu.com/images/blank.gif);z-index:1000;}.BMap_contextMenu{position:absolute;border-top:1px solid #adbfe4;border-left:1px solid #adbfe4;border-right:1px solid #8ba4d8;border-bottom:1px solid #8ba4d8;padding:0;margin:0;width:auto;visibility:hidden;background:#fff;z-index:10000000;}.BMap_cmShadow{position:absolute;background:#000;opacity:.3;filter:alpha(opacity=30);visibility:hidden;z-index:9000000;}div.BMap_cmDivider{border-bottom:1px solid #adbfe4;font-size:0;padding:1px;margin:0 6px;}div.BMap_cmFstItem{margin-top:2px;}div.BMap_cmLstItem{margin-bottom:2px;}.BMap_shadow img{border:0 none;margin:0;padding:0;height:370px;width:1144px;}.BMap_pop .BMap_top{border-top:1px solid #ababab;background-color:#fff;}.BMap_pop .BMap_center{border-left:1px solid #ababab;border-right:1px solid #ababab;background-color:#fff;}.BMap_pop .BMap_bottom{border-bottom:1px solid #ababab;background-color:#fff;}.BMap_shadow,.BMap_shadow img,.BMap_shadow div{-moz-user-select:none;-webkit-user-select:none;}.BMap_checkbox{background:url(https://api.map.baidu.com/images/mapctrls1d3.gif);vertical-align:middle;display:inline-block;width:11px;height:11px;margin-right:4px;background-position:-14px 90px;}.BMap_checkbox.checked{background-position:-2px 90px;}.BMap_pop .BMap_top img,.BMap_pop .BMap_center img,.BMap_pop .BMap_bottom img{display:none;}@media print{.BMap_noprint{display:none;}.BMap_noscreen{display:block;}.BMap_mask{background:none;}.BMap_pop .BMap_top img,.BMap_pop .BMap_center img,.BMap_pop .BMap_bottom img{display:block;}}.BMap_vectex{cursor:pointer;width:11px;height:11px;position:absolute;background-repeat:no-repeat;background-position:0 0;}.BMap_vectex_nodeT{background-image:url(https://api.map.baidu.com/images/nodeT.gif);}.BMap_vectex_node{background-image:url(https://api.map.baidu.com/images/node.gif);}.iw{width:100%;-webkit-box-sizing:border-box;border:.3em solid transparent;-webkit-background-clip:padding;}.iw_rt{position:relative;height:46px;width:195px;-webkit-box-sizing:border-box;display:-webkit-box;-webkit-box-align:center;margin:2px 5px 0 2px;background-color:rgba(0,0,0,0.8);-webkit-box-shadow:2px 2px 7px rgba(0,0,0,0.3);-webkit-border-radius:2px;color:#fff;}.iw_rt:after{content:"";position:absolute;left:50%;bottom:-8px;width:0;height:0;border-left:5px solid transparent;border-top:8px solid rgba(0,0,0,0.8);border-right:5px solid transparent;margin:0 0 0 -6px;}.iw_s{text-align:center;vertical-align:middle;height:100%;-webkit-box-sizing:border-box;}.iw_rt .iw_s1{color:#cbcbcb;}.iw_rt b{color:#fff;font-weight:bold;}.iw_rt_gr{margin-left:-4px;}.iw_busline{margin:32px 0 0 -3px;}.iw_busline .iw_cc{text-align:center;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;padding:0 6px;}.iw_r{-webkit-box-ordinal-group:3;}.iw_r,.iw_l{height:100%;font-size:4.5em;text-align:center;color:#747474;border:none;-webkit-box-sizing:border-box;-webkit-border-radius:0;line-height:.7em;border:1px solid rgba(255,255,255,0.2);width:41px;}.iw_r{border-style:none none none solid;}.iw_l{border-style:none solid none none;}.iw_search,.iw_l{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAlCAYAAAAuqZsAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6 eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEz NDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNl SUQ9InhtcC5paWQ6QjA3NjMyREJDNzQ2MTFFMTlBQUM5QzlCRDZGODZCQkYiIHhtcE1NOkRvY3Vt ZW50SUQ9InhtcC5kaWQ6QjA3NjMyRENDNzQ2MTFFMTlBQUM5QzlCRDZGODZCQkYiPiA8eG1wTU06 RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCMDc2MzJEOUM3NDYxMUUxOUFB QzlDOUJENkY4NkJCRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCMDc2MzJEQUM3NDYxMUUx OUFBQzlDOUJENkY4NkJCRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PllB9T8AAAKuSURBVHjaxFjRcdpAEAX+mVEqiFxB5AoQ HZAKElcArsBWBSgVQCoAVwCuwEoFlivwGQpI7jKrzGXn7ep0EsPO7BjLp/O73bdv9xifTqdRpCXW c+sz65n1lNy3mvzZemX9aN34C6bTKdx8HAHMgVlaX0QeaGv9J4EcBJgD9EA/hzAH7N4Cq/oAW1tf KX+vKEXP7PlMSLFvhQX32BWY49GBOIRO7FKy57wBlnoUQHu5yJX+g4mymdvgFWzkAM3JtwGgmiJw a2/pvQoEYBQCLKNI8RfuaeNjT245gAUdqgHdmkqUPiOctLdJVYkithkAVO/K5cC+M30KAZVSxboo /ybnn1eIR5r5qUyI7P4GX6nqJHskbQsxQ7wqu6aSn2qrgHLrXjqAat5ZC0WlRuzVE0J3uhtBCjRt a3qjX92JIMiOIqYtYgumzpo+7RRtu/E0zvknokMF5GgdQv4Ze/5DWL8CFVe2aNuedGsLCi1vS+WL F4WKNkL2Dnh414FnO1b1R5vKuRaxjKUF2YKBqjuCGtF6nyL5+XxOJWCcL2/CpjzdRYRuGpDShQQs ARUj9U/OnRh7Yr9/CW1JXU4fYxXoHIMCu+iB+gBLIt/LgShDYCYktGCDfCBgvyRgVQgZwTy/jIzy EnQNMZV1QCT4bJ+3XFCkS81/WijdkiYAdSak04BWtabWEmIbsNZYgU00YE+gjyErQeo31GpShVMH Yc+/dwsEzh97/D6ojT2ZMlM1XwN8WP9Ma7NAbZvbtBoEjE+jBT2TusCu5SIbI7z/wLWN1rdKi0o6 cqwTuAmYyTm5NQW/82atWvlnBbo7apxD98qDJxl7mkC76JQ2Qm0CI1xKF95Gb4oLXHJDwJlxjy/u LgruGtNFM8lqnNtfK2JqN3CVeW1gzWj9jThd0xd59R8BBgAAiefGO1Bt1gAAAABJRU5ErkJggg==") no-repeat 50% 50%;-webkit-background-size:19px 19px;}.iw_line_s,.iw_r{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAmCAYAAABDClKtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6 eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEz NDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNl SUQ9InhtcC5paWQ6QjA3NjMyREZDNzQ2MTFFMTlBQUM5QzlCRDZGODZCQkYiIHhtcE1NOkRvY3Vt ZW50SUQ9InhtcC5kaWQ6QjA3NjMyRTBDNzQ2MTFFMTlBQUM5QzlCRDZGODZCQkYiPiA8eG1wTU06 RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCMDc2MzJEREM3NDYxMUUxOUFB QzlDOUJENkY4NkJCRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCMDc2MzJERUM3NDYxMUUx OUFBQzlDOUJENkY4NkJCRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqheQ+MAAAEtSURBVHja7JftDYIwEIbB8JeEUXACZQPd oGygE+gGxAnQEZzAOgEdwREIDKBXUgjBIqW5Npj0kvcHpG0erveFX1WVZ8l2oBhEhRoLw/BroW8J KgeR3vMVlI5BrSwAHQZAnngmYxtMe4oIL41ZAp6iNqF4/BQTa0oBxmxAcaAHKFJY+wKtAaw0CRUJ oHjGHiY8VpqCKmYCdRkJUKmJ7Ms1gZqkqOs6w/bUGXRCOGePCcXjaItwDsW8PoZ0zhM70IeeyiZi jH/Isf+CF9MAOdCppDj+LJ6yim6j9802B6VqQa818BFjY6AHakHp9Crj15ctCaiFIi7Q/wCKLRHq vjSoVNKWunH4rTBDv5Cv7NKeKfvvU2nINzHAuexzUA7KQTkoB6UxDicKvc+qfQQYABaiUBxugCsr AAAAAElFTkSuQmCC") no-repeat 50% 50%;-webkit-background-size:19px 19px;}.iw_line{height:64px;width:228px;padding:0 11px;line-height:20px;}.iw_bustrans .iw_cc{text-align:center;}.iw_c{color:#FFFFFF;text-decoration:none;overflow:hidden;display:-webkit-box;-webkit-box-align:center;-webkit-box-flex:1;}.iw_cc{-webkit-box-sizing:border-box;width:100%;border:none;}.gray_background{filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity:0.5;opacity: 0.5} .light_gray_background {filter:alpha(opacity=70);-moz-opacity:0.7;-khtml-opacity:0.7;opacity: 0.7} .panoInfoBox {cursor: pointer; } .panoInfoBox {position: relative; width: 323px; height: 101px; margin-bottom: 4px; cursor: pointer; } .panoInfoBox .panoInfoBoxTitleBg {width: 323px; height: 19px; position: absolute; left: 0; bottom: 0; z-index: 2; background-color: #000; opacity: .7; } .panoInfoBox .panoInfoBoxTitleContent {font-size: 12px; color: #fff; position: absolute; bottom: 2px; left: 5px; z-index: 3; text-decoration: none; } .RouteAddressOuterBkg{position:relative; padding: 32px 4px 4px 3px; background-color:#ffdd99; } .RouteAddressInnerBkg{padding: 3px 5px 8px 8px; background-color:#ffffff; } #RouteAddress_DIV1{margin-top: 5px; } .RouteAddressTip{position:absolute; width:100%; top:0px; text-align:center; height:30px; line-height:30px; color:#994c00; } .route_tip_con {position:absolute;top:145px;} .route_tip_con .route_tip{position:absolute;width:233px;height:29px;color:#803300;text-align:center;line-height:29px;border:#cc967a solid 1px;background:#fff2b2;z-index:100000;} .route_tip_con .route_tip span{position:absolute;top:0;right:0;_right:-1px;width:14px;height:13px;background:url(https://api.map.baidu.com/images/addrPage.png?v=20121107) no-repeat 0 -121px;cursor:pointer;} .route_tip_con .route_tip_shadow{width:233px;height:29px;  position:absolute;left:1px;top:1px;background:#505050;border:1px solid #505050;opacity:0.2;filter:alpha(opacity=20)} .sel_body_body_page{margin:5px 0} .sel_n{margin-top:5px;overflow:hidden;} .sel_n .sel_top{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -418px;height:4px;font-size:0px;} .sel_n .sel_body_top{height:32px;width:100%;background:url(https://api.map.baidu.com/images/addrPage.png?v=20121107) no-repeat 0 -41px;} .sel_n .sel_body_title{float:left;width:100%;height:31px;} .sel_n .sel_body_sign{margin-top:1px;width:30px;height:31px;float:left;background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat -79px -387px;} .sel_n .sel_body_name{height: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin:0 20px 0 30px;padding:8px 7px 7px;font-size:14px;color:#FA8722;} .sel_n .sel_body_button{float:left;width:55px;margin-left:-55px;padding-top:8px;} .sel_n .sel_body_button a{} .sel_n .sel_bottom{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -415px;height:4px;font-size:0px;} .sel_n .sel_body_body{padding:3px 0 0 0} .sel_n1{margin-top:5px;width:329px;overflow:hidden;} .sel_n1 .sel_top{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -418px;height:4px;font-size:0px;} .sel_n1 .sel_body_top{height:31px;width:100%;background:url(https://api.map.baidu.com/images/sel_body_n_top.gif) repeat-x;} .sel_n1 .sel_body_top{height:32px;width:100%;background:url(https://api.map.baidu.com/images/addrPage.png?v=20121107) no-repeat 0 -41px} .sel_n1 .sel_body_title{float:left;width:100%;height:31px;cursor:pointer;} .sel_n1 .sel_body_sign{margin-top:1px;width:30px;height:31px;float:left;background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat -79px -387px;} .sel_n1 .sel_body_name{margin:0 20px 0 30px;padding:8px 7px 7px;font-size:14px;color:#FA8722;} .sel_n1 .sel_body_button{float:left;width:20px;height:31px;margin-left:-23px;background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat -253px -382px;overflow:hidden;zoom:1;cursor:pointer;} .sel_n1 .sel_body_button a{display:none;} .sel_n1 .sel_body_body{display:none} .sel_n1 .sel_bottom{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -415px;height:4px;font-size:0px;} .sel_y{margin-top:5px;overflow:hidden;} .sel_y .sel_top{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -439px;height:4px;zoom:1;font-size:0px;} .sel_y .sel_body_top{height:32px;width:100%;background:url(https://api.map.baidu.com/images/addrPage.png?v=20121107) no-repeat 0 0} .sel_y .sel_body_title{float:left;width:100%;height:31px;cursor:pointer;} .sel_y .sel_body_sign{margin-top:1px;width:30px;height:31px;float:left;background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat -167px -384px;} .sel_y .sel_body_name{margin:0 20px 0 30px;padding:8px 7px 7px;font-size:14px;color:#5B7BCB;} .sel_y .sel_body_button{float:left;width:20px;height:31px;margin-left:-20px;background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat -269px -297px;cursor:pointer;} .sel_y .sel_body_button a{display:none;} .sel_y .sel_body_body{display:none;height:0px} .sel_y .sel_body_body_div{} .sel_y .sel_bottom{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -436px;height:4px;font-size:0px;} .sel_y .sel_body_body_page{display:none;height:0px;} .sel_x{margin-top:5px;width:329px;overflow:hidden;} .sel_x .sel_top{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -418px;height:4px;font-size:0px;} .sel_x .sel_body_top{height:32px;width:100%;background:url(https://api.map.baidu.com/images/addrPage.png?v=20121107) no-repeat 0 -41px;} .sel_x .sel_body_title{float:left;width:100%;height:31px;} .sel_x .sel_body_sign{margin-top:1px;width:30px;height:31px;float:left;background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat -122px -384px;} .sel_x .sel_body_name{margin:0 20px 0 30px;padding:8px 7px 7px;font-size:14px;color:#FA8722;} .sel_x .sel_body_button{float:left;width:55px;margin-left:-55px;padding-top:8px;} .sel_x .sel_body_button a{} .sel_x .sel_body_body{} .sel_x .sel_body_body_div{padding:5px 5px 0 5px;} .sel_x .sel_bottom{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -415px;height:4px;font-size:0px;} .sel_x1{margin-top:5px;width:329px;overflow:hidden;} .sel_x1 .sel_top{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -418px;height:4px;font-size:0px;} .sel_x1 .sel_body_top{height:32px;width:100%;background:url(https://api.map.baidu.com/images/addrPage.png?v=20121107) no-repeat 0 -41px} .sel_x1 .sel_body_title{float:left;width:100%;height:31px;cursor:pointer;} .sel_x1 .sel_body_sign{margin-top:1px;width:30px;height:31px;float:left;background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat -122px -384px;} .sel_x1 .sel_body_name{margin:0 20px 0 30px;padding:8px 7px 7px;font-size:14px;color:#FA8722;} .sel_x1 .sel_body_button{float:left;width:55px;height:31px;margin-left:-55px;} .sel_x1 .sel_body_button a{display:none;} .sel_x1 .sel_body_body{display:none;height:0px;} .sel_x1 .sel_body_body_div{padding:5px 5px 0 5px;} .sel_x1 .sel_bottom{background:url(https://api.map.baidu.com/images/bgs.gif) no-repeat 0 -415px;height:4px;font-size:0px;} .sel_body_citylist{height:100px;padding: 0 0 0 5px} .sel_body_resitem{table-layout:fixed;overflow-x:hidden;overflow-y:hidden;} .sel_body_resitem table {margin-right:5px;} .sel_body_resitem tr{cursor:pointer;} .sel_body_resitem th{padding-top:5px;padding-left:5px;text-align:left;vertical-align:top;width:22px;} .sel_body_resitem th div.iconbg{background:url(https://api.map.baidu.com/images/markers_new_ie6.png) no-repeat scroll 0 0;height:29px;width:24px;} .sel_body_resitem th div.icon{cursor:pointer} .sel_body_resitem th div#no_0_1, .sel_body_resitem th div#no_1_1{background-position:0 -64px} .sel_body_resitem th div#no_0_2, .sel_body_resitem th div#no_1_2{background-position:-24px -64px} .sel_body_resitem th div#no_0_3, .sel_body_resitem th div#no_1_3{background-position:-48px -64px} .sel_body_resitem th div#no_0_4, .sel_body_resitem th div#no_1_4{background-position:-72px -64px} .sel_body_resitem th div#no_0_5, .sel_body_resitem th div#no_1_5{background-position:-96px -64px} .sel_body_resitem th div#no_0_6, .sel_body_resitem th div#no_1_6{background-position:-120px -64px} .sel_body_resitem th div#no_0_7, .sel_body_resitem th div#no_1_7{background-position:-144px -64px} .sel_body_resitem th div#no_0_8, .sel_body_resitem th div#no_1_8{background-position:-168px -64px} .sel_body_resitem th div#no_0_9, .sel_body_resitem th div#no_1_9{background-position:-192px -64px} .sel_body_resitem th div#no_0_10, .sel_body_resitem th div#no_1_10{background-position:-216px -64px} .sel_body_resitem td{line-height:160%;padding:3px 0 3px 3px;vertical-align:top;} .sel_body_resitem div.ra_td_title{float:left;margin-right:40px;} .sel_body_resitem div.ra_td_button{float:right; width:40px;} .sel_body_resitem div.ra_td_button input{height:18px;font-size:12px;width:40px;} .sel_body_resitem div.clear{clear:both;height:0px;width:100%;} .sel_body_resitem td .selBtn {width:70px;height:29px;background:url(https://api.map.baidu.com/images/addrPage.png?v=20121107) no-repeat -21px -81px;text-align:center;line-height:29px;visibility:hidden;color:#b35900;display:inline-block;*display:inline;*zoom:1;} .sel_body_resitem td .list_street_view_poi {display:inline-block;float:none;margin-right:6px;position:static;*vertical-align:-3px;_vertical-align:-5px;*display:inline;*zoom:1;} .selInfoWndBtn {width:70px;height:29px;background:url(https://api.map.baidu.com/images/addrPage.png?v=20121107) no-repeat -21px -81px;text-align:center;line-height:29px;margin: 0 auto;cursor:pointer;color:#b35900} .sel_body_body td a{text-decoration: none; cursor: auto; } .sel_body_body td a:hover,.sel_body_body td a:focus{text-decoration:underline; }.panoInfoBox{cursor:pointer}.panoInfoBox{position:relative;width:323px;height:101px;margin-bottom:4px;cursor:pointer}.panoInfoBox .panoInfoBoxTitleBg{width:323px;height:19px;position:absolute;left:0;bottom:0;z-index:2;background-color:#000;opacity:.7}.panoInfoBox .panoInfoBoxTitleContent{font-size:12px;color:#fff;position:absolute;bottom:2px;left:5px;z-index:3;text-decoration:none}.pano_switch_left,.pano_switch_right{position:absolute;width:28px;height:38px;cursor:pointer;background-color:#252525;background-color:rgba(37,37,37,.9)}.pano_switch_left{background:url(https://api.map.baidu.com/images/panorama/zuojiantou.png) no-repeat;-webkit-background-size:100% 100%;background-size:100% 100%}.pano_switch_right{background:url(https://api.map.baidu.com/images/panorama/youjiantou.png) no-repeat;-webkit-background-size:100% 100%;background-size:100% 100%}.pano_switch_left:hover{background:url(https://api.map.baidu.com/images/panorama/zuojiantou_hover.png) no-repeat;-webkit-background-size:100% 100%;background-size:100% 100%}.pano_switch_right:hover{background:url(https://api.map.baidu.com/images/panorama/youjiantou_hover.png) no-repeat;-webkit-background-size:100% 100%;background-size:100% 100%}.pano_switch_left.pano_switch_disable,.pano_switch_right.pano_switch_disable{background:0 0;border:none}.pano_poi_1,.pano_poi_2,.pano_poi_4{display:inline-block;width:16px;height:16px;vertical-align:middle;background:url(https://gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv/newmap/static/common/images/pano_whole/guide_icons_4b871b2.png) no-repeat;background-position:0 0}.pano_photo_arrow_l,.pano_photo_arrow_r{position:absolute;top:0;width:20px;height:100%;background:#f3eeee}.pano_photo_arrow_l{left:0}.pano_photo_arrow_r{right:0}.pano_arrow_l,.pano_arrow_r{display:inline-block;width:18px;height:18px;background:url(https://gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv/newmap/static/common/images/pano_whole/pano-icons_223a291.png) no-repeat}.pano_catlogLi{cursor:pointer;position:relative;line-height:10px;font-size:10px;text-align:center;color:#abb0b2;border:1px solid #53565c;padding:3px 0;margin-top:3px;margin-left:2px;width:90%}.pano_catlogLi:hover{color:#3DAAFC;border:1px solid #3DAAFC}.pano_catlogLiActive{color:#3DAAFC;border:1px solid #3DAAFC}.pano_arrow_l{background-position:0 -36px}.pano_arrow_r{background-position:-54px -36px}.pano_photo_arrow_l:hover .pano_arrow_l{background-position:-18px -36px}.pano_photo_arrow_r:hover .pano_arrow_r{background-position:-72px -36px}.pano_photo_arrow_l.pano_arrow_disable .pano_arrow_l{background-position:-36px -36px}.pano_photo_arrow_r.pano_arrow_disable .pano_arrow_r{background-position:-90px -36px}.pano_photo_item{position:relative;float:left;line-height:0;padding-left:8px}.pano_photo_decs{position:absolute;bottom:1px;left:0;padding:2px 0;text-indent:5px;margin-left:8px;display:inline-block;color:#fff;background:#000;opacity:.5;filter:alpha(opacity=50)9;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.pano_photo_item img{display:inline-block;border:solid 1px #252525}.pano_photo_item:hover img{border-color:#005efc}.pano_photo_item_seleted{position:absolute;top:0;left:-100000px;border:3px solid #097df3}.pano_close{position:absolute;right:10px;top:10px;width:40px;cursor:pointer;height:40px;line-height:40px;border-radius:3px;background-color:rgba(37,37,37,.9);background-image:url(https://api.map.baidu.com/images/panorama/close.png);background-repeat:no-repeat;background-position:center center;background-size:90%}.pano_close:hover{background-image:url(https://api.map.baidu.com/images/panorama/close_hover.png)}.pano_pc_indoor_exit{position:absolute;right:60px;top:10px;width:89px;cursor:pointer;height:40px;line-height:40px;color:#ebedf0;border-radius:3px;background-color:#252525;background-color:rgba(37,37,37,.9);background-image:url(https://api.map.baidu.com/images/panorama/indoor_exit.png);background-repeat:no-repeat;background-position:15px 12px}.pano_pc_indoor_exit:hover{background-image:url(https://api.map.baidu.com/images/panorama/indoor_exit_hover.png);color:#2495ff}.pano_m_indoor_exit{font-size:16px;position:absolute;right:30px;top:10px;width:89px;cursor:pointer;height:40px;line-height:40px;color:#ebedf0;border-radius:3px;background-color:#252525;background-color:rgba(37,37,37,.9);background-image:url(https://api.map.baidu.com/images/panorama/indoor_exit.png);background-repeat:no-repeat;background-position:15px 12px}.navtrans-table tr{color:#666}.navtrans-table tr:hover{color:#333}.navtrans-navlist-icon{float:left;width:18px;height:16px;background:url(https://gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv/wolfman/static/common/images/nav-icon_b5c3223.png) no-repeat 0px 0px;_background:url(https://gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv/wolfman/static/common/images/nav-icon_ie6_134841b.png) no-repeat 0px 0px;margin-top:2px;margin-right:5px}.navtrans-navlist-icon.s-1{background-position:0px 0px}.navtrans-navlist-icon.s-2{background-position:-18px 0px}.navtrans-navlist-icon.s-3{background-position:-36px 0px}.navtrans-navlist-icon.s-4{background-position:-54px 0px}.navtrans-navlist-icon.s-5{background-position:-72px 0px}.navtrans-navlist-icon.s-6{background-position:-90px 0px}.navtrans-navlist-icon.s-7{background-position:0px -16px}.navtrans-navlist-icon.s-8{background-position:-18px -16px}.navtrans-navlist-icon.s-9{background-position:-36px -16px}.navtrans-navlist-icon.s-10{background-position:-54px -16px}.navtrans-navlist-icon.s-11{background-position:-72px -16px}.navtrans-navlist-icon.s-12{background-position:-90px -16px}.navtrans-navlist-icon.s-13{background-position:0px -32px}.navtrans-navlist-icon.s-14{background-position:-18px -32px}.navtrans-navlist-icon.s-18{background-position:-36px -32px}.navtrans-navlist-icon.s-19{background-position:-54px -32px}.navtrans-navlist-icon.s-20{background-position:-72px -32px}.navtrans-navlist-icon.s-21{background-position:-90px -32px}.navtrans-navlist-icon.nav-st,.navtrans-navlist-icon.nav-through{background-position:-16px -70px}.navtrans-navlist-icon.nav-ed{background-position:0px -70px}.navtrans-view{border-top:1px solid #e4e6e7;border-left:1px solid #e4e6e7;border-right:1px solid #e4e6e7}.navtrans-view:hover{cursor:pointer}.navtrans-view .navtrans-arrow{position:absolute;top:8px;right:5px;width:7px;height:4px;background-image:url(https://gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv/wolfman/static/common/images/nav-icon_b5c3223.png);background-repeat:no-repeat;background-position:-40px -70px;margin-top:3px;margin-right:3px;_background-image:url(https://gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv/wolfman/static/common/images/nav-icon_ie6_134841b.png)}.navtrans-view.expand:hover .navtrans-arrow{background-position:-61px -70px}.navtrans-view.expand .navtrans-arrow{background-position:-54px -70px}.navtrans-view:hover .navtrans-arrow{background-position:-47px -70px}.navtrans-navlist-content{overflow:hidden}.navtrans-res{border-bottom:1px solid #E4E6E7;border-left:1px solid #E4E6E7;border-right:1px solid #E4E6E7}.navtrans-bus-icon{display:inline-block;float:left;background-image:url(https://gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv/wolfman/static/common/images/ui3/mo_banner_e1aa2e6.png);background-repeat:no-repeat}.navtrans-bus-icon.bus{width:13px;height:16px;background-position:-1px -192px;position:relative;top:4px}.navtrans-bus-icon.walk{width:16px;height:18px;background-position:-63px -189px;position:relative;top:2px;left:-2px}.navtrans-bus-desc{line-height:24px;margin-left:20px}.navtrans-busstation{color:#36c;font-weight:600}.tranroute-plan-list.expand .trans-title{border-bottom:1px solid #e4e6e7;background-color:#ebf1fb}.trans-plan-content tr td:hover .bus{background-position:-15px -192px}.trans-plan-content tr td:hover .walk{background-position:-82px -189px}.suggest-plan{position:absolute;background-color:#0C88E8;padding:0px 15px;line-height:20px;color:#fff;left:0px;top:0px}.suggest-plan-des{text-align:left;padding:29px 0px 0px 25px;font-size:13px;color:#000}.bmap-clearfix{*+height:1%}.bmap-clearfix:after{content:".";display:block;height:0px;clear:both;visibility:hidden}.BMap_CityListCtrl{font-size:12px}.BMap_CityListCtrl a{text-decoration:none!important}.BMap_CityListCtrl a:hover{text-decoration:underline!important}.BMap_CityListCtrl .citylist_popup_main{border:1px solid #cdcdcd;z-index:2;position:relative;width:100%;height:100%;background:#fafafa;overflow:hidden;box-shadow:1px 1px 1px rgba(0,0,0,.1)}.ui_city_change_top .ui_city_change_inner,.ui_city_change_bottom .ui_city_change_inner{display:inline-block;height:24px;line-height:24px;border:1px solid #c4c7cc;background-color:#fff;padding:0 10px 0 10px;color:#000}.ui_city_change_top .ui_city_change_inner i,.ui_city_change_bottom .ui_city_change_inner i{width:8px;height:6px;display:inline-block;position:relative;top:9px;left:5px;-webkit-transition:all ease-in-out .15s;transition:all ease-in-out .15s;display:none9}.ui_city_change_click .ui_city_change_inner i,.ui_city_change_click_close .ui_city_change_inner i{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}.ui_city_change_top .ui_city_change_inner:hover em{border-top-color:#0C88E8}.ui_city_change_top .ui_city_change_inner em{width:0;height:0;border-color:rgba(255,255,255,0);border-top-color:#D0D4DA;border-style:solid;border-width:4px}.ui_city_change_top .ui_city_change_inner:hover,.ui_city_change_bottom .ui_city_change_inner:hover{text-decoration:none!important;color:#3d6dcc}.ui_city_change_bottom .ui_city_change_inner:hover em{border-bottom-color:#0C88E8}.ui_city_change_bottom .ui_city_change_inner em{width:0;height:0;border-color:rgba(255,255,255,0);border-bottom-color:#D0D4DA;border-style:solid;border-width:4px;position:relative;top:-18px}.citylist_popup_main .citylist_ctr_title{background:#f9f9f9;border-bottom:1px solid #dadada;height:25px;line-height:25px;font-size:12px;color:#4c4c4c;padding-left:7px}.citylist_popup_main .city_content_top{position:relative;height:30px;padding:15px 10px 0px 10px;border-bottom:1px solid #CCC;margin:0px 10px}.citylist_popup_main .city_content_top .cur_city_info{display:inline-block;margin:0;padding:0;}#city_ctrl_form{position:absolute;right:12px;top:10px}#selCityWd{border:1px solid #ccc;height:20px;width:121px;line-height:20px;text-indent:4px;outline:none}#selCitySubmit:hover{background-position:-355px -98px}#selCitySubmit{float:right;background:url(https://gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv/wolfman/static/common/images/index_a2f1ac4.png) no-repeat scroll -302px -98px;height:24px;line-height:24px;width:48px;cursor:pointer;margin-left:5px;text-align:center}#sel_city_letter_list{padding-top:10px}#sel_city_letter_list a{white-space:nowrap;margin-right:11px;line-height:18px;font-size:13px;font-family:Arial,Helvetica,SimSun,sans-serif}.city_content_medium{padding:10px 10px 10px 10px;border-bottom:1px solid #CCC;margin:0px 10px}.city_content_bottom{padding:10px 10px 10px 8px;margin:9px 5px 5px 5px;height:218px;overflow-y:auto}#city_detail_table tr td{vertical-align:top}.sel_city_hotcity a{color:#3d6dcc}.sel_city_letter{padding:0 14px 0 3px}.sel_city_letter div{font-size:24px;line-height:24px;font-weight:700;color:#ccc;padding:0;margin:0;font-family:Arial,Helvetica,SimSun,sans-serif}.sel_city_sf{padding-right:8px;font-weight:700}.sel_city_sf a{white-space:nowrap;line-height:18px;color:#3d6dcc}.city_names_wrap{margin-bottom:9px}.sel_city_name{color:#3d6dcc;white-space:nowrap;margin-right:9px;line-height:18px;float:left}#popup_close{outline:none;position:absolute;z-index:50;top:7px;right:6px;width:12px;height:12px;background:url(https://gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv/wolfman/static/common/images/popup_close_15d2283.gif) no-repeat;border:0;cursor:pointer}</style><link rel="stylesheet" type="text/css" href="./导航分页——去实体店_files/bmap_autocomplete.css"></head>
+<body>    
+    
+
+<div id="masthead" class="masthead">
+    <div id="mastheadinfo" class="layout">
+        <ul class="menu-nav">
+            <li class="nav"><a href="https://jiameng.yichao.cn/">眼镜店加盟</a></li>
+            <li class="nav nav-line">|</li>
+            <li class="nav"><a href="https://www.yichao.cn/comment/0-1.html">眼镜评论</a></li>
+            <li class="nav nav-line">|</li>
+            <li class="nav"><a href="https://www.yichao.cn/hd/about.aspx">认识亿超</a></li>
+            <li class="nav nav-line">|</li>
+            <li class="nav nav-dropdown">
+                <div class="nav-title">
+                    <a href="https://m.yichao.cn/">手机网站</a>
+                </div>
+                <div class="nav-list">
+                    <img src="./导航分页——去实体店_files/myichaocn.jpg" data-img="/images/myichaocn.jpg">
+                </div>
+            </li>
+            <li class="nav nav-line">|</li>
+            <li class="nav nav-dropdown">
+                <div class="nav-title">
+                    <a href="https://city.yichao.cn/shop/shop-10155.html#">网站导航</a>
+                </div>
+                <div class="nav-list">
+                    <ul class="nav-map">
+                        <li class="nav1"><h3>商品分类</h3><a href="https://www.yichao.cn/yanjingkuang/" target="_blank">眼镜框</a><a href="https://www.yichao.cn/yanjingpian/" target="_blank">眼镜片</a><a href="https://www.yichao.cn/yinxingyanjing/" target="_blank">隐形美瞳</a><a href="https://www.yichao.cn/taiyangjing/" target="_blank">太阳镜</a><a href="https://www.yichao.cn/youyongchanpin/" target="_blank">游泳镜</a><a href="https://www.yichao.cn/fangfusheyanjing/" target="_blank">防辐射眼镜</a><a href="https://www.yichao.cn/laohuajing/" target="_blank">老花镜</a><a href="https://www.yichao.cn/peijian/" target="_blank">眼镜配件</a></li><li class="nav2"><h3>全国实体店</h3><a href="https://city.yichao.cn/beijing/">北京</a><a href="https://city.yichao.cn/shanghai/">上海</a><a href="https://city.yichao.cn/tianjin/">天津</a><a href="https://city.yichao.cn/chongqing/">重庆</a><a href="https://city.yichao.cn/zjhangzhou/">浙江杭州</a><a href="https://city.yichao.cn/zhejiangningbo/">浙江宁波</a><a href="https://city.yichao.cn/zhejingshaoxin/">浙江绍兴</a><a href="https://city.yichao.cn/gdshenzhen/">广东深圳</a><a href="https://city.yichao.cn/gdguangzhou/">广东广州</a><a href="https://city.yichao.cn/hzchangxing/">湖州长兴</a><a href="https://city.yichao.cn/huzhoudeqing/">湖州德清</a><a href="https://city.yichao.cn/shanxixian/">陕西西安</a><a href="https://city.yichao.cn/yunnandali/">云南大理</a><a href="https://city.yichao.cn/xjyining/">新疆伊宁</a><a href="https://city.yichao.cn/hunanchangsha/">湖南长沙</a></li><li class="nav3"><h3>关于亿超</h3><a href="https://www.yichao.cn/hd/about.aspx" target="_blank">亿超简介</a><a href="https://www.yichao.cn/about-13211.html" target="_blank">亿超荣誉</a><a href="https://jiameng.yichao.cn/" target="_blank">加盟合作</a><a href="https://www.yichao.cn/links.html" target="_blank">友情链接</a></li><li class="nav4"><h3>帮助中心</h3><a href="https://www.yichao.cn/orderquery.html" target="_blank">查询订单</a><a href="https://www.yichao.cn/help-13209.html" target="_blank">退货换货</a><a href="https://www.yichao.cn/help-13206.html" target="_blank">优惠券使用</a><a href="https://www.yichao.cn/help-13208.html" target="_blank">物流运费</a><a href="https://www.yichao.cn/help-13203.html" target="_blank">购物流程</a></li><li class="nav5"><h3>眼镜知识</h3><a href="https://www.yichao.cn/school-106.html" target="_blank">亿超动态</a><a href="https://www.yichao.cn/school-127.html" target="_blank">时尚前沿</a><a href="https://www.yichao.cn/school-105.html" target="_blank">隐形美瞳</a><a href="https://www.yichao.cn/school-107.html" target="_blank">配镜知识</a><a href="https://www.yichao.cn/school-108.html" target="_blank">时尚太阳镜</a><a href="https://www.yichao.cn/school-110.html" target="_blank">护理保养</a><a href="https://www.yichao.cn/school-109.html" target="_blank">行业资讯</a><a href="https://www.yichao.cn/school-133.html" target="_blank">媒体报道</a><a href="https://www.yichao.cn/school-144.html" target="_blank">眼镜专题</a><a href="https://www.yichao.cn/school-143.html" target="_blank">品牌专题</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav pull-right"><a href="https://www.yichao.cn/cart.html" class="nav-cart">购物车(<i id="myCartQty">0</i>)</a>
+                <div class="cart-warp">
+                    <div class="cart-shd"> <div class="nothing-msg"> <p>购物车中还没有商品,赶紧选购吧!</p></div></div>
+                </div>
+            </li>
+            <li class="nav pull-right nav-dropdown">
+                
+                <a href="https://www.yichao.cn/login.html" class="nav-login-register">登录</a>|<a href="https://www.yichao.cn/register.html" class="nav-login-register">注册</a>
+                
+            </li>
+        </ul>
+
+
+    </div>
+</div>
+
+
+    <div class="layout header">
+        <div class="head">
+            <div class="logo">
+                <a href="https://www.yichao.cn/">
+                    <img src="./导航分页——去实体店_files/logo.jpg" alt="亿超LOGO" class="firstload"></a>
+            </div>
+            <script type="text/javascript">
+                function doSerchCity() {
+                    var serchValue = $.trim($("#iptcityvalue").val());
+                    var isExists = false;
+                    if (serchValue != null && serchValue != "" && serchValue != "请输入城市名") {
+                        var reg = new RegExp("([\W]*" + serchValue + ")");
+                        $("#scroll-pane a").each(function () {
+                            if ($(this).html() != "" && reg.test($(this).html())) {
+                                window.location.href = $(this).attr("href");
+                                isExists = true;
+                                return false;
+                            }
+                        });
+                    }
+                    if (!isExists) {
+                        $("#spannotfind").show();
+                    }
+                }
+                function setCityCookie(sName, sValue, cityUrl, cityName) {
+                    SetCooike(sName, sValue);
+                    var defaultCity = $("#aDefaultCity");
+                    if (cityUrl) {
+                        defaultCity.attr("href", cityUrl);
+                        defaultCity.html(cityName);
+                        defaultCity.parent().show();
+                    }
+                    else {
+                        defaultCity.attr("href", '');
+                        defaultCity.html('');
+                        defaultCity.parent().hide();
+                    }
+                }
+
+                function SetCooike(sName, sValue) {
+                    var d = new Date();
+                    d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+                    expires = "; expires=" + d.toGMTString();
+                    document.cookie = sName + "=" + sValue + expires + "; path=/;domain=yichao.cn";
+                }
+
+            </script>
+            <div id="selectCity" class="selectCity">
+                <strong class="current-city">
+                    浙江杭州站</strong>
+                <div class="toggle">
+                    <span class="button">切换城市</span>
+                    <div id="citylist" class="citylist">
+                        <a class="citylist-close" title="关闭" href="javascript:;"></a>
+                        
+                        <div class="default">
+                            <p style="display:none;">您默认的城市是：<a id="aDefaultCity" class="color-red" href="https://city.yichao.cn/shop/shop-10155.html"></a> <a class="color-red" onclick="setCityCookie(&#39;SITE_COOKIE_DEFAULTSITEIDNEW&#39;,&#39;&#39;);return false;" href="javaScript:;">[删除]</a></p>
+                        </div>
+                        <div class="important">
+                            <b><a href="https://www.yichao.cn/">亿超商城</a></b><a href="https://city.yichao.cn/zjhangzhou/">杭州市</a><a href="https://city.yichao.cn/beijing/">北京</a><a href="https://city.yichao.cn/gdguangzhou/">广州市</a><a href="https://city.yichao.cn/shanghai/">上海</a><a href="https://city.yichao.cn/gdshenzhen/">深圳市</a>
+                        </div>
+                        <div class="search">
+                            <input id="iptcityvalue" class="input" type="text" onfocus="$(&#39;#spannotfind&#39;).hide();if (this.value == &#39;请输入城市名&#39;) this.value = &#39;&#39;;this.className = &#39;input input-focus&#39;;" onblur="$(&#39;#spannotfind&#39;).hide();if (this.value == &#39;&#39;) this.value = &#39;请输入城市名&#39;;this.className = &#39;input&#39;;" value="请输入城市名">
+                            &nbsp;<span id="spannotfind" style="color: Red; display: none;">抱歉，该城市暂无体验馆！</span>
+                            <button class="btn" id="btnserchcity" onclick="doSerchCity();return false;">
+                                搜索</button>
+                        </div>
+                        <div id="anchors" class="anchors">
+                            <a href="avascript:;" class="anchor-B">B</a><a href="avascript:;" class="anchor-C">C</a><a href="avascript:;" class="anchor-D">D</a><a href="avascript:;" class="anchor-F">F</a><a href="avascript:;" class="anchor-G">G</a><a href="avascript:;" class="anchor-H">H</a><a href="avascript:;" class="anchor-J">J</a><a href="avascript:;" class="anchor-K">K</a><a href="avascript:;" class="anchor-L">L</a><a href="avascript:;" class="anchor-N">N</a><a href="avascript:;" class="anchor-Q">Q</a><a href="avascript:;" class="anchor-S">S</a><a href="avascript:;" class="anchor-T">T</a><a href="avascript:;" class="anchor-W">W</a><a href="avascript:;" class="anchor-X">X</a><a href="avascript:;" class="anchor-Y">Y</a><a href="avascript:;" class="anchor-Z">Z</a>
+                        </div>
+                        <div id="scroll-pane" class="scroll-pane">
+                            <ul>
+                                <li><b class="icon-anchors anchor-B">B</b><a href="https://city.yichao.cn/beijing/">北京</a><a href="https://city.yichao.cn/yunnanbaoshan/">保山市</a></li><li><b class="icon-anchors anchor-C">C</b><a href="https://city.yichao.cn/chongqing/">重庆</a><a href="https://city.yichao.cn/hzchangxing/">长兴县</a><a href="https://city.yichao.cn/hunanchangsha/">长沙市</a><a href="https://city.yichao.cn/changzhi/">长治市</a><a href="https://city.yichao.cn/chengdu/">成都市</a></li><li><b class="icon-anchors anchor-D">D</b><a href="https://city.yichao.cn/huzhoudeqing/">德清县</a><a href="https://city.yichao.cn/dunhuang/">敦煌市</a><a href="https://city.yichao.cn/gddongguan/">东莞市</a><a href="https://city.yichao.cn/yunnandali/">大理白族自治州</a></li><li><b class="icon-anchors anchor-F">F</b><a href="https://city.yichao.cn/guangdongfengshun/">丰顺县</a><a href="https://city.yichao.cn/fengcheng/">丰城市</a></li><li><b class="icon-anchors anchor-G">G</b><a href="https://city.yichao.cn/gdguangzhou/">广州市</a><a href="https://city.yichao.cn/gongcheng/">恭城瑶族自治县</a><a href="https://city.yichao.cn/geermu/">格尔木市</a><a href="https://city.yichao.cn/jiangxiganxian/">赣县</a></li><li><b class="icon-anchors anchor-H">H</b><a href="https://city.yichao.cn/zjhangzhou/">杭州市</a><a href="https://city.yichao.cn/huzhou/">湖州市</a><a href="https://city.yichao.cn/hainanhaikou/">海口市</a><a href="https://city.yichao.cn/huaihua/">怀化市</a><a href="https://city.yichao.cn/heilongjiangdaqing/">黑龙江大庆市</a><a href="https://city.yichao.cn/huizhou/">惠州市</a><a href="https://city.yichao.cn/huairen/">怀仁县</a></li><li><b class="icon-anchors anchor-J">J</b><a href="https://city.yichao.cn/jining/">济宁市</a><a href="https://city.yichao.cn/jinsha/">金沙县</a><a href="https://city.yichao.cn/jiangmeng/">江门市</a><a href="https://city.yichao.cn/jiaxing/">嘉兴市</a><a href="https://city.yichao.cn/gdjieyang/">揭阳市</a><a href="https://city.yichao.cn/henanjiaozuo/">焦作市</a><a href="https://city.yichao.cn/jiamusi/">佳木斯市</a></li><li><b class="icon-anchors anchor-K">K</b><a href="https://city.yichao.cn/kunming/">昆明市</a></li><li><b class="icon-anchors anchor-L">L</b><a href="https://city.yichao.cn/luquan/">禄劝彝族苗族自治县</a><a href="https://city.yichao.cn/luoyang/">洛阳市</a></li><li><b class="icon-anchors anchor-N">N</b><a href="https://city.yichao.cn/nancang/">南昌市</a><a href="https://city.yichao.cn/zhejiangningbo/">宁波市</a></li><li><b class="icon-anchors anchor-Q">Q</b><a href="https://city.yichao.cn/yunnanqjing/">曲靖市</a></li><li><b class="icon-anchors anchor-S">S</b><a href="https://city.yichao.cn/shangqiu/">商丘市</a><a href="https://city.yichao.cn/shanghai/">上海</a><a href="https://city.yichao.cn/zhejingshaoxin/">绍兴市</a><a href="https://city.yichao.cn/gdshenzhen/">深圳市</a></li><li><b class="icon-anchors anchor-T">T</b><a href="https://city.yichao.cn/tianjin/">天津</a><a href="https://city.yichao.cn/taizhou/">台州市</a><a href="https://city.yichao.cn/tongxiang/">桐乡市</a></li><li><b class="icon-anchors anchor-W">W</b><a href="https://city.yichao.cn/zjwenzhou/">温州市</a><a href="https://city.yichao.cn/shangdongweifang/">潍坊市</a></li><li><b class="icon-anchors anchor-X">X</b><a href="https://city.yichao.cn/xiapu/">霞浦县</a><a href="https://city.yichao.cn/xianggelila/">香格里拉市</a><a href="https://city.yichao.cn/xianju/">仙居县</a><a href="https://city.yichao.cn/shanxixian/">西安市</a><a href="https://city.yichao.cn/qujinxwei/">宣威市</a><a href="https://city.yichao.cn/qhxining/">西宁市</a></li><li><b class="icon-anchors anchor-Y">Y</b><a href="https://city.yichao.cn/xjyining/">伊宁市</a><a href="https://city.yichao.cn/jiangxiyichun/">宜春市</a><a href="https://city.yichao.cn/yangzhong/">扬中市</a><a href="https://city.yichao.cn/yueqing/">乐清市</a></li><li><b class="icon-anchors anchor-Z">Z</b><a href="https://city.yichao.cn/shandongzouping/">邹平县</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headad">
+            
+        </div>
+        <div class="sitesearch">
+            <div class="search-form">
+                <input id="site_top_search" class="input" type="text" onkeydown="EnterSearch();">
+                <a class="button" onclick="Search(); return false;" href="javascript:void(0);">
+                    <img src="./导航分页——去实体店_files/iconfont-fangdajing.png" class="firstload" height="22" width="22"></a>
+                <script>
+                    $(function () {
+                        $("#navs_li3").mouseover(function () {
+                            $(this).children().show();;
+                        });
+                        $("#navs_li3").mouseleave(function () {
+                            $(this).children("div").hide();;
+                        });
+                        $(".button").hover(function () {
+                            $(this).children("img").attr("src", "/images/iconfont-fangdajing (1).png").css("background-color", "#b91c2b");
+                        });
+                        $(".button").mouseleave(function () {
+                            $(this).children("img").attr("src", "/images/iconfont-fangdajing.png").css("background-color", "#fff");
+                        });
+                        $(".ad-hide").click(function () { $(".ad-full").hide() });
+                        $("#navs_li1").hover(function () {
+                            $(this).find(".shopds").show();
+                        }, function () {
+                            $(this).find(".shopds").hide();
+                        })
+                        var $navSli = $('.navs-slider');
+                        var $cityWrap = $navSli.find(".cityWrap");
+
+                        $cityWrap.each(function () {
+                            var self = $(this);
+                            var $a = self.find("a");
+                            var childLength = $a.length;
+                            if (childLength) {
+                                if (childLength == 1) {
+                                    self.css("width", "33.3%");
+                                    $a.css("width", "100%");
+                                }
+                                if (childLength >= 2) {
+                                    self.css("width", "100%");
+                                    $a.css("width", "33.3%");
+                                }
+                            }
+                        });
+                    })
+
+                </script>
+            </div>
+
+            <div class="hot">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navibar">
+        <div class="layout">
+            <div id="classify" class="classify" data-ishome="false">
+                <a href="javascript:;" class="classify-all">所有商品分类<i class="arrow_down"></i></a>
+                
+                    <div class="classify-body">
+                        <div class="cl-hd"><div class="cl-bd"><i class="arrow"></i><dl><dt><i class="icon_101"></i><a href="https://www.yichao.cn/yanjingkuang/">眼镜框</a></dt></dl></div><div class="cl-content" style="top:-0px"><dl class="cl-c-list"><dt class="red">品牌</dt><dd><a href="https://www.yichao.cn/yanjingkuang/yichao/" target="_blank">亿超</a><a href="https://www.yichao.cn/yanjingkuang/mode/" target="_blank">MODELE</a><a href="https://www.yichao.cn/yanjingkuang/zuochuantengjing/" target="_blank">佐川藤井</a><a href="https://www.yichao.cn/yanjingkuang/amani/" target="_blank">阿玛尼</a><a href="https://www.yichao.cn/yanjingkuang/ck/" target="_blank">CK</a><a href="https://www.yichao.cn/yanjingkuang/pulada/" target="_blank">普拉达</a><a href="https://www.yichao.cn/yanjingkuang/guchi/" target="_blank">古驰</a><a href="https://www.yichao.cn/yanjingkuang/dior/" target="_blank">迪奥</a><a href="https://www.yichao.cn/yanjingkuang/dupeng/" target="_blank">都彭</a><a href="https://www.yichao.cn/yanjingkuang/bobaili/" target="_blank">博柏利</a><a href="https://www.yichao.cn/yanjingkuang/naike/" target="_blank">耐克</a><a href="https://www.yichao.cn/yanjingkuang/jilongxue/" target="_blank">姬龙雪</a><a href="https://www.yichao.cn/yanjingkuang/dg/" target="_blank">D&amp;G</a><a href="https://www.yichao.cn/yanjingkuang/leipeng/" target="_blank">雷朋</a><a href="https://www.yichao.cn/yanjingkuang/oukeli/" target="_blank">欧克利</a><a href="https://www.yichao.cn/yanjingkuang/kouchi/" target="_blank">蔻驰</a><a href="https://www.yichao.cn/yanjingkuang/baolong/" target="_blank">暴龙</a><a href="https://www.yichao.cn/yanjingkuang/woge/" target="_blank">沃格</a><a href="https://www.yichao.cn/yanjingkuang/eyu/" target="_blank">鳄鱼</a><a href="https://www.yichao.cn/yanjingkuang/jinggong/" target="_blank">精工</a><a href="https://www.yichao.cn/yanjingkuang/baozi/" target="_blank">宝姿</a><a href="https://www.yichao.cn/yanjingkuang/liweisi/" target="_blank">李维斯</a><a href="https://www.yichao.cn/yanjingkuang/pailimeng/" target="_blank">派丽蒙</a><a href="https://www.yichao.cn/yanjingkuang/sanshiqidu/" target="_blank">37度</a><a href="https://www.yichao.cn/yanjingkuang/guess/" target="_blank">GUESS</a><a href="https://www.yichao.cn/yanjingkuang/tangmufute/" target="_blank">汤姆福特</a><a href="https://www.yichao.cn/yanjingkuang/wanbaolong/" target="_blank">万宝龙</a><a href="https://www.yichao.cn/yanjingkuang/feilagemu/" target="_blank">菲拉格慕</a><a href="https://www.yichao.cn/yanjingkuang/zhuchuanmuye/" target="_blank">竹川木野</a><a href="https://www.yichao.cn/yanjingkuang/xinbailun/" target="_blank">新百伦</a></dd><dt class="red">价格</dt><dd><a href="https://www.yichao.cn/yanjingkuang/300yuan/" target="_blank">0-300元</a><a href="https://www.yichao.cn/yanjingkuang/500yuan/" target="_blank">301-500元</a><a href="https://www.yichao.cn/yanjingkuang/900yuan/" target="_blank">501-900元</a><a href="https://www.yichao.cn/yanjingkuang/900yuanyishang/" target="_blank">900元以上</a></dd><dt class="red">风格</dt><dd><a href="https://www.yichao.cn/yanjingkuang/shangwu/" target="_blank">商务</a><a href="https://www.yichao.cn/yanjingkuang/xiuxian/" target="_blank">休闲</a><a href="https://www.yichao.cn/yanjingkuang/chaokuan/" target="_blank">潮款</a><a href="https://www.yichao.cn/yanjingkuang/yundong/" target="_blank">运动</a></dd><dt class="red">适合人群</dt><dd><a href="https://www.yichao.cn/yanjingkuang/ertong/" target="_blank">儿童</a><a href="https://www.yichao.cn/yanjingkuang/nannvtongyong/" target="_blank">男女通用</a><a href="https://www.yichao.cn/yanjingkuang/nvshi/" target="_blank">女士</a><a href="https://www.yichao.cn/yanjingkuang/nanshi/" target="_blank">男士</a></dd><dt class="red">材料</dt><dd><a href="https://www.yichao.cn/yanjingkuang/chuntai/" target="_blank">纯钛</a><a href="https://www.yichao.cn/yanjingkuang/wutan/" target="_blank">钨碳</a><a href="https://www.yichao.cn/yanjingkuang/bancai/" target="_blank">板材</a><a href="https://www.yichao.cn/yanjingkuang/taiban/" target="_blank">钛板</a><a href="https://www.yichao.cn/yanjingkuang/tr90/" target="_blank">TR90</a><a href="https://www.yichao.cn/yanjingkuang/jinshuhejin/" target="_blank">金属合金</a><a href="https://www.yichao.cn/yanjingkuang/huangniujiao/" target="_blank">黄牛角</a><a href="https://www.yichao.cn/yanjingkuang/muzhi/" target="_blank">木质</a></dd><dt class="red">边框</dt><dd><a href="https://www.yichao.cn/yanjingkuang/meixiankuang/" target="_blank">眉线框</a><a href="https://www.yichao.cn/yanjingkuang/wukuang/" target="_blank">无框</a><a href="https://www.yichao.cn/yanjingkuang/bankuang/" target="_blank">半框</a><a href="https://www.yichao.cn/yanjingkuang/quankuang/" target="_blank">全框</a></dd><dt class="channel"><a href="https://www.yichao.cn/yanjingkuang/" target="_blank">眼镜框频道<i></i></a></dt></dl><div class="clear"></div></div></div><div class="cl-hd"><div class="cl-bd"><i class="arrow"></i><dl><dt><i class="icon_100"></i><a href="https://www.yichao.cn/yanjingpian/">眼镜片</a></dt></dl></div><div class="cl-content" style="top:-50px"><dl class="cl-c-list"><dt class="red">品牌</dt><dd><a href="https://www.yichao.cn/yanjingpian/yichaojingpian/" target="_blank">亿超</a><a href="https://www.yichao.cn/yanjingpian/gaodingjingpian/" target="_blank">亿超高定</a><a href="https://www.yichao.cn/yanjingpian/caisi/" target="_blank">蔡司</a><a href="https://www.yichao.cn/yanjingpian/yishilu/" target="_blank">依视路</a></dd><dt class="red">适合度数</dt><dd><a href="https://www.yichao.cn/yanjingpian/825duyishang/" target="_blank">825度以上</a><a href="https://www.yichao.cn/yanjingpian/525dao800du/" target="_blank">525到800度</a><a href="https://www.yichao.cn/yanjingpian/325dao500du/" target="_blank">325到500度</a><a href="https://www.yichao.cn/yanjingpian/0dao300du/" target="_blank">0到300度</a></dd><dt class="red">类型</dt><dd><a href="https://www.yichao.cn/yanjingpian/jinshiputongpian/" target="_blank">近视透明片</a><a href="https://www.yichao.cn/yanjingpian/biansepian/" target="_blank">变色片</a><a href="https://www.yichao.cn/yanjingpian/fangfushe/" target="_blank">防蓝光</a><a href="https://www.yichao.cn/yanjingpian/kangpilao/" target="_blank">抗疲劳</a><a href="https://www.yichao.cn/yanjingpian/ransepian/" target="_blank">染色片</a><a href="https://www.yichao.cn/yanjingpian/pianguangpian/" target="_blank">偏光片</a><a href="https://www.yichao.cn/yanjingpian/laohuapian/" target="_blank">老花片</a><a href="https://www.yichao.cn/yanjingpian/yanggungshaonian/" target="_blank">阳光少年</a><a href="https://www.yichao.cn/yanjingpian/fangwu/" target="_blank">防雾片</a><a href="https://www.yichao.cn/yanjingpian/jianjin/" target="_blank">渐进片</a></dd><dt class="red">材料</dt><dd><a href="https://www.yichao.cn/yanjingpian/mr8/" target="_blank">MR</a><a href="https://www.yichao.cn/yanjingpian/pctaikongpian/" target="_blank">PC太空片</a><a href="https://www.yichao.cn/yanjingpian/shuzhijingpian/" target="_blank">树脂镜片</a></dd><dt class="channel"><a href="https://www.yichao.cn/yanjingpian/" target="_blank">眼镜片频道<i></i></a></dt></dl><div class="clear"></div></div></div><div class="cl-hd"><div class="cl-bd"><i class="arrow"></i><dl><dt><i class="icon_102"></i><a href="https://www.yichao.cn/yinxingyanjing/">隐形眼镜</a></dt></dl></div><div class="cl-content" style="top:-100px"><dl class="cl-c-list"><dt class="red">隐形分类</dt><dd><a href="https://www.yichao.cn/yinxingyanjing/yuanshiyinxing/" target="_blank">远视隐形</a><a href="https://www.yichao.cn/yinxingyanjing/gaodushuyinxing/" target="_blank">高度数隐形</a><a href="https://www.yichao.cn/yinxingyanjing/sanguangyinxing/" target="_blank">散光隐形</a><a href="https://www.yichao.cn/yinxingyanjing/meitongcaipian/" target="_blank">美瞳彩片</a><a href="https://www.yichao.cn/yinxingyanjing/toumingyinxing/" target="_blank">透明隐形</a></dd><dt class="red">品牌</dt><dd><a href="https://www.yichao.cn/yinxingyanjing/boshilun/" target="_blank">博士伦</a><a href="https://www.yichao.cn/yinxingyanjing/qiangsheng/" target="_blank">强生</a><a href="https://www.yichao.cn/yinxingyanjing/haichang/" target="_blank">海昌</a><a href="https://www.yichao.cn/yinxingyanjing/weikang/" target="_blank">卫康</a><a href="https://www.yichao.cn/yinxingyanjing/kubo/" target="_blank">库博</a><a href="https://www.yichao.cn/yinxingyanjing/ouweishi/" target="_blank">欧威视</a></dd><dt class="red">更换周期</dt><dd><a href="https://www.yichao.cn/yinxingyanjing/ripao/" target="_blank">日抛</a><a href="https://www.yichao.cn/yinxingyanjing/shuangzhoupao/" target="_blank">双周抛</a><a href="https://www.yichao.cn/yinxingyanjing/yuepao/" target="_blank">月抛</a><a href="https://www.yichao.cn/yinxingyanjing/jipao/" target="_blank">季抛</a><a href="https://www.yichao.cn/yinxingyanjing/bannianpao/" target="_blank">半年抛</a><a href="https://www.yichao.cn/yinxingyanjing/nianpao/" target="_blank">年抛</a></dd><dt class="red">隐形颜色</dt><dd><a href="https://www.yichao.cn/yinxingyanjing/zengdazenghei/" target="_blank">增大增黑</a><a href="https://www.yichao.cn/yinxingyanjing/zongse/" target="_blank">棕色</a><a href="https://www.yichao.cn/yinxingyanjing/huise/" target="_blank">灰色</a><a href="https://www.yichao.cn/yinxingyanjing/lvse/" target="_blank">绿色</a><a href="https://www.yichao.cn/yinxingyanjing/zise/" target="_blank">紫色</a><a href="https://www.yichao.cn/yinxingyanjing/lanse/" target="_blank">蓝色</a></dd><dt class="channel"><a href="https://www.yichao.cn/yinxingyanjing/" target="_blank">隐形眼镜频道<i></i></a></dt></dl><div class="clear"></div></div></div><div class="cl-hd"><div class="cl-bd"><i class="arrow"></i><dl><dt><i class="icon_104"></i><a href="https://www.yichao.cn/huliye/">眼镜清洗</a></dt></dl></div><div class="cl-content" style="top:-150px"><dl class="cl-c-list"><dt class="red">品牌</dt><dd><a href="https://www.yichao.cn/huliye/haichang/" target="_blank">海昌</a><a href="https://www.yichao.cn/huliye/boshilun/" target="_blank">博士伦</a><a href="https://www.yichao.cn/huliye/weikang/" target="_blank">卫康</a><a href="https://www.yichao.cn/huliye/aierkang/" target="_blank">爱尔康</a></dd><dt class="red">品类</dt><dd><a href="https://www.yichao.cn/huliye/runyanye/" target="_blank">润眼液</a><a href="https://www.yichao.cn/huliye/huliye/" target="_blank">护理液</a></dd><dt class="channel"><a href="https://www.yichao.cn/huliye/" target="_blank">眼镜清洗频道<i></i></a></dt></dl><div class="clear"></div></div></div><div class="cl-hd"><div class="cl-bd"><i class="arrow"></i><dl><dt><i class="icon_103"></i><a href="https://www.yichao.cn/taiyangjing/">太阳镜</a></dt></dl></div><div class="cl-content" style="top:-200px"><dl class="cl-c-list"><dt class="red">品牌</dt><dd><a href="https://www.yichao.cn/taiyangjing/leipeng/" target="_blank">雷朋</a><a href="https://www.yichao.cn/taiyangjing/yichao/" target="_blank">亿超</a><a href="https://www.yichao.cn/taiyangjing/guchi/" target="_blank">古驰</a><a href="https://www.yichao.cn/taiyangjing/oukeli/" target="_blank">欧克利</a></dd><dt class="red">适合人群</dt><dd><a href="https://www.yichao.cn/taiyangjing/tongyong/" target="_blank">通用</a><a href="https://www.yichao.cn/taiyangjing/nvshi/" target="_blank">女士</a><a href="https://www.yichao.cn/taiyangjing/nanshi/" target="_blank">男士</a></dd><dt class="red">功能</dt><dd><a href="https://www.yichao.cn/taiyangjing/huaxuejing/" target="_blank">滑雪镜</a><a href="https://www.yichao.cn/taiyangjing/jinshi/" target="_blank">近视</a><a href="https://www.yichao.cn/taiyangjing/jiapian/" target="_blank">夹片</a><a href="https://www.yichao.cn/taiyangjing/pianguang/" target="_blank">偏光</a></dd><dt class="red">形状</dt><dd><a href="https://www.yichao.cn/taiyangjing/tuoyuanxing/" target="_blank">椭圆形</a><a href="https://www.yichao.cn/taiyangjing/fangxing/" target="_blank">方形</a><a href="https://www.yichao.cn/taiyangjing/hamajing/" target="_blank">蛤蟆镜</a></dd><dt class="channel"><a href="https://www.yichao.cn/taiyangjing/" target="_blank">太阳镜频道<i></i></a></dt></dl><div class="clear"></div></div></div><div class="cl-hd"><div class="cl-bd"><i class="arrow"></i><dl><dt><i class="icon_106"></i><a href="https://www.yichao.cn/youyongchanpin/">游泳产品</a></dt></dl></div><div class="cl-content" style="top:-250px"><dl class="cl-c-list"><dt class="red">功能分类</dt><dd><a href="https://www.yichao.cn/youyongchanpin/ertong/" target="_blank">儿童</a><a href="https://www.yichao.cn/youyongchanpin/pingguang/" target="_blank">平光</a><a href="https://www.yichao.cn/youyongchanpin/jinshi/" target="_blank">近视</a></dd><dt class="red">配件</dt><dd><a href="https://www.yichao.cn/youyongchanpin/bijiaersai/" target="_blank">鼻夹|耳塞</a><a href="https://www.yichao.cn/youyongchanpin/yongmao/" target="_blank">泳帽</a></dd><dt class="channel"><a href="https://www.yichao.cn/youyongchanpin/" target="_blank">游泳产品频道<i></i></a></dt></dl><div class="clear"></div></div></div><div class="cl-hd"><div class="cl-bd"><i class="arrow"></i><dl><dt><i class="icon_116"></i><a href="https://www.yichao.cn/qiebian/">钻石切边</a></dt></dl></div><div class="cl-content" style="top:-300px"><dl class="cl-c-list"><dt class="red">适合人群</dt><dd><a href="https://www.yichao.cn/qiebian/nvshi/" target="_blank">女士</a><a href="https://www.yichao.cn/qiebian/nanshi/" target="_blank">男士</a></dd><dt class="red">品牌</dt><dd><a href="https://www.yichao.cn/qiebian/meijing/" target="_blank">魅晶</a><a href="https://www.yichao.cn/qiebian/yichao/" target="_blank">亿超</a><a href="https://www.yichao.cn/qiebian/huanying/" target="_blank">幻影</a></dd><dt class="channel"><a href="https://www.yichao.cn/qiebian/" target="_blank">钻石切边频道<i></i></a></dt></dl><div class="clear"></div></div></div><div class="cl-end"><i class="icon_0"></i><a href="https://www.yichao.cn/brand.html" target="_blank">国际品牌</a></div><div class="cl-end"><i class="icon_1"></i><a href="https://www.yichao.cn/laohuajing/" target="_blank">老花镜</a></div><div class="cl-end"><i class="icon_2"></i><a href="https://www.yichao.cn/peijian/" target="_blank">眼镜配件</a></div>
+                    </div>
+                
+            </div>
+
+
+            <script>
+                $(function () {
+                    $(".navs li").mouseover(function () {
+                        $(this).addClass("current").siblings().removeClass("current");
+                    });
+                    $(".navs li").mouseleave(function () {
+                        $(this).removeClass("current");
+                    });
+                    $('#navs_li6').hide();
+                })
+                function GetCartNumber(isShow) {
+                    $.get("/ajax/CartList.ashx?url=https://www.yichao.cn/ajax/cartlist.ashx", function (data) {
+                        var str = "<ul>";
+                        for (var i = 0; i < data.Goodslist.length; i++) {
+                            str += "<li> <div><a  href='" + data.Goodslist[i].GoodsUrl + "' target='_blank'><img class=\"cart-img\" src=\"" + data.Goodslist[i].GoodsImage + "\" width=\"62\" height=\"62\"></a></div>" +
+                        "<div class=\"cart-shd-right\"><div><a  href='https://www.yichao.cn" + data.Goodslist[i].GoodsUrl + "' target='_blank'><span class=\"f-l\">" + data.Goodslist[i].GoodsName + "</span></a></div><br/><span class=\"f-r\">￥" + data.Goodslist[i].SalePrice + "×" + data.Goodslist[i].Qty + "</span></div></li>";
+
+                            }
+                            str += "</ul> <div class=\"cart-bottom\"><div class=\"btm-left\"><p>共" + data.GetTotalGoods + "件</p><p class=\"price-red\">" + data.GetTotalAmount + "元</p></div><div class=\"btm-right\"><button style=\"border:none\" onclick=\"linkblank('https://www.yichao.cn/cart.html')\" >去结算</button></div></div>  ";
+                            $("#myCartQty").html(data.GetTotalGoods);
+                            if (data.Goodslist.length == 0) {
+                                str = " <div class=\"nothing-msg\"> <p>购物车中还没有商品,赶紧选购吧!</p></div>";
+                            }
+                            $(".cart-shd").html(str);
+
+                        }, "json");
+
+
+                }
+               
+            </script>
+            <ul class="navs">
+                <li id="navs_li1"><a href="https://city.yichao.cn/zjhangzhou/">杭州实体店</a><ul class="shopds"><li onclick="javascript:location.href=&#39;/shop/shop-10019.html&#39;">杭州文晖路店</li><li onclick="javascript:location.href=&#39;/shop/shop-10000.html&#39;">杭州新塘路店</li><li onclick="javascript:location.href=&#39;/shop/shop-10006.html&#39;">杭州紫金港店</li><li onclick="javascript:location.href=&#39;/shop/shop-10002.html&#39;">杭州高技街店</li><li onclick="javascript:location.href=&#39;/shop/shop-10023.html&#39;">杭州近江店</li><li onclick="javascript:location.href=&#39;/shop/shop-10020.html&#39;">杭州滨江店</li><li onclick="javascript:location.href=&#39;/shop/shop-10160.html&#39;">杭州西溪永乐城店</li><li onclick="javascript:location.href=&#39;/shop/shop-10157.html&#39;">杭州五常翡翠城店</li><li onclick="javascript:location.href=&#39;/shop/shop-10155.html&#39;">杭州闲林竹海水韵店</li><li onclick="javascript:location.href=&#39;/shop/shop-10154.html&#39;">拱墅H108广场店</li><li onclick="javascript:location.href=&#39;/shop/shop-10153.html&#39;">杭州闲林桃源小镇店</li><li onclick="javascript:location.href=&#39;/shop/shop-10152.html&#39;">杭州文澜店</li><li onclick="javascript:location.href=&#39;/shop/shop-10149.html&#39;">杭州文二路店</li><li onclick="javascript:location.href=&#39;/shop/shop-10145.html&#39;">杭州北宸之光店</li><li onclick="javascript:location.href=&#39;/shop/shop-10143.html&#39;">杭州金惠路店</li><li onclick="javascript:location.href=&#39;/shop/shop-10136.html&#39;">杭州滨江贺田尚城店</li><li onclick="javascript:location.href=&#39;/shop/shop-10130.html&#39;">杭州海天城店</li><li onclick="javascript:location.href=&#39;/shop/shop-10129.html&#39;">杭州瓶窑店</li><li onclick="javascript:location.href=&#39;/shop/shop-10128.html&#39;">杭州蒋村花园店</li><li onclick="javascript:location.href=&#39;/shop/shop-10127.html&#39;">杭州西溪北苑店</li><li onclick="javascript:location.href=&#39;/shop/shop-10126.html&#39;">富阳桂花西路店</li><li onclick="javascript:location.href=&#39;/shop/shop-10117.html&#39;">杭州闲林山水店</li><li onclick="javascript:location.href=&#39;/shop/shop-10110.html&#39;">杭州西溪花园店</li><li onclick="javascript:location.href=&#39;/shop/shop-10107.html&#39;">杭州三里亭店</li><li onclick="javascript:location.href=&#39;/shop/shop-10105.html&#39;">杭州星桥店</li><li onclick="javascript:location.href=&#39;/shop/shop-10101.html&#39;">杭州仓前店</li><li onclick="javascript:location.href=&#39;/shop/shop-10096.html&#39;">杭州滨江春晓路店</li><li onclick="javascript:location.href=&#39;/shop/shop-10094.html&#39;">杭州塘栖镇店</li><li onclick="javascript:location.href=&#39;/shop/shop-10088.html&#39;">杭州亲亲家园店</li><li onclick="javascript:location.href=&#39;/shop/shop-10075.html&#39;">临安店</li><li onclick="javascript:location.href=&#39;/shop/shop-10065.html&#39;">杭州九堡店</li><li onclick="javascript:location.href=&#39;/shop/shop-10056.html&#39;">杭州闲林店</li><li onclick="javascript:location.href=&#39;/shop/shop-10051.html&#39;">杭州余杭总部店</li><li onclick="javascript:location.href=&#39;/shop/shop-10049.html&#39;">杭州江城店</li><li onclick="javascript:location.href=&#39;/shop/shop-10045.html&#39;">杭州北景园店</li><li onclick="javascript:location.href=&#39;/shop/shop-10038.html&#39;">杭州文三西路店</li><li onclick="javascript:location.href=&#39;/shop/shop-10035.html&#39;">杭州三墩店</li><li onclick="javascript:location.href=&#39;/shop/shop-10032.html&#39;">杭州老余杭店</li><li onclick="javascript:location.href=&#39;/shop/shop-10026.html&#39;">杭州萧山眼镜店</li><li onclick="javascript:location.href=&#39;/shop/shop-10014.html&#39;">杭州富阳店</li><li onclick="javascript:location.href=&#39;/shop/shop-10013.html&#39;">杭州临平店</li></ul></li><li id="navs_li2_1"><a href="https://city.yichao.cn/shop/map-10155.html">地图导航</a></li><li id="navs_li4"><a href="https://city.yichao.cn/shop/show-10155-1.html">晒单评论</a></li><li id="navs_li6" style="display: none;"><a href="https://www.yichao.cn/yuyue.aspx" target="_blank">上门验光</a></li><li id="navs_li5" class=""><a href="https://www.yichao.cn/">在线商城</a>
+                <div class="navs-shd">
+                    <div class="navs-slider">
+                        <div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/zjhangzhou/&#39;)">浙江杭州</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10019.html" style="width: 33.3%;">文晖路店</a><a href="https://city.yichao.cn/shop/shop-10000.html" style="width: 33.3%;">新塘路店</a><a href="https://city.yichao.cn/shop/shop-10006.html" style="width: 33.3%;">浙大紫金港店</a><a href="https://city.yichao.cn/shop/shop-10002.html" style="width: 33.3%;">高技街店</a><a href="https://city.yichao.cn/shop/shop-10023.html" style="width: 33.3%;">近江店</a><a href="https://city.yichao.cn/shop/shop-10020.html" style="width: 33.3%;">滨江店</a><a href="https://city.yichao.cn/shop/shop-10160.html" style="width: 33.3%;">永乐城店</a><a href="https://city.yichao.cn/shop/shop-10157.html" style="width: 33.3%;">翡翠城店</a><a href="https://city.yichao.cn/shop/shop-10155.html" style="width: 33.3%;">竹海水韵店</a><a href="https://city.yichao.cn/shop/shop-10154.html" style="width: 33.3%;">H108广场店</a><a href="https://city.yichao.cn/shop/shop-10153.html" style="width: 33.3%;">桃源小镇店</a><a href="https://city.yichao.cn/shop/shop-10152.html" style="width: 33.3%;">文澜店</a><a href="https://city.yichao.cn/shop/shop-10149.html" style="width: 33.3%;">文二路店</a><a href="https://city.yichao.cn/shop/shop-10145.html" style="width: 33.3%;">北宸之光店</a><a href="https://city.yichao.cn/shop/shop-10143.html" style="width: 33.3%;">萧山金惠路店</a><a href="https://city.yichao.cn/shop/shop-10136.html" style="width: 33.3%;">滨江贺田尚城店</a><a href="https://city.yichao.cn/shop/shop-10130.html" style="width: 33.3%;">海天城店</a><a href="https://city.yichao.cn/shop/shop-10129.html" style="width: 33.3%;">瓶窑店</a><a href="https://city.yichao.cn/shop/shop-10128.html" style="width: 33.3%;">蒋村花园店</a><a href="https://city.yichao.cn/shop/shop-10127.html" style="width: 33.3%;">西溪北苑店</a><a href="https://city.yichao.cn/shop/shop-10126.html" style="width: 33.3%;">桂花西路店</a><a href="https://city.yichao.cn/shop/shop-10117.html" style="width: 33.3%;">闲林山水店</a><a href="https://city.yichao.cn/shop/shop-10110.html" style="width: 33.3%;">西溪花园店</a><a href="https://city.yichao.cn/shop/shop-10107.html" style="width: 33.3%;">三里亭店</a><a href="https://city.yichao.cn/shop/shop-10105.html" style="width: 33.3%;">星桥店</a><a href="https://city.yichao.cn/shop/shop-10101.html" style="width: 33.3%;">仓前店</a><a href="https://city.yichao.cn/shop/shop-10096.html" style="width: 33.3%;">滨江春晓路店</a><a href="https://city.yichao.cn/shop/shop-10094.html" style="width: 33.3%;">塘栖镇店</a><a href="https://city.yichao.cn/shop/shop-10088.html" style="width: 33.3%;">亲亲家园店</a><a href="https://city.yichao.cn/shop/shop-10075.html" style="width: 33.3%;">临安店</a><a href="https://city.yichao.cn/shop/shop-10065.html" style="width: 33.3%;">九堡店</a><a href="https://city.yichao.cn/shop/shop-10056.html" style="width: 33.3%;">闲林店</a><a href="https://city.yichao.cn/shop/shop-10051.html" style="width: 33.3%;">余杭总部店</a><a href="https://city.yichao.cn/shop/shop-10049.html" style="width: 33.3%;">江城店</a><a href="https://city.yichao.cn/shop/shop-10045.html" style="width: 33.3%;">北景园店</a><a href="https://city.yichao.cn/shop/shop-10038.html" style="width: 33.3%;">文三西路店</a><a href="https://city.yichao.cn/shop/shop-10035.html" style="width: 33.3%;">三墩店</a><a href="https://city.yichao.cn/shop/shop-10032.html" style="width: 33.3%;">老余杭店</a><a href="https://city.yichao.cn/shop/shop-10026.html" style="width: 33.3%;">萧山店</a><a href="https://city.yichao.cn/shop/shop-10014.html" style="width: 33.3%;">富阳店</a><a href="https://city.yichao.cn/shop/shop-10013.html" style="width: 33.3%;">临平店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/beijing/&#39;)">北京</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10015.html" style="width: 100%;">五道口店</a></div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/chongqing/&#39;)">重庆</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10159.html" style="width: 33.3%;">江北店</a><a href="https://city.yichao.cn/shop/shop-10118.html" style="width: 33.3%;">武隆店</a></div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/tianjin/&#39;)">天津</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10148.html" style="width: 33.3%;">北辰双街店</a><a href="https://city.yichao.cn/shop/shop-10132.html" style="width: 33.3%;">河北区店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/gdguangzhou/&#39;)">广东广州</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10008.html" style="width: 100%;">天河店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/xjyining/&#39;)">新疆伊宁</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10043.html" style="width: 100%;">伊宁店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/hzchangxing/&#39;)">湖州长兴</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10017.html" style="width: 100%;">长兴店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/huzhoudeqing/&#39;)">湖州德清</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10033.html" style="width: 100%;">德清店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/huzhou/&#39;)">浙江湖州</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10109.html" style="width: 100%;">南浔店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/nancang/&#39;)">江西南昌</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10074.html" style="width: 100%;">高新店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/jiangxiyichun/&#39;)">江西宜春</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10061.html" style="width: 100%;">宜春店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/hainanhaikou/&#39;)">海南海口</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10058.html" style="width: 100%;">海口店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/shandongzouping/&#39;)">山东邹平</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10063.html" style="width: 100%;">邹平店</a></div>
+</div><div class="cityWrap"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/hunanchangsha/&#39;)">湖南长沙</span></div><div class="shoplist">
+</div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/huaihua/&#39;)">湖南怀化</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10099.html" style="width: 100%;">怀化店</a></div>
+</div><div class="cityWrap"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/jining/&#39;)">山东济宁</span></div><div class="shoplist">
+</div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/changzhi/&#39;)">山西长治</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10076.html" style="width: 100%;">长治店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/yangzhong/&#39;)">江苏扬中</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10078.html" style="width: 100%;">扬中店</a></div>
+</div><div class="cityWrap"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/xiapu/&#39;)">宁德霞浦</span></div><div class="shoplist">
+</div>
+</div><div class="cityWrap"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/jinsha/&#39;)">贵州金沙</span></div><div class="shoplist">
+</div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/kunming/&#39;)">云南昆明</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10090.html" style="width: 100%;">五华店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/luquan/&#39;)">昆明禄劝</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10111.html" style="width: 100%;">禄劝县店</a></div>
+</div><div class="cityWrap"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/heilongjiangdaqing/&#39;)">黑龙江大庆</span></div><div class="shoplist">
+</div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/yueqing/&#39;)">温州乐清</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10137.html" style="width: 33.3%;">乐清虹桥店</a><a href="https://city.yichao.cn/shop/shop-10089.html" style="width: 33.3%;">乐清店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/luoyang/&#39;)">河南洛阳</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10091.html" style="width: 100%;">洛阳店</a></div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/huizhou/&#39;)">广东惠州</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10139.html" style="width: 33.3%;">东湖店</a><a href="https://city.yichao.cn/shop/shop-10092.html" style="width: 33.3%;">水岸城店</a></div>
+</div><div class="cityWrap"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/huairen/&#39;)">山西怀仁</span></div><div class="shoplist">
+</div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/xianggelila/&#39;)">云南香格里拉</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10095.html" style="width: 100%;">香格里拉店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/gongcheng/&#39;)">桂林恭城</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10112.html" style="width: 100%;">恭城县店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/geermu/&#39;)">青海格尔木</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10116.html" style="width: 100%;">格尔木店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/xianju/&#39;)">台州仙居</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10131.html" style="width: 100%;">仙居县店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/dunhuang/&#39;)">酒泉敦煌</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10133.html" style="width: 100%;">敦煌店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/jiangmeng/&#39;)">广东江门</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10098.html" style="width: 100%;">江门店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/taizhou/&#39;)">浙江台州</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10125.html" style="width: 100%;">椒江店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/jiaxing/&#39;)">浙江嘉兴</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10102.html" style="width: 100%;">江南摩尔店</a></div>
+</div><div class="cityWrap"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/shangqiu/&#39;)">河南商丘</span></div><div class="shoplist">
+</div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/gddongguan/&#39;)">广东东莞</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10142.html" style="width: 33.3%;">长安长福店</a><a href="https://city.yichao.cn/shop/shop-10114.html" style="width: 33.3%;">厚街镇店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/yunnanbaoshan/&#39;)">云南保山</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10057.html" style="width: 100%;">昌宁店</a></div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/yunnandali/&#39;)">云南大理</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10122.html" style="width: 33.3%;">下关二小店</a><a href="https://city.yichao.cn/shop/shop-10097.html" style="width: 33.3%;">喜洲店</a><a href="https://city.yichao.cn/shop/shop-10053.html" style="width: 33.3%;">下关泰安店</a><a href="https://city.yichao.cn/shop/shop-10052.html" style="width: 33.3%;">下关苍山店</a><a href="https://city.yichao.cn/shop/shop-10046.html" style="width: 33.3%;">祥云店</a></div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/chengdu/&#39;)">四川成都</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10120.html" style="width: 33.3%;">成华店</a><a href="https://city.yichao.cn/shop/shop-10060.html" style="width: 33.3%;">温江店</a></div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/tongxiang/&#39;)">嘉兴桐乡</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10134.html" style="width: 33.3%;">崇福店</a><a href="https://city.yichao.cn/shop/shop-10084.html" style="width: 33.3%;">桐乡店</a></div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/shanghai/&#39;)">上海</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10005.html" style="width: 33.3%;">徐家汇店</a><a href="https://city.yichao.cn/shop/shop-10147.html" style="width: 33.3%;">浦东樱花路店</a><a href="https://city.yichao.cn/shop/shop-10135.html" style="width: 33.3%;">浦东上南路店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/zhejiangningbo/&#39;)">浙江宁波</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10004.html" style="width: 100%;">天一店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/gdjieyang/&#39;)">广东揭阳</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10067.html" style="width: 100%;">揭阳店</a></div>
+</div><div class="cityWrap"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/shanxixian/&#39;)">陕西西安</span></div><div class="shoplist">
+</div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/zhejingshaoxin/&#39;)">浙江绍兴</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10034.html" style="width: 100%;">柯桥店</a></div>
+</div><div class="cityWrap" style="width: 100%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/gdshenzhen/&#39;)">广东深圳</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10146.html" style="width: 33.3%;">泽润中心店</a><a href="https://city.yichao.cn/shop/shop-10106.html" style="width: 33.3%;">宝安店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/henanjiaozuo/&#39;)">河南焦作</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10156.html" style="width: 100%;">焦作店</a></div>
+</div><div class="cityWrap"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/yunnanqjing/&#39;)">云南曲靖</span></div><div class="shoplist">
+</div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/jiangxiganxian/&#39;)">江西赣县</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10151.html" style="width: 100%;">赣县中学店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/qujinxwei/&#39;)">曲靖宣威</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10158.html" style="width: 100%;">宣威店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/guangdongfengshun/&#39;)">广东丰顺县</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10103.html" style="width: 100%;">罗湖店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/fengcheng/&#39;)">江西丰城</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10138.html" style="width: 100%;">丰城店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/jiamusi/&#39;)">黑龙江佳木斯</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10140.html" style="width: 100%;">长安西路店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/qhxining/&#39;)">青海西宁</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10141.html" style="width: 100%;">城西店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/zjwenzhou/&#39;)">温州</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10144.html" style="width: 100%;">人民中路店</a></div>
+</div><div class="cityWrap" style="width: 33.3%;"><div class="shoparea"><span style="cursor:pointer;" onclick="window.open(&#39;https://city.yichao.cn/shangdongweifang/&#39;)">山东潍坊</span></div><div class="shoplist">
+<a href="https://city.yichao.cn/shop/shop-10150.html" style="width: 100%;">潍坊店</a></div>
+</div>
+                    </div>
+                </div>
+                </li>
+                <li id="navs_li7" class=""><a href="https://www.yichao.cn/schoolhome.html" target="_blank">眼镜知识</a></li>
+                <li><a href="http://jiameng.yichao.cn/">加盟服务</a></li><li><a href="https://yjcs.tmall.com/">天猫旗舰店</a></li>
+            </ul>
+        </div>
+    </div>
+
+<style>
+    .shoplist > a:hover {
+        color: #DA1E3A !important;
+    }
+
+    .navs #navs_li2_1 {
+        position: relative;
+    }
+
+    .badge-h {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: #bd3943;
+        color: #fff;
+        text-align: center;
+        line-height: 10px;
+        font-size: 7px;
+        -webkit-transform: scale(0.7,0.7);
+        *font-size: 7px;
+        position: absolute;
+        top: 6px;
+        left: 70px;
+    }
+
+    #navs_li1 .shopds {
+        width: 124px;
+        position: relative;
+        clear: both;
+        border: 1px solid #da1e3a;
+        border-top: 0px;
+    }
+
+    #navs_li1 .shopds {
+        display: none;
+    }
+
+        #navs_li1 .shopds li {
+            background-color: rgba(255, 255, 255, 1);
+            color: #333;
+            line-height: 30px;
+            width: 100%;
+            text-indent: 1.5em;
+            clear: both;
+            float: none !important;
+            cursor: pointer;
+            height: 30px;
+            overflow: hidden;
+        }
+
+            #navs_li1 .shopds li:hover {
+                color: #da1e3a;
+                background-color: rgba(200, 200, 200, 1);
+            }
+</style>
+
+<form id="formDefault" method="post" target="_blank" action="https://city.yichao.cn/shop/shop-10155.html">
+    <input id="iptGoodsID" name="iptGoodsID" type="hidden" value="0">
+</form>
+<div id="documentMask" class="documentMask" style="display: none;">
+</div>
+<div id="sendResult" class="sendResult" style="display: none;">
+    <a href="javascript:;" class="close"></a>
+    <p>
+        已发送亿超眼镜<a class="sr-shopname" href="https://city.yichao.cn/shop/shop-10155.html">杭州延安路店</a>信息到<strong class="sr-phone">12345667890</strong>感谢您对亿超眼镜的信任与厚爱！^_^
+    </p>
+</div>
+
+        
+
+    <div class="main linkTitle">
+        
+             <a href="https://city.yichao.cn/">全国实体店</a><span>&gt;</span><a href="https://city.yichao.cn/zjhangzhou/">杭州市实体店</a><span>&gt;</span>杭州闲林竹海水韵店
+        
+    </div>
+
+    <div class="main findStore">
+        <div class="left">
+            
+            <img src="./导航分页——去实体店_files/FF33CF100AFF501441C3060CC0515DD8D2B4776D.jpg" alt="竹海水韵店" data-img="https://img.yichao.cn:442/uploads/shop/FF33CF100AFF501441C3060CC0515DD8D2B4776D.jpg">
+            <p>竹海水韵店</p>
+            <p>服务热线：400-675-2788</p>
+            <p>营业时间：每日 10：00-22：00</p>
+            <p>门店地址：门店地址：杭州市余杭区闲林街道闲富北路竹海水韵春风里4幢</p>
+            <a href="https://city.yichao.cn/shop/map-10155.html"><button>查看寻店攻略</button></a>
+            
+        </div>
+        <div class="center">
+            <p>实体店特色</p>
+            <p>
+                <img src="./导航分页——去实体店_files/center4 (2).jpg" data-img="/images/center4 (2).jpg"><span>场景模拟验光</span><img src="./导航分页——去实体店_files/center4 (3).jpg" data-img="/images/center4 (3).jpg"><span>32道精准加工</span></p>
+            <p>
+                <img src="./导航分页——去实体店_files/center4 (4).jpg" data-img="/images/center4 (4).jpg"><span>上门验光服务</span><img class="padL" src="./导航分页——去实体店_files/center4.jpg" data-img="/images/center4.jpg"><span>2公里送货到家</span></p>
+        </div>
+        <div class="right" style="position: inherit; top: 0px; right: 356.5px;">
+            
+            <p>110687人</p>
+            <p>已预约免费验光试戴</p>
+            <p>杭州市实体店</p>
+            <p>
+                <button data-city="5" id="10155">预约到店</button></p>
+            <p>免费验光再减10</p>
+          
+        </div>
+    </div>
+    <div class="findShopTitle main page1">
+        地图交通
+    </div>
+    <div class="main">
+        <div class="searchmap">
+            <div id="shopmap" style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;"><div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 33px; cursor: url(&quot;https://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default;"><div class="BMap_mask" style="position: absolute; left: 0px; top: -33px; z-index: 9; overflow: hidden; user-select: none; width: 678px; height: 500px;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"><div class="BMap_pop" style="box-sizing: content-box; position: absolute; cursor: default; left: 180px; top: -23px;"><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 0px; top: 0px; width: 25px; height: 25px;"><div style="box-sizing:content-box;background:#fff;border-top:1px solid #ababab;border-left:1px solid #ababab;width:30px;height:30px;"></div></div><div class="BMap_top" style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 25px; top: 0px; width: 302px; height: 25px;"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 327px; top: 0px; width: 25px; height: 25px;"><div style="box-sizing:content-box;position:absolute;top:0;left:-6px;background:#fff;border-top:1px solid #ababab;border-right:1px solid #ababab;width:30px;height:30px;"></div></div><div class="BMap_center" style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 0px; top: 25px; width: 350px; height: 174px;"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 0px; top: 199px; width: 25px; height: 25px;"><div style="box-sizing:content-box;position:absolute;top:-6px;left:0;background:#fff;border-bottom:1px solid #ababab;border-left:1px solid #ababab;width:30px;height:30px;"></div></div><div class="BMap_bottom" style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 25px; top: 199px; width: 302px; height: 24px;"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 327px; top: 199px; width: 25px; height: 25px;"><div style="box-sizing:content-box;position:absolute;top:-6px;left:-6px;background:#fff;border-right:1px solid #ababab;border-bottom:1px solid #ababab;width:30px;height:30px;"></div></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 159px; top: 199px; width: 34px; height: 50px;"><img style="box-sizing:content-box;border:none;margin:0px;padding:0px;margin-left:-186px;margin-top:-691px;max-width:none; width:690px;height:786px;" src="./导航分页——去实体店_files/iw3.png"></div><div style="box-sizing: content-box; width: 320px; height: 192px; position: absolute; left: 16px; top: 16px; z-index: 10; overflow: hidden;"><div class="BMap_bubble_title" style="overflow: hidden; height: auto; line-height: 24px; white-space: nowrap; width: auto;"><div style="border-bottom:1px solid #bdbdbd;"><span style="font-weight:bold;font-size:14px;"><a style="color:#454545;" href="https://city.yichao.cn/shop/shop-10155.html#" title="竹海水韵店" target="_blank">竹海水韵店</a></span></div></div><div class="BMap_bubble_content" style="width: auto; height: auto;"><div style="border-bottom:1px solid #bdbdbd;padding:10px 0px;"><div><span style="font-size:12px;color:#999;line-height:20px;width:60px;float:left;">门店地址：</span><span style="color:#454545;width:260px;float:left;line-height:20px;">门店地址：杭州市余杭区闲林街道闲富北路竹海水韵春风里4幢</span></div><div><span style="font-size:12px;color:#999; height:24px;line-height:20px;">营业时间：</span><span style="color:#454545">10:00-22:00</span></div><div><span style="font-size:12px;color:#999; height:24px;line-height:20px;">服务电话：</span><span style="color:#454545">400-675-2788</span></div></div><div id="test" style="height:30px;color:#454545;"><div id="end_nav" style="width:159px;border-right:1px solid #bdbdbd;height:20px;display:inline-block;line-height:20px;text-align:center;float:left;padding:5px 0px;"><span style="background:url(/images/expr_allbg.gif) -135px -348px no-repeat;width:14px;height:20px;display:inline-block;margin-right:5px;vertical-align:top;"></span><span style="height:20px;line-height20px;display:inline-block">到这里去</span></div><div id="start_nav" style="border-bottom:1px solid #bdbdbd;width:160px;height:20px;display:inline-block;line-height:20px;text-align:center;background:#f7f7f7;cursor:pointer;float:left;padding:5px 0px;"><span style="background:url(/images/expr_allbg.gif) -135px -324px no-repeat;width:14px;height:20px;display:inline-block;margin-right:5px;vertical-align:top;"></span><span style="height:20px;line-height20px;display:inline-block">从这里出发</span></div></div><div style="padding-top:10px;height:26px;line-height:20px;"><span id="exchange" style="padding-right:10px;float:left;display:inline-block;height:26px;line-height:26px;">起点</span><span style="padding-right:10px;float:left;display:inline-block;"><input id="input_addr" style="width:150px;height:20px;" type="text" autocomplete="off"></span><span id="bus" style="padding:2px 10px;display:inline-block;border:1px solid #bdbdbd;float:left;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;margin-right: 10px;cursor:pointer;">公交</span><span id="car" style="padding:2px 10px;display:inline-block;border:1px solid #bdbdbd;float:left;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;cursor:pointer;">驾车</span></div></div><div class="BMap_bubble_max_content" style="display:none;position:relative"></div></div><img style="position: absolute; top: 12px; width: 10px; height: 10px; cursor: pointer; z-index: 10000; left: 327px;" src="./导航分页——去实体店_files/iw_close1d3.gif"><img style="position:absolute;top:12px;width:10px;height:10px;-moz-user-select:none;cursor:pointer;z-index:10000;display:none" src="./导航分页——去实体店_files/quanjing.png" title="进入全景"><img style="position:absolute;top:10px;width:9px;height:14px;-moz-user-select:none;cursor:pointer;z-index:10000;display:none;" src="./导航分页——去实体店_files/phone.png" title="发送到手机"><img style="position: absolute; top: 12px; width: 10px; height: 10px; cursor: pointer; z-index: 10000; display: none; left: 307px;" src="./导航分页——去实体店_files/iw_plus1d3.gif"><div style="position: absolute; top: 0px; left: 0px; z-index: 10000; width: 352px;"></div></div></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; background: url(&quot;https://api.map.baidu.com/images/blank.gif&quot;); width: 19px; height: 25px; left: 329px; top: 225px; z-index: -6048724;" title=""></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"><div class="BMap_shadow" style="position: absolute; left: 158px; top: 91px;" type="infowindow_shadow"><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 103px; top: 0px; width: 70px; height: 30px;"><img onmousedown="return false" style="margin-left: -323px; margin-top: 0px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 173px; top: 0px; width: 263px; height: 30px;"><img onmousedown="return false" style="margin-left: -393px; margin-top: 0px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 436px; top: 0px; width: 70px; height: 30px;"><img onmousedown="return false" style="margin-left: -1033px; margin-top: 0px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 29px; top: 30px; width: 144px; height: 74px;"><img onmousedown="return false" style="margin-top: -30px; margin-left: -249px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 173px; top: 30px; width: 218px; height: 74px;"><img onmousedown="return false" style="margin-left: -360px; margin-top: -30px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 391px; top: 30px; width: 144px; height: 74px;"><img onmousedown="return false" style="margin-top: -30px; margin-left: -989px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 0px; top: 104px; width: 50px; height: 60px;"><img onmousedown="return false" style="margin-left: -14px; margin-top: -310px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 50px; top: 104px; width: 61px; height: 60px;"><img onmousedown="return false" style="margin-left: -255px; margin-top: -310px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 111px; top: 104px; width: 140px; height: 60px;"><img onmousedown="return false" style="margin-left: -440px; margin-top: -310px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 251px; top: 104px; width: 111px; height: 60px;"><img onmousedown="return false" style="margin-left: -255px; margin-top: -310px;" src="./导航分页——去实体店_files/iws3.png"></div><div style="box-sizing: content-box; overflow: hidden; z-index: 1; position: absolute; left: 362px; top: 104px; width: 70px; height: 60px;"><img onmousedown="return false" style="margin-left: -754px; margin-top: -310px;" src="./导航分页——去实体店_files/iws3.png"></div></div></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"><label class="BMapLabel" unselectable="on" style="position: absolute; display: none; cursor: inherit; background-color: rgb(190, 190, 190); border: 1px solid rgb(190, 190, 190); padding: 1px; white-space: nowrap; font: 12px arial, sans-serif; z-index: -20000; color: rgb(190, 190, 190);">shadow</label></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 329px; top: 225px; z-index: -6048724;"><div style="position: absolute; margin: 0px; padding: 0px; width: 19px; height: 25px; overflow: hidden;"><img src="./导航分页——去实体店_files/marker_red_sprite.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300;"><span unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 20px; height: 11px; left: 333px; top: 239px;"><div style="position: absolute; margin: 0px; padding: 0px; width: 20px; height: 11px; overflow: hidden;"><img src="./导航分页——去实体店_files/marker_red_sprite.png" style="display: block; border:none;margin-left:-19px; margin-top:-13px; "></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1;"><div style="position: absolute; overflow: visible; z-index: -100; left: 339px; top: 217px; display: block; transform: translate3d(0px, 0px, 0px);"><img src="./导航分页——去实体店_files/saved_resource" style="position: absolute; border: none; width: 256px; height: 256px; left: 157px; top: 250px; max-width: none; opacity: 1;"><img src="./导航分页——去实体店_files/saved_resource(1)" style="position: absolute; border: none; width: 256px; height: 256px; left: -355px; top: -6px; max-width: none; opacity: 1;"><img src="./导航分页——去实体店_files/saved_resource(2)" style="position: absolute; border: none; width: 256px; height: 256px; left: 157px; top: -6px; max-width: none; opacity: 1;"><img src="./导航分页——去实体店_files/saved_resource(3)" style="position: absolute; border: none; width: 256px; height: 256px; left: -99px; top: -262px; max-width: none; opacity: 1;"><img src="./导航分页——去实体店_files/saved_resource(4)" style="position: absolute; border: none; width: 256px; height: 256px; left: -355px; top: 250px; max-width: none; opacity: 1;"><img src="./导航分页——去实体店_files/saved_resource(5)" style="position: absolute; border: none; width: 256px; height: 256px; left: 157px; top: -262px; max-width: none; opacity: 1;"><img src="./导航分页——去实体店_files/saved_resource(6)" style="position: absolute; border: none; width: 256px; height: 256px; left: -99px; top: 250px; max-width: none; opacity: 1;"><img src="./导航分页——去实体店_files/saved_resource(7)" style="position: absolute; border: none; width: 256px; height: 256px; left: -355px; top: -262px; max-width: none; opacity: 1;"><img src="./导航分页——去实体店_files/saved_resource(8)" style="position: absolute; border: none; width: 256px; height: 256px; left: -99px; top: -6px; max-width: none; opacity: 1;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2; display: none;"><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 0; display: none;"></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 10; display: none;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 3;"></div></div><div class="pano_close" title="退出全景" style="z-index: 1201; display: none;"></div><a class="pano_pc_indoor_exit" title="退出室内景" style="z-index: 1201; display: none;"><span style="float:right;margin-right:12px;">出口</span></a><div class=" anchorBL" style="height: 32px; position: absolute; z-index: 30; text-size-adjust: none; bottom: 20px; right: auto; top: auto; left: 1px;"><a title="到百度地图查看此区域" target="_blank" href="http://map.baidu.com/?sr=1" style="outline: none;"><img style="border:none;width:77px;height:32px" src="./导航分页——去实体店_files/copyright_logo.png"></a></div><div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(https://api.map.baidu.com/images/openhand.cur) 8 8,default"><div class="BMap_zoomer" style="top:0;left:0;"></div><div class="BMap_zoomer" style="top:0;right:0;"></div><div class="BMap_zoomer" style="bottom:0;left:0;"></div><div class="BMap_zoomer" style="bottom:0;right:0;"></div></div><div unselectable="on" class=" BMap_stdMpCtrl BMap_stdMpType0 BMap_noprint anchorTL" style="width: 62px; height: 192px; bottom: auto; right: auto; top: 10px; left: 10px; position: absolute; z-index: 1100; text-size-adjust: none;"><div class="BMap_stdMpPan"><div class="BMap_button BMap_panN" title="向上平移"></div><div class="BMap_button BMap_panW" title="向左平移"></div><div class="BMap_button BMap_panE" title="向右平移"></div><div class="BMap_button BMap_panS" title="向下平移"></div><div class="BMap_stdMpPanBg BMap_smcbg"></div></div><div class="BMap_stdMpZoom" style="height: 147px; width: 62px;"><div class="BMap_button BMap_stdMpZoomIn" title="放大一级"><div class="BMap_smcbg"></div></div><div class="BMap_button BMap_stdMpZoomOut" title="缩小一级" style="top: 126px;"><div class="BMap_smcbg"></div></div><div class="BMap_stdMpSlider" style="height: 108px;"><div class="BMap_stdMpSliderBgTop" style="height: 108px;"><div class="BMap_smcbg"></div></div><div class="BMap_stdMpSliderBgBot" style="top: 19px; height: 93px;"></div><div class="BMap_stdMpSliderMask" title="放置到此级别"></div><div class="BMap_stdMpSliderBar" title="拖动缩放" style="cursor: url(&quot;https://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default; top: 19px;"><div class="BMap_smcbg"></div></div></div><div class="BMap_zlHolder"><div class="BMap_zlSt"><div class="BMap_smcbg"></div></div><div class="BMap_zlCity"><div class="BMap_smcbg"></div></div><div class="BMap_zlProv"><div class="BMap_smcbg"></div></div><div class="BMap_zlCountry"><div class="BMap_smcbg"></div></div></div></div><div class="BMap_stdMpGeolocation" style="position: initial; display: none; margin-top: 43px; margin-left: 10px;"><div class="BMap_geolocationContainer" style="position: initial; width: 24px; height: 24px; overflow: hidden; margin: 0px; box-sizing: border-box;"><div class="BMap_geolocationIconBackground" style="width: 24px; height: 24px; background-image: url(https://api.map.baidu.com/images/navigation-control/geolocation-control/pc/bg-20x20.png); background-size: 20px 20px; background-position: 3px 3px; background-repeat: no-repeat;"><div class="BMap_geolocationIcon" style="position: initial; width: 24px; height: 24px; cursor: pointer; background-image: url(&#39;https://api.map.baidu.com/images/navigation-control/geolocation-control/pc/success-10x10.png&#39;); background-size: 10px 10px; background-repeat: no-repeat; background-position: center;"></div></div></div></div></div><div unselectable="on" class=" BMap_cpyCtrl BMap_noprint anchorBL" style="cursor: default; white-space: nowrap; color: black; background: none; font: 11px/15px arial, sans-serif; bottom: 2px; right: auto; top: auto; left: 2px; position: absolute; z-index: 10; text-size-adjust: none;"><span _cid="1" style="display: inline;"><span style="background: rgba(255, 255, 255, 0.701961);padding: 0px 1px;line-height: 16px;display: inline;height: 16px;">©&nbsp;2018 Baidu - GS(2016)2089号 - 甲测资字1100930 - 京ICP证030173号 - Data © 长地万方</span></span></div></div>
+            <div class="rightSearchBer mapRigth">
+                <ul class="search">
+                    <li class="title">交通路线</li>
+                    <li class="input">
+                        <input type="text" class="start" id="suggestId" autocomplete="off"></li>
+                    <li class="input">
+                        <input type="text" class="end blur" readonly="readonly" value="杭州闲林竹海水韵店"><textarea id="shopinfo" style="display:none">{"shop_name":"竹海水韵店","city":"杭州市","point":{"lng":"119.990736","lat":"30.243629"},"tel":"400-675-2788","opening_hours":"10:00-22:00","address":"门店地址：杭州市余杭区闲林街道闲富北路竹海水韵春风里4幢","shop_id":10155}</textarea>
+                    </li>
+                    <li class="searbtn"><a href="javascript:;" class="sbus" onclick="checkLine(&#39;bus&#39;);" title="查询公交线路"></a><a href="javascript:;" onclick="checkLine(&#39;car&#39;);" class="scar" title="查询驾车线路"></a></li>
+                </ul>
+                <div class="lin1"><div class="dsj"></div></div>
+                <div id="local_result" class="numBox">
+                    <span>提示：请在输入框输入您的起点查询交通路线！</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="findShopTitle main page2">
+        交通线路
+    </div>
+    <div class="main findline">
+        <ul class="traffic">
+            
+        </ul>
+    </div>
+    <div class="findShopTitle main" id="findshop">
+        寻店攻略
+    </div>
+    <div class="main findshop">
+        <div style="text-align: left;"><img src="./导航分页——去实体店_files/201610171051518915.jpg" alt="" data-img="https://img.yichao.cn:442/uploads/shop/day_161017/201610171051518915.jpg"><img src="./导航分页——去实体店_files/201610130249375991.jpg" alt="" data-img="https://img.yichao.cn:442/uploads/shop/day_161013/201610130249375991.jpg"><img src="./导航分页——去实体店_files/201610150917477744.jpg" alt="" data-img="https://img.yichao.cn:442/uploads/shop/day_161015/201610150917477744.jpg"><img src="./导航分页——去实体店_files/201610130249571257.jpg" alt="" data-img="https://img.yichao.cn:442/uploads/shop/day_161013/201610130249571257.jpg"><img src="./导航分页——去实体店_files/2016101509165195.jpg" alt="" data-img="https://img.yichao.cn:442/uploads/shop/day_161015/2016101509165195.jpg"><img src="./导航分页——去实体店_files/201610150916579206.jpg" alt="" data-img="https://img.yichao.cn:442/uploads/shop/day_161015/201610150916579206.jpg"></div>
+    </div>
+    <div class="findShopTitle main">
+        评论晒单
+    </div>
+    <div class="comments main">
+        
+    </div>
+
+    <div class="findShopTitle main">
+        杭州实体店(41家)
+    </div>
+    <div class="main storeList2">
+        <ul>
+            
+                <li><a href="https://city.yichao.cn/shop/shop-10019.html">
+                    下城区文晖路店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10000.html">
+                    江干区新塘路店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10006.html">
+                    西湖区浙大紫金港店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10002.html">
+                    西湖区高技街店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10023.html">
+                    上城区近江店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10020.html">
+                    滨江店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10160.html">
+                    余杭区永乐城店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10157.html">
+                    余杭区翡翠城店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10155.html">
+                    余杭区竹海水韵店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10154.html">
+                    拱墅区H108广场店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10153.html">
+                    余杭区桃源小镇店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10152.html">
+                    拱墅区文澜店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10149.html">
+                    西湖区文二路店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10145.html">
+                    余杭区北宸之光店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10143.html">
+                    萧山金惠路店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10136.html">
+                    滨江贺田尚城店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10130.html">
+                    江干区海天城店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10129.html">
+                    余杭区瓶窑店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10128.html">
+                    西湖区蒋村花园店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10127.html">
+                    余杭区西溪北苑店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10126.html">
+                    富阳市桂花西路店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10117.html">
+                    余杭区闲林山水店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10110.html">
+                    西湖区西溪花园店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10107.html">
+                    江干区三里亭店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10105.html">
+                    余杭区星桥店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10101.html">
+                    余杭区仓前店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10096.html">
+                    滨江春晓路店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10094.html">
+                    余杭区塘栖镇店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10088.html">
+                    余杭区亲亲家园店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10075.html">
+                    临安店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10065.html">
+                    江干区九堡店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10056.html">
+                    余杭区闲林店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10051.html">
+                    余杭总部店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10049.html">
+                    上城区江城店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10045.html">
+                    下城区北景园店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10038.html">
+                    西湖区文三西路店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10035.html">
+                    西湖区三墩店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10032.html">
+                    老余杭店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10026.html">
+                    萧山店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10014.html">
+                    富阳店</a></li>
+                  
+                <li><a href="https://city.yichao.cn/shop/shop-10013.html">
+                    余杭区临平店</a></li>
+                     
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $("#suggestId").focus(function () {
+                if (!$(this).hasClass('blur')) {
+                    $(this).addClass("blur");
+                    this.value = "";
+                }
+
+            });
+            $("#suggestId").blur(function () {
+                if (this.value == "") {
+                    $(this).removeClass("blur");
+                    this.value = "请输入起点";
+                }
+            })
+        })
+        // 百度地图API功能
+        var map = new BMap.Map('shopmap');
+        var shopobj = JSON.parse($("#shopinfo").val());
+        var pointlng = shopobj.point.lng;
+        var pointlat = shopobj.point.lat; //纬度
+        var poi = new BMap.Point(pointlng, pointlat);
+        map.centerAndZoom(poi, 16);
+        map.enableScrollWheelZoom();
+        map.enableContinuousZoom();
+        map.addControl(new BMap.NavigationControl());
+        var ac = new BMap.Autocomplete({ "input": "suggestId", "location": map }); //匹配地址
+        var myValue;
+        var _flag = false;
+        var _type = "bus"
+        var p_start = null;
+        var p_end = null;
+        var marker = [];
+        var infoWindow = [];
+        var infoWindowTitle = [];
+        var _che = false;
+
+        //修改原poi事件
+        map.addEventListener('click', function (e) {
+            timeout(0, e.point)
+        });
+        function timeout(i, e) {
+            setTimeout(function () {
+                var t = initop(i, e);
+                if (t < 5) {
+                    timeout(t, e);
+                }
+            }, 100);
+        }
+        function initop(i, point) {
+            //if ($("#shopmap .BMap_pop .BMap_bubble_content #test").length != 0) {
+            //    return 5;
+            //}
+            if (isthis) {
+                return 5;
+            }
+            if ($("#shopmap .BMap_pop").css("display") != 'none') {
+                var html = "";
+                var shopname = $(".search .input input.end").val();
+                html += '<div id="test1" style="height:30px;color:#454545;"><div id="end_nav" style="width:159px;border-right:1px solid #bdbdbd;height:20px;display:inline-block;line-height:20px;text-align:center;float:left;padding:5px 0px;"><span style="background:url(/images/expr_allbg.gif) -135px -324px no-repeat;width:14px;height:20px;display:inline-block;margin-right:5px;vertical-align:top;"></span><span style="height:20px;line-height20px;display:inline-block">从这里出发</span></div>';
+                html += '<div id="start_nav" style="border-bottom:1px solid #bdbdbd;width:160px;height:20px;display:inline-block;line-height:20px;text-align:center;background:#f7f7f7;cursor:pointer;float:left;padding:5px 0px;"><span style="background:url(/images/expr_allbg.gif) -135px -348px no-repeat;width:14px;height:20px;display:inline-block;margin-right:5px;vertical-align:top;"></span><span style="height:20px;line-height20px;display:inline-block">到这里去</span></div></div>';
+                html += '<div style="padding-top:10px;height:26px;line-height:20px;"><span id="exchange" style="padding-right:10px;float:left;display:inline-block;height:26px;line-height:26px;">终点</span><span style="padding-right:10px;float:left;display:inline-block;"><input id="input_addr2" style="width:150px;height:20px;" type="text" value="' + shopname + '" readonly="readonly" /></span><span id="bus" style="padding:2px 10px;display:inline-block;border:1px solid #bdbdbd;float:left;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;margin-right: 10px;cursor:pointer;">公交</span><span id="car" style="padding:2px 10px;display:inline-block;border:1px solid #bdbdbd;float:left;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;cursor:pointer;">驾车</span></div>';
+                $("#shopmap .BMap_pop .BMap_bubble_content>div:eq(1)").html(html);
+                $("#shopmap .BMap_pop .BMap_bubble_content>div:eq(1)").css('border-top', '1px solid #cccccc');
+                var start = $('#end_nav');
+                var end = $('#start_nav');
+                var ex = $("#exchange");
+                var bus = $("#bus");
+                var car = $("#car");
+                _che = false;
+                if (start) {
+                    start.click(function () {
+                        start.css({ background: "#fff", borderBottom: "none", cursor: "default" });
+                        end.css({ background: "#f7f7f7", borderBottom: "1px solid #bdbdbd", cursor: "pointer" });
+                        ex.html("终点");
+                        _che = false;
+                    });
+                }
+                if (end) {
+                    end.click(function () {
+                        end.css({ background: "#fff", borderBottom: "none", cursor: "default" });
+                        start.css({ background: "#f7f7f7", borderBottom: "1px solid #bdbdbd", cursor: "pointer" });
+                        ex.html("起点");
+                        _che = true;
+                    });
+                }
+                if (bus) {
+                    bus.click(function () {
+                        _type = "bus";
+                        _flag = _che;
+                        if (!_che) {
+                            p_start = new BMap.Point(point.lng, point.lat);
+                            p_end = new BMap.Point(pointlng, pointlat);
+
+                        } else {
+                            p_start = new BMap.Point(pointlng, pointlat);
+                            p_end = new BMap.Point(point.lng, point.lat);
+                        }
+                        setStartInput();
+                        LineBycar(p_start, p_end);
+                        showResult();
+                    });
+                }
+                if (car) {
+                    car.click(function () {
+                        _type = "car";
+                        _flag = _che;
+                        if (!_che) {
+                            p_start = new BMap.Point(point.lng, point.lat);
+                            p_end = new BMap.Point(pointlng, pointlat);
+
+                        } else {
+                            p_start = new BMap.Point(pointlng, pointlat);
+                            p_end = new BMap.Point(point.lng, point.lat);
+                        }
+                        setStartInput();
+                        LineBycar(p_start, p_end);
+                        showResult();
+                    });
+                }
+
+                return 5;
+            }
+            return i + 1;
+        }
+        ac.addEventListener("onconfirm", function (e) {
+            var _value = e.item.value;
+            myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+            setPlace();
+            showResult();
+        });
+
+        iniInInfoWindow();
+        var pp;
+        function setPlace() {
+            $("#local_result").html("提示：符合您要求的地址！");
+            map.clearOverlays(); //清除地图上所有覆盖物
+
+            var ls = new BMap.LocalSearch(map, { //智能搜索  
+                onSearchComplete: myFun
+            });
+            ls.search(myValue);
+            function myFun() {
+                pp = ls.getResults().getPoi(0).point; //获取第一个智能搜索结果
+                map.centerAndZoom(pp, 16);
+                var marker = new BMap.Marker(pp);
+                map.addOverlay(marker); //添加标注
+            }
+        }
+        var isthis = false;
+        function iniInInfoWindow() {
+
+            var contentString = [];
+            infoWindow = [];
+            marker = [];
+            infoWindowTitle = [];
+            var myLatLng = [];
+            myLatLng[0] = new BMap.Point(pointlng, pointlat);
+            var shopName = shopobj.shop_name;
+            var shopAddress = shopobj.address;;
+            var shopTel = shopobj.tel;;
+            var shopOpenHours = shopobj.opening_hours;
+            infoWindowTitle[0] = '<div style="border-bottom:1px solid #bdbdbd;"><span style="font-weight:bold;font-size:14px;"><a style="color:#454545;" href="#" title="' + shopName + '" target="_blank">' + shopName + '</a></span></div>';
+            contentString[0] = '<div style="border-bottom:1px solid #bdbdbd;padding:10px 0px;"><div><span style="font-size:12px;color:#999;line-height:20px;width:60px;float:left;">门店地址：</span><span style="color:#454545;width:260px;float:left;line-height:20px;">' + shopAddress + '</span></div>';
+            contentString[0] += '<div><span style="font-size:12px;color:#999; height:24px;line-height:20px;">营业时间：</span><span style="color:#454545">' + shopOpenHours + '</span></div>';
+            contentString[0] += '<div><span style="font-size:12px;color:#999; height:24px;line-height:20px;">服务电话：</span><span style="color:#454545">' + shopTel + '</span></div></div>';
+
+            contentString[0] += '<div id="test" style="height:30px;color:#454545;"><div id="end_nav" style="width:159px;border-right:1px solid #bdbdbd;height:20px;display:inline-block;line-height:20px;text-align:center;float:left;padding:5px 0px;"><span style="background:url(/images/expr_allbg.gif) -135px -348px no-repeat;width:14px;height:20px;display:inline-block;margin-right:5px;vertical-align:top;"></span><span style="height:20px;line-height20px;display:inline-block">到这里去</span></div>';
+            contentString[0] += '<div id="start_nav" style="border-bottom:1px solid #bdbdbd;width:160px;height:20px;display:inline-block;line-height:20px;text-align:center;background:#f7f7f7;cursor:pointer;float:left;padding:5px 0px;"><span style="background:url(/images/expr_allbg.gif) -135px -324px no-repeat;width:14px;height:20px;display:inline-block;margin-right:5px;vertical-align:top;"></span><span style="height:20px;line-height20px;display:inline-block">从这里出发</span></div></div>';
+            contentString[0] += '<div style="padding-top:10px;height:26px;line-height:20px;"><span id="exchange" style="padding-right:10px;float:left;display:inline-block;height:26px;line-height:26px;">起点</span><span style="padding-right:10px;float:left;display:inline-block;"><input id="input_addr" style="width:150px;height:20px;" type="text"/></span><span id="bus" style="padding:2px 10px;display:inline-block;border:1px solid #bdbdbd;float:left;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;margin-right: 10px;cursor:pointer;">公交</span><span id="car" style="padding:2px 10px;display:inline-block;border:1px solid #bdbdbd;float:left;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;cursor:pointer;">驾车</span></div>';
+
+            infoWindow[0] = new BMap.InfoWindow(contentString[0], { title: infoWindowTitle[0], width: 320 });
+            marker[0] = new BMap.Marker(myLatLng[0]);
+
+            map.addOverlay(marker[0]);
+            iniInfoWinFun(0, pointlng, pointlat);
+            marker[0].addEventListener("click", function (e) {
+                iniInInfoWindow();
+                isthis = true;
+                setTimeout(function () { isthis = false; }, 200)
+            });
+
+        }
+
+        function iniInfoWinFun(key, positionX, positionY) {
+            marker[key].openInfoWindow(infoWindow[key]);
+            var ready = $('#input_addr');
+            if (ready.length == 0) {
+                setTimeout(function () {
+                    iniInfoWinFun(key, positionX, positionY);
+                }, 200)
+                return;
+            } else {
+                $("#suggestId").val("请输入起点")
+                var auto = new BMap.Autocomplete({ "input": "input_addr", "location": map }); //匹配地址              
+                var stbtn = $("#start_nav");
+                var putline = $("#input_addr");
+                var enbtn = $("#end_nav");
+                var bus = $("#bus");
+                var car = $("#car");
+                var ex = $("#exchange");
+                _che = true;
+                if (bus) {
+                    bus.click(function () {
+                        auto.dispose();
+                        _type = "bus";
+                        _flag = _che;
+                        if (!_che) {
+                            p_start = $("#input_addr").val();
+                            p_end = new BMap.Point(positionX, positionY);
+                            if (!p_start || p_start == "请输入起点") {
+                                alert("请输入您要查询的起点！");
+                                return;
+                            }
+                        } else {
+                            p_start = new BMap.Point(positionX, positionY);
+                            p_end = $("#input_addr").val();
+                            if (!p_end) {
+                                alert("请输入您要查询的终点！");
+                                return;
+                            }
+                        }
+                        setStartInput();
+                        LineBycar(p_start, p_end);
+                        showResult();
+                    });
+                }
+                if (car) {
+                    car.click(function () {
+                        auto.dispose(); //销毁自动匹配
+                        _type = "car";
+                        _flag = _che;
+                        if (!_che) {
+                            p_start = $("#input_addr").val();
+                            p_end = new BMap.Point(positionX, positionY);
+                            if (!p_start || p_start == "请输入起点") {
+                                alert("请输入您要查询的起点！");
+                                return;
+                            }
+                        } else {
+                            p_start = new BMap.Point(positionX, positionY);
+                            p_end = $("#input_addr").val();
+                            if (!p_end) {
+                                alert("请输入您要查询的终点！");
+                                return;
+                            }
+                        }
+                        setStartInput();
+                        LineBycar(p_start, p_end);
+                        showResult();
+                    });
+                }
+
+                if (stbtn) {
+                    stbtn.click(function () {
+                        stbtn.css({ background: "#fff", borderBottom: "none", cursor: "default" });
+                        enbtn.css({ background: "#f7f7f7", borderBottom: "1px solid #bdbdbd", cursor: "pointer" });
+                        ex.html("终点");
+                        _che = true;
+                    });
+                }
+                if (enbtn) {
+                    enbtn.click(function () {
+                        enbtn.css({ background: "#fff", borderBottom: "none", cursor: "default" });
+                        stbtn.css({ background: "#f7f7f7", borderBottom: "1px solid #bdbdbd", cursor: "pointer" });
+                        ex.html("起点");
+                        _che = false;
+                    });
+                }
+                if (putline) {
+                    putline.onkeyup = function (e) {
+                        e = e || window.event;
+                        if (e.keyCode == 13) {
+                            auto.dispose();
+                            _type = "bus";
+                            _flag = _che;
+                            if (!_che) {
+                                p_start = $("#input_addr").val();
+                                p_end = new BMap.Point(positionX, positionY);
+                                if (!p_start || p_start == "请输入起点") {
+                                    alert("请输入您要查询的起点！");
+                                    return;
+                                }
+                            } else {
+                                p_start = new BMap.Point(positionX, positionY);
+                                p_end = $("#input_addr").val();
+                                if (!p_end) {
+                                    alert("请输入您要查询的终点！");
+                                    return;
+                                }
+                            }
+                            setStartInput();
+                            LineBycar(p_start, p_end);
+                            showResult();
+                        }
+                    }
+                }
+            }
+
+        }
+
+        function setStartInput() {
+            if (!_flag) {
+                $("#suggestId").val($("#input_addr").val());
+
+            }
+        }
+
+        function showStart(index) {
+            $("#btn" + index).css("visibility", "visible");
+        }
+
+        function hideStart(index) {
+            $("#btn" + index).css("visibility", "hidden");
+        }
+
+        function checkLine(type) {
+            _type = type;
+            p_start = pp;// $("#suggestId").val();
+            p_end = new BMap.Point(pointlng, pointlat);
+
+            if (!p_start || p_start == null || p_end == '' || p_start == "请输入起点") {
+                alert("请输入您要查询的起点！");
+            } else {
+                LineBycar(p_start, p_end);
+            }
+            showResult();
+        }
+
+        function LineBycar(p_start, p_end) {
+            if (_flag) {
+                map.centerAndZoom(p_start, 12);
+
+            }
+            if (_type == "bus") {
+                $(".lin1> div")[0].className = 'dsj';
+                var transit = new BMap.TransitRoute(map, {
+                    renderOptions: { map: map },
+                    onSearchComplete: function (result) {
+                        if (!result.getNumPlans()) {
+                            if (_flag) {
+                                localShow(p_end);
+                            } else {
+                                localShow(p_start);
+                            }
+                        } else {
+                            showLine(result);
+                        }
+                    }
+                });
+            } if (_type == "car") {
+                $(".lin1> div")[0].className = 'dsj2';
+                var transit = new BMap.DrivingRoute(map, {
+                    renderOptions: { map: map },
+                    onSearchComplete: function (result) {
+                        if (!result.getNumPlans()) {
+                            if (_flag) {
+                                localShow(p_end);
+                            } else {
+                                localShow(p_start);
+                            }
+                        } else {
+                            showLine(result);
+                        }
+                    }
+                });
+            }
+            map.clearOverlays();
+            transit.search(p_start, p_end);
+        }
+
+        function localShow(p_start) {
+            var option = {
+                onSearchComplete: function (results) {
+                    if (local.getStatus() == BMAP_STATUS_SUCCESS) {
+                        var s = [];
+                        var num = results.getCurrentNumPois() > 8 ? 8 : results.getCurrentNumPois();
+                        var po = _flag ? "终点" : "起点";
+                        var pp = local.getResults().getPoi(0).point; //获取第一个智能对象
+                        map.centerAndZoom(pp, 16); //放大以此对象为中心的地图
+                        s.push('<div style="padding-bottom:10px;display:inline-block;">我们为您找到<strong style="color:#c00">' + num + '</strong>' + po + '地址，请选择！</div>');
+                        s.push('<div style="font-size:12px;">');
+                        openInfoWinFuns = [];
+                        for (var i = 0; i < num; i++) {
+                            var marker = addMarker(results.getPoi(i).point, i);
+                            var openInfoWinFun = addInfoWindow(marker, results, i);
+                            openInfoWinFuns.push(openInfoWinFun);
+                            s.push('<div id="list' + i + '" style="padding:5px; cursor: pointer; overflow: hidden; border:2px solid #d4e0f8;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:inline-block; width:218px;margin-bottom:5px;" onclick="openInfoWinFuns[' + i + ']()" onmouseover="showStart(' + i + ');" onmouseout="hideStart(' + i + ');">');
+                            s.push('<div id="po_title' + i + '" style="overflow:hidden;"><div style="float:left;display:inline-block;line-height:18px;width:150px;"><a style="color:#607bc8;font-weight:bold;">' + results.getPoi(i).title.replace(new RegExp(results.keyword, "g"), '<b>' + results.keyword + '</b>') + '</a></div>');
+                            s.push('<div style="float:left;"><span id="btn' + i + '" style="background:url(/images/expr_allbg.gif) 0px -435px no-repeat;width:65px;height:17px;display:inline-block;color:#fff;text-align:center;line-height:17px;visibility:hidden;" onclick="setStartpoints(' + i + ')">设为' + po + '</span></div></div>');
+                            s.push('<div class="none" style="padding-right:5px;margin-top:0px;line-height:18px;" id="address_detail' + i + '"><span style="color:#666;">' + results.getPoi(i).address + '</span></div>');
+                            s.push('</div>');
+                        }
+                        s.push('</div>');
+                        $("#local_result").html(s.join(""));
+                        openInfoWinFuns[0]();
+                    } else {
+                        $("#local_result").html('<span class="red">提示：</span>未找到您查询的地址，请核对后重新输入！');
+                    }
+                    window.setStartpoints = function (index) {
+                        searchAgain(results, index);
+                        if (po == "起点") {
+                            $("#suggestId").val(results.getPoi(index).title.replace(new RegExp(results.keyword, "g"), results.keyword));
+                        }
+                    }
+                }
+            }
+            var local = new BMap.LocalSearch(map, option);
+            local.search(p_start);
+        }
+
+        function addInfoWindow(marker, poi, index) {
+            var maxLen = 8;
+            var name = null;
+            var po = _flag ? "终点" : "起点";
+            if (poi.getPoi(index).type == BMAP_POI_TYPE_NORMAL) {
+                name = "地址：";
+            } else if (poi.getPoi(index).type == BMAP_POI_TYPE_BUSSTOP) {
+                name = "公交：";
+            } else if (poi.getPoi(index).type == BMAP_POI_TYPE_SUBSTOP) {
+                name = "地铁：";
+            }
+            var infoWindowTitle = '<div>' + poi.getPoi(index).title + '</div>';
+            var infoWindowHtml = [];
+            infoWindowHtml.push('<table><tbody>');
+            infoWindowHtml.push('<tr>');
+            infoWindowHtml.push('<td>' + name + '</td>');
+            infoWindowHtml.push('<td>' + poi.getPoi(index).address + '</td>');
+            infoWindowHtml.push('</tbody></table>');
+            infoWindowHtml.push('<div><span id="busstart">设为' + po + '</span></div>');
+            var infoWindow = new BMap.InfoWindow(infoWindowHtml.join(""), { title: infoWindowTitle, width: 250 });
+            var openInfoWinFun = function () {
+                marker.openInfoWindow(infoWindow);
+                var starBtn = $("#busstart");
+                if (starBtn) {
+                    starBtn.onclick = function () {
+                        searchAgain(poi, index);
+                        if (po == "起点") {
+                            $("#suggerstId").val(poi.getPoi(index).title);
+                        }
+                    }
+                }
+                for (var cnt = 0; cnt < maxLen; cnt++) {
+                    var detail = $("#address_detail" + cnt)
+                    var title = $("#po_title" + cnt);
+                    if (!$("list" + cnt)) {
+                        continue;
+                    }
+                    if (cnt == index) {
+                        title.css("height", "0px");
+                        $("list" + cnt).css("backgroundColor", "#f0f0f0");
+                    } else {
+                        title.css("height", "20px");
+                        $("list" + cnt).css("backgroundColor", "#fff");
+                    }
+
+                }
+            }
+            marker.addEventListener("onclick", openInfoWinFun);
+            return openInfoWinFun;
+        }
+
+        function addMarker(point, index) {
+            var myIcon = new BMap.Icon("https://api.map.baidu.com/img/markers.png", new BMap.Size(23, 25), {
+                offset: new BMap.Size(10, 25),
+                imageOffset: new BMap.Size(0, 0 - index * 25)
+            });
+            var marker = new BMap.Marker(point, { icon: myIcon });
+            map.addOverlay(marker);
+            return marker;
+        } //添加标注
+
+        function searchAgain(result, index) {
+            if (_type == "bus") {
+                var newTransit = new BMap.TransitRoute(map, {
+                    renderOptions: { map: map },
+                    onSearchComplete: function (rslt) {
+                        if (!rslt || rslt.getNumPlans() < 1) {
+                            $("#local_result").html("<span>提示：</span><span>未找到您查询的地址，请核对后重新输入！</span>");
+                        } else {
+                            showLine(rslt);
+                        }
+                    }
+                });
+            } else if (_type == "car") {
+                var newTransit = new BMap.DrivingRoute(map, {
+                    renderOptions: { map: map },
+                    onSearchComplete: function (rslt) {
+                        if (!rslt || rslt.getNumPlans() < 1) {
+                            $("#local_result").html('<span>提示：</span><span>未找到您查询的地址，请核对后重新输入！</span>');
+                        } else {
+                            showLine(rslt);
+                        }
+                    }
+                });
+            }
+            map.clearOverlays();
+            if (_flag) {
+                newTransit.search(p_start, result.getPoi(index));
+            } else {
+                newTransit.search(result.getPoi(index), p_end);
+            }
+        }
+
+        function showLine(result) {
+            var line = [];
+            showMaplines = [];
+            if (result.getNumPlans() > 6) {
+                var lineNum = 6;
+            } else {
+                var lineNum = result.getNumPlans();
+            }
+            line.push('<div style="padding-bottom:10px;">共有<strong style="color:#c00;">' + lineNum + '</strong>条到店线路到' + result.getEnd().title + '</div>');
+            if (_type == "car") {
+                line.push('<div id="JS_line_nav" style="border:1px solid #d7e1f7;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;font-size:12px;margin-top:5px;cursor:pointer;">')
+                line.push('<div style="background:#f3f6ff;padding:5px 10px;color:#607bc8;font-weight:bold;height:18px;line-height:18px;border-bottom:1px solid #bcceee;"><span style="float:left;">全程：</span>');
+                line.push('<span style="float:right;"><span>' + result.getPlan(0).getDistance() + '</span>');
+                line.push('<span style="padding-left:10px;">' + result.getPlan(0).getDuration() + '</span></span></div>');
+                line.push('<div style="padding:10px;font-weight:normal;color:#454545;">');
+                line.push('<div id="JS_line_detail" style="height:360px;overflow:hidden;position:relative; line-height:18px;">')
+                var plan = result.getPlan(0);
+                var route = plan.getRoute(0);
+                for (var i = 0; i < route.getNumSteps() ; i++) {
+                    var step = route.getStep(i);
+                    line.push('<p style="padding:2px 5px 3px 0px;">' + (i + 1) + ". " + step.getDescription() + '</p>');
+                }
+                line.push('</div></div></div>');
+            } else if (_type == "bus") {
+                for (var i = 0; i < lineNum; i++) {
+                    var showMapline = drawLine(map, result, i, lineNum);
+                    showMaplines.push(showMapline);
+                    line.push('<div id="JS_line_nav_' + i + '" style="border:1px solid #d7e1f7;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;font-size:12px;margin-top:5px;cursor:pointer;" onclick="showMaplines[' + i + ']()">');
+                    line.push('<div style="background:#f3f6ff;padding:5px 10px;color:#607bc8;font-weight:bold;height:18px;line-height:18px;"><span style="float:left;">线路' + (i + 1) + '</span>');
+                    line.push('<span style="float:right;"><span>' + result.getPlan(i).getDistance() + '</span>');
+                    line.push('<span style="padding-left:10px;">' + result.getPlan(i).getDuration() + '</span></span></div>');
+                    if (i == 0) {
+                        line.push('<div id="JS_line_detail_' + i + '" style="padding:10px;font-weight:normal;color:#454545;border-top:1px solid #bcceee;line-height:18px;">' + result.getPlan(i).getDescription() + '</div>');
+                    } else {
+                        line.push('<div id="JS_line_detail_' + i + '" class="none" style="padding:10px;font-weight:normal;color:#454545;border-top:1px solid #bcceee;line-height:18px;">' + result.getPlan(i).getDescription() + '</div>');
+                    }
+                    line.push('</div>');
+                }
+            }
+            $("#local_result").html(line.join(""));
+        }
+
+        function drawLine(aMap, results, index, total) {
+            return function () {
+                var opacity = 0.45;
+                var planObj = results.getPlan(index);
+                var bounds = new Array();
+                var addMarkerFun = function (point, imgType, index, title) {
+                    var url;
+                    var width;
+                    var height
+                    var myIcon;
+                    // imgType:1的场合，为起点和终点的图；2的场合为过程的图形
+                    if (imgType == 1) {
+                        url = "http://map.baidu.com/image/dest_markers.png";
+                        width = 42;
+                        height = 34;
+                        myIcon = new BMap.Icon(url, new BMap.Size(width, height), { offset: new BMap.Size(14, 32), imageOffset: new BMap.Size(0, 0 - index * height) });
+                    } else {
+                        url = "http://map.baidu.com/image/trans_icons.png";
+                        width = 22;
+                        height = 25;
+                        var d = 25;
+                        var cha = 0;
+                        var jia = 0
+                        if (index == 2) {
+                            d = 21;
+                            cha = 5;
+                            jia = 1;
+                        }
+                        myIcon = new BMap.Icon(url, new BMap.Size(width, d), { offset: new BMap.Size(10, (11 + jia)), imageOffset: new BMap.Size(0, 0 - index * height - cha) });
+                    }
+                    var marker = new BMap.Marker(point, { icon: myIcon });
+                    if (title != null && title != "") {
+                        marker.setTitle(title);
+                    }
+                    // 起点和终点放在最上面
+                    if (imgType == 1) {
+                        marker.setTop(true);
+                    }
+                    aMap.addOverlay(marker);
+                }
+                var addPoints = function (points) {
+                    for (var i = 0; i < points.length; i++) {
+                        bounds.push(points[i]);
+                    }
+                }
+                aMap.clearOverlays(); // 清空覆盖物        
+                for (var i = 0; i < planObj.getNumRoutes() ; i++) {// 绘制驾车步行线路
+                    var route = planObj.getRoute(i);
+                    if (route.getDistance(false) > 0) {
+                        // 步行线路有可能为0
+                        aMap.addOverlay(new BMap.Polyline(route.getPath(), { strokeStyle: "dashed", strokeColor: "#30a208", strokeOpacity: 0.75, strokeWeight: 4, enableMassClear: true }));
+                    }
+                }
+                for (i = 0; i < planObj.getNumLines() ; i++) {// 绘制公交线路
+                    var line = planObj.getLine(i);
+                    addPoints(line.getPath());
+                    // 公交
+                    if (line.type == BMAP_LINE_TYPE_BUS) {
+                        // 上车
+                        addMarkerFun(line.getGetOnStop().point, 2, 2, line.getGetOnStop().title);
+                        // 下车
+                        addMarkerFun(line.getGetOffStop().point, 2, 2, line.getGetOffStop().title);
+                        // 地铁
+                    } else if (line.type == BMAP_LINE_TYPE_SUBWAY) {
+                        // 上车
+                        addMarkerFun(line.getGetOnStop().point, 2, 3, line.getGetOnStop().title);
+                        // 下车
+                        addMarkerFun(line.getGetOffStop().point, 2, 3, line.getGetOffStop().title);
+                    }
+                    aMap.addOverlay(new BMap.Polyline(line.getPath(), { strokeColor: "#0030ff", strokeOpacity: opacity, strokeWeight: 6, enableMassClear: true }));
+                }
+                aMap.setViewport(bounds);
+                // 终点
+                addMarkerFun(results.getEnd().point, 1, 1);
+                // 开始点
+                addMarkerFun(results.getStart().point, 1, 0);
+                for (var i = 0; i < total; i++) {
+                    var detail = $("#JS_line_detail_" + i);
+                    if (i == index) {
+                        detail.removeClass("none");
+                    } else {
+                        detail.addClass("none");
+                    }
+                }
+            }
+        }
+
+        function showResult() {
+            $("#shopline").addClass("current").siblings('li').removeClass("current");
+            $("#local_result").show().siblings('.numBox').hide();
+        }
+    </script>
+     
+     
+    <style>
+        .page19 ul {
+            display: inline-block;
+            width: auto !important;
+        }
+        .footcity p{
+            text-align:left;
+            color:#222;
+            font-size:14px;    margin: 26px 30px 0px;
+        }
+         .footcity p b{
+             margin-right:25px;
+         }
+        .footcity p a{
+color:#222;
+            font-size:14px; padding: 10px 20px 0 0;
+        }
+    </style>
+    <div class="page19" style="text-align: center">
+        <ul>
+            <li>
+                <img src="./导航分页——去实体店_files/footer1_06.jpg" alt="" data-img="/images/footer1_06.jpg"><span>线上线下同价</span></li>
+            <li>
+                <img src="./导航分页——去实体店_files/footer2_06.jpg" alt="" data-img="/images/footer2_06.jpg"><span>尊享一年质保</span></li>
+            <li>
+                <img src="./导航分页——去实体店_files/footer3_06.jpg" alt="" data-img="/images/footer3_06.jpg"><span>场景模拟验光</span></li>
+            <li>
+                <img src="./导航分页——去实体店_files/footer4_06.jpg" alt="" data-img="/images/footer4_06.jpg"><span>全国连锁服务</span></li>
+            <li style="width: 330px;">
+                <img style="display: block; float: left; margin-top: 10px; margin-left: 40px;" src="./导航分页——去实体店_files/D08.png" width="50" height="50" alt="" data-img="/images/D08.png">
+                <p style="float: left; width: 240px; line-height: 20px; margin-top: 20px;">
+                    <span>互联网药品信息服务资格证书</span><span style="color: #ccc; font-size: 12px;">(浙)-非经营性-2016-0037</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="page20 main">
+        <div class="store" style="line-height: 280px;">
+            <div onclick="javascript:location.href=&#39;http://city.yichao.cn&#39;" style="cursor: pointer">全国实体店</div>
+        </div>
+        <ul class="storeList">
+            
+                    <li><a href="https://city.yichao.cn/beijing/">北京实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/shanghai/">上海实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/tianjin/">天津实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/chongqing/">重庆实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/zjhangzhou/">浙江杭州实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/zhejiangningbo/">浙江宁波实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/zhejingshaoxin/">浙江绍兴实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/gdshenzhen/">广东深圳实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/gdguangzhou/">广东广州实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/hzchangxing/">湖州长兴实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/huzhoudeqing/">湖州德清实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/shanxixian/">陕西西安实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/hunanchangsha/">湖南长沙实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/xjyining/">新疆伊宁实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/yunnandali/">云南大理实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/yunnanbaoshan/">云南保山实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/hainanhaikou/">海南海口实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/jiangxiyichun/">江西宜春实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/shandongzouping/">山东邹平实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/gdjieyang/">广东揭阳实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/nancang/">江西南昌实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/changzhi/">山西长治实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/yangzhong/">江苏扬中实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/xiapu/">宁德霞浦实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/jinsha/">贵州金沙实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/kunming/">云南昆明实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/yueqing/">温州乐清实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/luoyang/">河南洛阳实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/huizhou/">广东惠州实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/huairen/">山西怀仁实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/xianggelila/">云南香格里拉实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/jiangmeng/">广东江门实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/huaihua/">湖南怀化实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/taizhou/">浙江台州实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/zjwenzhou/">温州实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/jiaxing/">浙江嘉兴实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/tongxiang/">嘉兴桐乡实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/heilongjiangdaqing/">黑龙江大庆实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/huzhou/">浙江湖州实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/luquan/">昆明禄劝实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/gongcheng/">桂林恭城实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/gddongguan/">广东东莞实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/shangqiu/">河南商丘实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/geermu/">青海格尔木实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/chengdu/">四川成都实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/jining/">山东济宁实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/xianju/">台州仙居实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/dunhuang/">酒泉敦煌实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/guangdongfengshun/">广东丰顺县实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/fengcheng/">江西丰城实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/jiamusi/">黑龙江佳木斯实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/qhxining/">青海西宁实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/shangdongweifang/">山东潍坊实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/jiangxiganxian/">江西赣县实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/henanjiaozuo/">河南焦作实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/yunnanqjing/">云南曲靖实体店</a></li>
+                
+                    <li><a href="https://city.yichao.cn/qujinxwei/">曲靖宣威实体店</a></li>
+                
+        </ul>
+    </div>
+
+    <div class="page21">
+        <ul>
+            
+                    <li><a href="http://www.yichao.cn/hd/about.aspx">专利验光</a></li>
+                
+                    <li><a href="http://www.yichao.cn/hd/about.aspx">无尘加工</a></li>
+                
+                    <li><a href="http://www.yichao.cn/hd/about.aspx">取镜方式</a></li>
+                
+                    <li><a href="http://www.yichao.cn/hd/about.aspx">产品质保</a></li>
+                
+                    <li><a href="http://www.yichao.cn/hd/about.aspx">免费保养</a></li>
+                
+                    <li><a href="http://www.yichao.cn/hd/about.aspx">免费维修</a></li>
+                
+                    <li><a href="http://www.yichao.cn/links.html">友情链接</a></li>
+                
+                    <li><a href="http://jiameng.yichao.cn/">加盟亿超</a></li>
+                
+        </ul>
+    </div>
+    <footer>
+        
+        <p>杭州亿超电子商务有限公司（眼镜商城）All Rights Reserved 浙ICP备12039237;增值电信业务经营许可证：浙B2-20110007&nbsp;法律顾问：丁红霞（执业编号：A20063301830199）</p>
+    </footer>
+    <script type="text/javascript" src="./导航分页——去实体店_files/modules.js.下载"></script>
+
+
+
+
+
+    <img src="./导航分页——去实体店_files/wapstat.php" width="0" height="0" data-img="https://c.cnzz.com/wapstat.php?siteid=30053850&amp;r=https%3a%2f%2fcity.yichao.cn%2f&amp;rnd=1997188782">
+    
+
+
+<div class="tangram-suggestion-main" id="tangram-suggestion--TANGRAM__1r-main" data-guid="TANGRAM__1r" style="position: absolute; display: none; left: 1048px; top: 650px; width: 276px;"><div id="tangram-suggestion--TANGRAM__1r" class="tangram-suggestion" style="position:relative; top:0px; left:0px"></div></div><div class="tangram-suggestion-main" id="tangram-suggestion--TANGRAM__2b-main" data-guid="TANGRAM__2b" style="position: absolute; display: none; left: 587px; top: 763px; width: 154px;"><div id="tangram-suggestion--TANGRAM__2b" class="tangram-suggestion" style="position:relative; top:0px; left:0px"></div></div></body></html>

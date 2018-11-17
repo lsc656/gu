@@ -1,0 +1,34 @@
+.keyword-inshop-overlay{position:fixed;z-index:1000000;left:-9999px;top:-9999px;outline:0;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased;font:12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif}
+.keyword-inshop-overlay-hidden{visibility:hidden}
+.keyword-inshop-overlay-mask-hidden{display:none}
+.keyword-inshop-overlay-close{height:30px;width:30px;position:absolute;z-index:1000000;top:50%;left:50%;margin:-280px 0 0 230px;vertical-align:middle;text-decoration:none;outline:0;overflow:hidden;cursor:pointer;background-image:url(//img.alicdn.com/tps/TB1k_S0NVXXXXchXpXXXXXXXXXX-30-30.png);background-repeat:no-repeat;background-position:0 0}
+.keyword-inshop-overlay-close .keyword-inshop-overlay-close-x{display:none}
+.keyword-inshop-overlay-mask{background-color:rgba(0,0,0,.8);background-color:#000\9;opacity:.3\9;filter:alpha(opacity=15)\9;z-index:999999}
+.keyword-inshop-ext-loading{opacity:.3;filter:alpha(opacity=15);background:#000 center center no-repeat scroll;background-image:url(loading.gif)}
+.ke-global-loading .keyword-inshop-ext-loading{background-attachment:fixed}
+.keyword-inshop-overlay .keyword-inshop-resizable-handler{overflow:hidden;font-size:0;line-height:0;position:absolute}
+.keyword-inshop-overlay .keyword-inshop-resizable-handler-b{height:6px;width:100%;bottom:0;left:0;cursor:n-resize}
+.keyword-inshop-overlay .keyword-inshop-resizable-handler-t{height:6px;width:100%;top:0;left:0;cursor:n-resize}
+.keyword-inshop-overlay .keyword-inshop-resizable-handler-l{height:100%;-height:expression(this.parentNode.offsetHeight);width:6px;top:0;left:0;cursor:e-resize}
+.keyword-inshop-overlay .keyword-inshop-resizable-handler-r{height:100%;-height:expression(this.parentNode.offsetHeight);width:6px;position:absolute;top:0;right:0;cursor:e-resize}
+.keyword-inshop-overlay .keyword-inshop-resizable-handler-bl{height:6px;width:6px;z-index:1;bottom:0;left:0;cursor:sw-resize}
+.keyword-inshop-overlay .keyword-inshop-resizable-handler-br{height:6px;width:6px;z-index:1;bottom:0;right:0;cursor:se-resize}
+.keyword-inshop-overlay .keyword-inshop-resizable-handler-tl{height:6px;width:6px;z-index:1;left:0;cursor:nw-resize}
+.keyword-inshop-overlay .keyword-inshop-resizable-handler-tr{height:6px;width:6px;z-index:1;top:0;right:0;cursor:ne-resize}
+.keyword-inshop-overlay .hb-panel{background-position:0 0;background-repeat:no-repeat;background-size:cover;position:relative;z-index:1000001;color:#fff}
+.keyword-inshop-overlay .error-panel{width:399px;height:401px;background-image:url(//img.alicdn.com/tps/TB1cdKiNVXXXXX7XVXXXXXXXXXX-399-401.png)}
+.keyword-inshop-overlay .success-panel{width:448px;height:472px;background-image:url(//img.alicdn.com/tps/TB11bmrNVXXXXbQXFXXXXXXXXXX-448-472.png)}
+.keyword-inshop-overlay .shop-logo{width:44px;height:44px;position:absolute;z-index:1000003;top:50px;left:98px;border-radius:2px}
+.keyword-inshop-overlay .info{width:270px;position:absolute;z-index:1000003;top:156px;left:50%;margin-left:-140px;text-align:center;white-space:nowrap;overflow:hidden}
+.keyword-inshop-overlay .info em{margin:0 10px}
+.keyword-inshop-overlay .info-line1{font-size:18px;line-height:24px}
+.keyword-inshop-overlay .info-line1 em{font-weight:500}
+.keyword-inshop-overlay .info-line2{font-size:18px;line-height:32px;height:32px}
+.keyword-inshop-overlay .info-line2 em{color:#fff100;font-size:28px;font-weight:600}
+.keyword-inshop-overlay .tips{width:300px;text-align:center;position:absolute;z-index:1000003;top:379px;left:50%;margin-left:-163px;font-size:12px;line-height:16px;height:16px}
+.keyword-inshop-overlay .ki-btn-close{position:absolute;z-index:1000003;height:46px;left:50%;font-size:18px;line-height:46px;overflow:hidden;cursor:pointer;text-align:center;text-decoration:none}
+.keyword-inshop-overlay .success-panel .ki-btn-close{width:270px;bottom:20px;margin-left:-149px;color:#d50100}
+.keyword-inshop-overlay .error-panel .ki-btn-close{width:280px;bottom:20px;margin-left:-135px}
+.keyword-inshop-overlay .err-info{width:280px;position:absolute;z-index:1000003;top:190px;left:50%;margin-left:-134px;text-align:center;white-space:nowrap;overflow:hidden;color:#090800}
+.keyword-inshop-overlay .err-msg{font-weight:700;font-size:32px;line-height:36px;height:36px;margin-bottom:4px}
+.keyword-inshop-overlay .err-tip{font-size:22px}

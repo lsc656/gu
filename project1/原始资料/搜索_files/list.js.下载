@@ -1,0 +1,244 @@
+﻿$(function () {
+
+    $(".side_category dl dt").click(function () {
+        $(".side_category dl dt").not($(this).next()).removeClass("current");
+        $(this).next().slideToggle(500);
+        $(this).toggleClass("current");
+    });
+
+    $(".filter_products img").lazyload({ effect: "fadeIn" });
+
+    $("#pageMore").live('click', function () {
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            myfilter.push($(this).attr("filter"));
+        });
+        var typeid = $(".my_filter .conditions i").attr("typeid");
+        var sort = $(".filter_sort .sort_type .focus a").attr("sort");
+        var areaid = $(".filter_sort .sort_type .city .sitelist").attr("areaid");
+        var index = $(this).attr("pageindex");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/GoodsListWaterFall1.ashx",
+            cache: false,
+            data: "typeid=" + typeid + "&sort=" + sort + "&areaid=" + areaid + "&myfilter=" + myfilter.join("") + "&fallIndex=" + index,
+            dataType: "html",
+            async: true,
+            timeout: 60000,
+            success: function (html) {
+                $("#pageMore").attr("pageindex", parseInt(index) + 1);
+                $('#list-waterfall').append(html);
+                if ($(html).find(".title").length < 20) {
+                    $(".pageMoreWarp").hide();
+                }
+            }
+        });
+    });
+
+    $(".filter_value").live('click', function () {
+
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            myfilter.push($(this).attr("filter"));
+        });
+        myfilter.push($(this).attr("filter"));
+        var typeid = $(".my_filter .conditions i").attr("typeid");
+        var sort = $(".filter_sort .sort_type .focus a").attr("sort");
+        var areaid = $(".filter_sort .sort_type .city .sitelist").attr("areaid");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/Filter.ashx",
+            cache: false,
+            data: "typeid=" + typeid + "&sort=" + sort + "&areaid=" + areaid + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+
+                $("#layoutcontent").html(html);
+                $(".filter_products img").lazyload({ effect: "fadeIn" });
+            }
+        });
+    });
+
+    $(".filter_items li i").live('click', function () {
+        var removefilter = $(this).attr("filter");
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            if ($(this).attr("filter") != removefilter) {
+                myfilter.push($(this).attr("filter"));
+            }
+        });
+        var typeid = $(".my_filter .conditions i").attr("typeid");
+        var sort = $(".filter_sort .sort_type .focus a").attr("sort");
+        var areaid = $(".filter_sort .sort_type .city .sitelist").attr("areaid");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/Filter.ashx",
+            cache: false,
+            data: "typeid=" + typeid + "&sort=" + sort + "&areaid=" + areaid + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+                $("#layoutcontent").html(html);
+                $(".filter_products img").lazyload({ effect: "fadeIn" });
+            }
+        });
+    });
+
+    $(".attrExtra-more").live('click', function () {
+        if ($(this).hasClass("drop")) {
+            $(this).html("更多选项<i></i>");
+            $(this).removeClass("drop");
+            $(".extra").hide();
+        }
+        else {
+            $(this).html("精简选项<i></i>");
+            $(this).addClass("drop");
+            $(".extra").show();
+        }
+    });
+
+    $(".filter_sort li a.a_sort").live('click', function () {
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            myfilter.push($(this).attr("filter"));
+        });
+        var typeid = $(".my_filter .conditions i").attr("typeid");
+        var sort = $(this).attr("sort");
+        var areaid = $(".filter_sort .sort_type .city .sitelist").attr("areaid");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/Filter.ashx",
+            cache: false,
+            data: "typeid=" + typeid + "&sort=" + sort + "&areaid=" + areaid + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+                $("#layoutcontent").html(html);
+                $(".filter_products img").lazyload({ effect: "fadeIn" });
+            }
+        });
+    });
+
+    $(".filter_sort li a.a_area").live('click', function () {
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            myfilter.push($(this).attr("filter"));
+        });
+        var typeid = $(".my_filter .conditions i").attr("typeid");
+        var sort = $(".filter_sort .sort_type .focus a").attr("sort");
+        var areaid = $(this).attr("areaid");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/Filter.ashx",
+            cache: false,
+            data: "typeid=" + typeid + "&sort=" + sort + "&areaid=" + areaid + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+                $("#layoutcontent").html(html);
+                $(".filter_products img").lazyload({ effect: "fadeIn" });
+            }
+        });
+    });
+
+    $(".filter_sort li .desc").live('click', function () {
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            myfilter.push($(this).attr("filter"));
+        });
+        var typeid = $(".my_filter .conditions i").attr("typeid");
+        var sort = $(this).attr("sort");
+        var areaid = $(".filter_sort .sort_type .city .sitelist").attr("areaid");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/Filter.ashx",
+            cache: false,
+            data: "typeid=" + typeid + "&sort=" + sort + "&areaid=" + areaid + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+                $("#layoutcontent").html(html);
+                $(".filter_products img").lazyload({ effect: "fadeIn" });
+            }
+        });
+    });
+
+    $(".filter_sort li.city").live('mouseover mouseout', function (event) {
+        if (event.type == 'mouseover') {
+            $(this).find(".citysite ").removeClass("none");
+        }
+        else {
+            $(this).find(".citysite ").addClass("none");
+        }
+    });
+
+
+    $('.gc .bcolor').live('click', function () {
+        $(this).addClass('bcolor-select').siblings('b').removeClass('bcolor-select');
+        var goodsjson = jQuery.parseJSON($(this).attr("goodsInfo"));
+        $li = $(this).parents('li');
+        $img = $li.find(".img");
+        $title = $li.find("h3")
+        $img.attr("src", goodsjson.GoodsImg);
+        $title.find("a").text(goodsjson.GoodsName);
+        $title.find("a").attr("onclick", "openGoods(" + goodsjson.GoodsID + ",'" + goodsjson.DefaultUrl + "'); return false;");
+        $img.parent("a").attr("onclick", "openGoods(" + goodsjson.GoodsID + ",'" + goodsjson.DefaultUrl + "'); return false;");
+    });
+
+    $('.gc .gc-prev').live('click', function () {
+        $gc = $(this).parent();
+        $warp = $gc.find(".gc-switchable");
+        var gcindex = $warp.attr("gcindex");
+        if (gcindex > 1) {
+            $warp.animate({ left: "+=185px" }, "slow");
+            $warp.attr("gcindex", parseInt(gcindex) - 1)
+
+        }
+    });
+
+    $('.gc .gc-next').live('click', function () {
+        $gc = $(this).parent();
+        $warp = $gc.find(".gc-switchable");
+        var gcindex = $warp.attr("gcindex");
+        var gcsize = $warp.attr("gcsize");
+        if (gcindex < gcsize) {
+            $warp.animate({ left: "-=185px" }, "slow");
+            $warp.attr("gcindex", parseInt(gcindex) + 1)
+        }
+    });
+
+
+    $('#list-waterfall li').live('mouseover', function () {
+        $(this).addClass("cell-hover");
+        $(this).find(".bookingtoshop").show();
+    });
+
+    $('#list-waterfall li').live('mouseout', function () {
+        $(this).removeClass("cell-hover");
+        $(this).find(".bookingtoshop").hide();
+    });
+
+    $(".gc .gc-prev").live('mouseover', function () {
+        $gc = $(this).parent();
+        $warp = $gc.find(".gc-switchable");
+        var gcindex = $warp.attr("gcindex");
+        if (gcindex > 1) {
+            $(this).addClass("gc-prev-hover");
+        }
+    });
+
+    $(".gc .gc-prev").live('mouseout', function () {
+        $(this).removeClass("gc-prev-hover");
+    });
+
+    $(".gc .gc-next").live('mouseover', function () {
+        $gc = $(this).parent();
+        $warp = $gc.find(".gc-switchable");
+        var gcindex = $warp.attr("gcindex");
+        var gcsize = $warp.attr("gcsize");
+        if (gcindex < gcsize) {
+            $(this).addClass("gc-next-hover");
+        }
+    });
+
+    $(".gc .gc-next").live('mouseout', function () {
+        $(this).removeClass("gc-next-hover");
+    });
+
+});

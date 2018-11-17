@@ -1,0 +1,197 @@
+
+
+/**
+ * 切换城市
+ */
+(function() {
+
+	setSlider($('#scroll-pane'));
+	$('#anchors a').click(function(){
+		var difference = $('.scroll-content').height()-$('#scroll-pane').height();//calculate the difference - not needed if within the main slider code
+		var targetclass = ($(this).attr('class'));//read the class of the clicked anchor
+		var position = $(".scroll-content ."+targetclass).position();//search for a div with matching class and read its position
+	    var topValue = -(position.top);//content top is just the negative of the top position
+		if (topValue>0) topValue = 0;//stop the content scrolling down too much
+		if (Math.abs(topValue)>difference) topValue = (-1)*difference;//stop the content scrolling up too much
+		sliderVal = (100+(topValue*100/difference));//calculate the slider position from the content position
+		$(".slider-vertical").slider("value", sliderVal);//set the slider position
+		return false;
+	});
+	var selectCity = $('#selectCity'),
+		button = selectCity.find('.button');
+
+	var citylist = $('#citylist'),
+		input = citylist.find('.input'),
+		close = citylist.find('.citylist-close'),
+		show = function() {
+			selectCity.addClass('selectCityHover');
+			input.focus();
+		},
+		hide = function() {
+			selectCity.removeClass('selectCityHover');
+			input.blur();
+		};
+	button.click(function() {
+		if (selectCity.hasClass('selectCityHover')) {
+			hide();
+		}
+		else {
+			show();
+		}
+	});
+
+	close.click(function() {
+		hide();
+	});
+	$(document).click(function(e) {
+		var e = e || window.event,
+			target = e.target || e.srcElement;
+		if ($(target).parents('#selectCity').size() == 0) {
+			hide();
+		}
+	});
+
+}) ();
+
+/**
+ * 分类信息切换
+ */
+(function() {
+	var classify = $('#classify'),
+		hd = classify.find('.cl-hd');
+
+	hd.hover(function() {
+		$(this).addClass('cl-hd-hover');
+	}, function() {
+		$(this).removeClass('cl-hd-hover');
+	});
+
+	classify.hover(function() {
+		classify.addClass('classify-hover');
+	}, function() {
+		classify.removeClass('classify-hover');
+	});
+}) ();
+
+/**
+ * 图片切换
+ */
+(function($) {
+	var createLabel = function(size) {
+		var labels = [];
+		if (size > 1) {
+			labels.push('<i class="SP-current">1</i>');
+			for (var i = 2; i <= size; i++) {
+				labels.push('<i>' + i + '</i>')
+			}
+		}
+		return labels.join('');
+	};
+	$.extend($.fn, {
+		SliderPicture: function() {
+			$.each(this, function() {
+				var that = $(this),
+					size = {
+						width: that.width(),
+						height: that.height()
+					},
+					picture = that.find('.SP-picture'),
+					label = that.find('.SP-label');
+
+				var pics = picture.find('li'),
+					labels = $(createLabel(pics.size()));
+				picture.css('width', pics.size());
+				labels.mouseover(function() {
+					var dot = $(this), index = dot.index();
+					dot.addClass('SP-current').siblings().removeClass('SP-current');
+					picture.stop().animate({left: -(index * (size.width | 0))}, 300, function() {})
+				});
+				label.empty().append(labels);
+			});
+		}
+	});
+}) (jQuery);
+
+
+function sendAddress(id, name,shopID) {
+	var r = /^(\d){11}$/,
+		docheight = $(document).height(),
+		scrollTop = document.documentElement.scrollTop + document.body.scrollTop,
+		winHeight = document.documentElement.clientHeight || document.body.clientHeight,
+		mask = $('#documentMask'), result = $('#sendResult');
+	var phone = $('#' + id).val();
+	if (r.test(phone)) {
+	    $.ajax({
+	        type: "POST",
+	        url: "/Ajax/SmsAddress.ashx",
+	        data: "Mobile=" + phone + "&ShopID=" + shopID + "",
+	        dataType: "text",
+	        success: function (msg) {
+	            if (msg == "1") {
+	                mask.css('height', docheight).show();
+	                result.show().find('.sr-shopname').html(name).end().find('.sr-phone').html(phone);
+	                result.css('top', (winHeight - result.get(0).offsetHeight) / 2 + scrollTop);
+	                var close = function () {
+	                    result.hide();
+	                    mask.hide();
+	                };
+	                result.find('.close').get(0).onclick = function () {
+	                    close();
+	                };
+
+	            }
+	            else if (msg == "2") {
+	                dMessage.show("请输入正确的手机号", 1);
+	            }
+	            else {
+	                dMessage.show("发送失败，请联系客服处理", 3);
+	            }
+	        },
+	        error: function (msg) {
+	            dMessage.show(msg.responseText, 3);
+	        }
+	    });
+	}
+	else {
+		alert('请输入正确的手机号码！');
+	}
+}
+
+
+(function() {
+
+	var ss = $('#SiteService');
+
+	ss.find('li').hover(function() {
+		$(this).addClass('hover');
+	}, function() {
+		$(this).removeClass('hover');
+	});
+
+	var ie6=!-[1,]&&!window.XMLHttpRequest;
+	var set = function() {
+		var t = $(document).scrollTop();
+		ss.css('top', t + (document.documentElement.clientHeight || document.body.clientHeight) * 0.3);
+	};
+	if (ie6) {
+		ss.css('position', 'absolute');
+		set();
+		$(window).scroll(function() {
+			set();
+		}).resize(function() {
+			set();
+		});
+	}
+
+}) ();
+
+$('.navibar .navs').find('li').hover(function() {
+	$(this).addClass('hover');
+}, function() {
+	$(this).removeClass('hover');
+})
+
+
+
+
+

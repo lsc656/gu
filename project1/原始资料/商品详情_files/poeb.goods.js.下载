@@ -1,0 +1,342 @@
+﻿$(function () {
+    $('.jqzoom').jqzoom({ zoomType: 'standard', lens: true, preloadImages: false, alwaysOn: false });
+    $('.spec .skuchoose li.sku').live('click', function () {
+        var skuinfo = jQuery.parseJSON($(this).attr("skujson"));
+        $("#detailTitle").html("<div class=\"goodsname\">" + skuinfo.goodsName + "<p class=\"alais\">" + skuinfo.alias + "</p></div>");
+        $("#SpancrumbsGoodsName").html(skuinfo.goodsName);
+        $(".spec-top-title2").html(skuinfo.alias);
+        $(".spec-top-title").html(skuinfo.goodsName);
+        $('#hidSpecID').val(skuinfo.skuID);
+        $("#hidGoodsID").val(skuinfo.goodsID);
+        $("#detailesmall ul li").hide();
+        $("#detailesmall ul li.li" + skuinfo.goodsID).show();
+        $(".detail_img .jqzoom").hide();
+        $(".detail_img #aGoods" + skuinfo.goodsID).show();
+        $("#buyPrice").val(skuinfo.salePrice);
+        $(".spec-top-price").html('<span>零售价￥</span><span class="colorb91d2b">' + skuinfo.salePrice + '</span> <span>市场价</span><del class="del-price">￥' + skuinfo.marketPrice + '</del>');
+        $(".spec-top-pinjia li").last(".b91d2b").html(skuinfo.point)
+        $(".l-proframeslens .m-proframes .goodsimg img").attr("src", "http://img.yichao.cn/uploads/goods/" + skuinfo.middleImage);
+        $(".l-proframeslens .m-proframes .goodsname a").text(skuinfo.goodsName);
+        $("#hidGroupFramesID").val(skuinfo.goodsID);
+        $showgroup = $("a.showgroup");
+        $showgroup.attr("data-frameid", skuinfo.goodsID);
+        $showgroup.attr("href", "/glasses/set-" + $showgroup.attr("data-frameid") + "-" + $showgroup.attr("data-lensid") + ".html");
+        GetshipHtml();
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/Goods.ashx",
+            cache: false,
+            data: "goodsID=" + $("#hidGoodsID").val() + "&operatingType=1",
+            dataType: "html",
+            success: function (html) {
+                if (isNaN(html)) {
+                    var strHtmls = html.split("|");
+                    //var strCommentHtml = $("#tabbox_rv").html();
+                    //$("#detail_img_trying").html(strHtmls[0]);
+                    $("#divGoodsDescription").html(strHtmls[1]);
+                    //$("#ctl00_cphBody_divCssChange").attr("class", strHtmls[2]);
+                    //$("#divGroup").html(strHtmls[3]);
+                }
+            }
+        });
+    });
+    CalculatePrice();
+    listenScrollgood($(".tb_tab"));
+    $("#pro_info img").lazyload({ threshold: 100, effect: "fadeIn" });
+    $(".seeUserYou").live('click', function () {
+        $(this).find(".closeDiv").toggleClass("dn");
+        $(this).toggleClass("bod");
+        if ($(this).find("i").attr("class") == "sanDown") {
+            $(this).find("i").attr("class", "sanUp");
+        }
+        else {
+            $(this).find("i").attr("class", "sanDown");
+        }
+        $(this).find(".ulSeeYou").toggleClass("dn");
+    });
+    $(".yunfei .closeDiv").live('click', function () {
+        $(this).parent().hide()
+    });
+    $("#moreCity").click('click', function () {
+        $(".yunfei").find(".addresMore").show();
+    })
+    $('.ald-switchable-prev-btn').click(function () {
+        var recommendnum = $('.recommendlist li').length;
+        var top = $('.recommendlist').css('top').replace("px", "");
+        if (top < 0) {
+            $('.recommendlist').animate({ top: "+=475" }, "slow");
+        }
+        else {
+            $('.recommendlist').animate({ top: "+=475" }, "slow", function () {
+                $('.recommendlist').css("top", -(recommendnum / 3 - 1) * 475);
+            });
+        }
+    });
+    $('.ald-switchable-next-btn').click(function () {
+        var recommendnum = $('.recommendlist li').length;
+        var top = $('.recommendlist').css("top").replace("px", "");
+        if (top > -((recommendnum / 3 - 1) * 475)) {
+            $('.recommendlist').animate({ top: "-=475" }, "slow");
+        }
+        else {
+            $('.recommendlist').animate({ top: "-=475" }, "slow", function () {
+                $('.recommendlist').css("top", 0);
+            });
+        }
+    });
+
+    $(".btn-bar .red").hover(
+       function () {
+           $(".btn-bar .shoplist").show();
+       },
+      function () {
+          $(".btn-bar .shoplist").hide();
+      }
+    );
+
+    $("#btnyysubmit").click(function () {
+        var realname = $("#txtyyname").val();
+        var phone = $("#txtyyphone").val();
+        var add = $("#txtyyadd").val();
+        if (realname == "") {
+            $("#txtyyname").focus();
+            $("#txtyyname").addClass("ipt_focus");
+            return;
+        }
+        else {
+            $("#txtyyname").removeClass("ipt_focus");
+        }
+        if (phone == "" || phone.length != 11) {
+            $("#txtyyphone").focus();
+            $("#txtyyphone").addClass("ipt_focus");
+            return;
+        }
+        else {
+            $("#txtyyphone").removeClass("ipt_focus");
+        }
+        $("#btnyysubmit").attr("disabled", "disabled");
+        $.ajax({
+            type: "POST",
+            url: "/ajax/o2oyy.ashx",
+            data: { "RealName": realname, "Phone": phone, "Add": add },
+            dataType: "json",
+            success: function (json) {
+                if (json.status == 1) {
+                    var msg = [];
+                    msg.push('<div class="msgoto">');
+                    msg.push('<div class="msgsuccess">恭喜你！预约提交成功</div>');
+                    msg.push('<div class="msgconfirm">具体以客服电话核对为准</div>');
+                    msg.push('<div class="msgtrygoods"><button type="button" id="btntrygoods">立即挑选喜欢的眼镜</button></div>');
+                    msg.push('<div class="msgtakeit">验光师上门将会携带您挑选的眼镜</div>');
+                    msg.push("</div>");
+                    $.dialog({ id: 'lhgo2oalert', title: false, lock: true, max: false, min: false, content: msg.join(""), zIndex: 999999, padding: 0 });
+                    $("#btntrygoods").click(function () { location.href = "/yanjingkuang/"; });
+                }
+                else {
+                    $.dialog.tips(json.message, 2, 'tips.gif');
+                }
+            }
+        });
+    });
+});
+/**** ling ****/
+// 头部fixed
+function listenScrollgood(element) {
+    var obj_top = element.position().top;
+    $(window).scroll(function () {
+        var window_top = $(this).scrollTop();
+        if (window_top >= obj_top) {
+            if (!$.browser.msie || ($.browser.msie && $.browser.version >= 7)) {
+                element.css({
+                    position: "fixed",
+                    top: 0,
+                    zIndex: 9999
+                });
+            } else {
+                element.css({
+                    position: "absolute",
+                    top: window_top,
+                    zIndex: 9999
+                });
+            }
+        } else {
+            element.css("position", "static");
+        }
+    });
+}
+function GetshipHtml() {
+    $.ajax({
+        type: "POST",
+        url: "/Ajax/Express.ashx",
+        cache: false,
+        data: "goodsID=" + $("#hidGoodsID").val() + "&price=" + $("#strongPrice").html() + "&province=" + $("#spanCityValue").html(),
+        dataType: "html",
+        success: function (html) {
+            $("#emNoYun").html(html);
+        }
+    });
+}
+
+function openDegreeHtml() {
+    $.dialog({
+        id: "openDegree",
+        max: false,
+        min: false,
+        title: '度数选择说明',
+        width: '700px',
+        height: '500px',
+        drag: false,
+        resize: false,
+        content: 'url:sushuInfo.htm'
+    });
+}
+
+// 商品评价内容切换
+function toggleComment() {
+    var $this = $('#pnlComment'),
+		tab = $this.find('.tb_tab li'),
+		box = $this.find('.tb_box_part');
+    tab.mouseover(function () {
+        var $this = $(this),
+			index = $this.index();
+        $this.addClass('focus').siblings('li').removeClass('focus');
+
+    });
+}
+
+// 载入商品的评价内容
+// spaceID：显示评价内容的容器ID；goodsID:商品ID； pageIndex:页序号；level:好评=3、中评=2、差评=1
+function GetComment(spaceID, goodsID, pageIndex, level) {
+    $("#" + spaceID).load("/Ajax/GoodsComment.ashx?SpaceID=" + spaceID + "&GoodsID=" + goodsID + "&PageIndex=" + pageIndex + "&Level=" + level);
+    $("html,body").stop(true);
+    $("html,body").animate({ scrollTop: $("#" + spaceID).offset().top }, 500);
+}
+
+// 购买数量增加
+function Plus(objID) {
+    var qty = $("#" + objID).val();
+    if (isNaN(qty)) {
+        qty = 1;
+    } else {
+        qty++;
+    }
+    $("#" + objID).val(qty);
+}
+
+// 购买数量减少
+function Minus(objID) {
+    var qty = $("#" + objID).val();
+    if (isNaN(qty)) {
+        qty = 1;
+    } else {
+        qty--;
+    }
+    if (qty < 1) qty = 1;
+
+    $("#" + objID).val(qty);
+}
+
+//立刻购买
+function BuyNow() {
+    $('#hidCart').val(1);
+    addCartItem();
+}
+
+//单买镜架
+function BuyOnlyFrames() {
+    $('#hidOnlyFrames').val('true');
+    addCartItem();
+}
+
+//单买镜架恢复
+function SetOnlyFrames() {
+    $('#hidOnlyFrames').val('false');
+}
+
+function CalculatePrice() {
+    var salePrice = 0;
+    var marketPrice = 0;
+    var goodsNumber = 0;
+    $("input[name='chkGoodsGroup']:checked").each(function () {
+        salePrice += parseFloat($(this).attr("salePirce"));
+        marketPrice += parseFloat($(this).attr("marketPrice"));
+        goodsNumber += 1;
+    });
+    $("#g_SalePrice").text("￥" + salePrice.toFixed(2));
+    $("#g_MarketPrice").text("￥" + marketPrice.toFixed(2));
+    $("#g_Number").text(goodsNumber + "个");
+}
+
+function closeCommentImg(commentID) {
+    $("#divLargeImg" + commentID).hide();
+    $("#divSmallimg" + commentID).find("img").each(function () {
+        $(this).attr("class", "smallimg");
+    });
+}
+
+function openCommentImg(commentID, thisID) {
+    var thisElement = $("#" + thisID);
+    if (thisElement.attr("class") == "smallimg") {
+        thisElement.attr("class", "currentimage").siblings().attr("class", "smallimg");
+        var bigImg = $("#divLargeImg" + commentID).find("img");
+        bigImg.attr("src", thisElement.attr("src"));
+        bigImg.attr("src", thisElement.attr("src").replace("_45_45", "_425_425").replace("_74_74", "_425_425"));
+        $("#divLargeImg" + commentID).show();
+    }
+    else {
+        thisElement.attr("class", "smallimg");
+        $("#divLargeImg" + commentID).hide();
+    }
+}
+
+//促销倒计时函数
+function updateEndTime() {
+    var date = new Date();
+    var time = date.getTime();  //当前时间距1970年1月1日之间的毫秒数
+    $(".spantime").each(function (i) {
+        var endDate = this.getAttribute("endTime"); //结束时间字符串
+        //转换为时间日期类型
+        var endDate1 = eval('new Date(' + endDate.replace(/\d+(?=-[^-]+$)/, function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) + ')');
+        var endTime = endDate1.getTime(); //结束时间毫秒数
+        var lag = (endTime - time) / 1000; //当前时间和结束时间之间的秒数
+        if (lag > 0) {
+            var second = Math.floor(lag % 60);
+            var minite = Math.floor((lag / 60) % 60);
+            var hour = Math.floor((lag / 3600) % 24);
+            var day = Math.floor((lag / 3600) / 24);
+            $(this).html("剩余 " + day + "天" + hour + "小时" + minite + "分" + second + "秒");
+        }
+        else {
+            $(this).html("促销结束啦！");
+        }
+    });
+    setTimeout("updateEndTime()", 1000);
+}
+
+function SendShopMsg(shopid) {
+    var mobile = $("#txtMobile" + shopid).val();
+    if (mobile == "" || mobile.length != 11) {
+        dMessage.show("请输入11位手机号码", 1);
+        return false;
+    }
+    $.ajax({
+        type: "POST",
+        url: "/Ajax/SmsAddress.ashx",
+        data: "Mobile=" + mobile + "&ShopID=" + shopid + "",
+        dataType: "text",
+        success: function (msg) {
+            if (msg == "1") {
+                dMessage.show("发送成功", 4);
+            }
+            else if (msg == "2") {
+                dMessage.show("请输入正确的手机号", 1);
+            }
+            else {
+                dMessage.show("发送失败，请联系客服处理", 3);
+            }
+        },
+        error: function (msg) {
+            dMessage.show(msg.responseText, 3);
+        }
+    });
+}

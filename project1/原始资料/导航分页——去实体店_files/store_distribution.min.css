@@ -1,0 +1,28 @@
+.red{color:#d22320}
+.mb15{margin-bottom:15px}
+
+.store_distribution_map .title,.store_info .title,.best_selling_goods .title
+{
+    height:52px;background:url(/img/shop/store_title_bg.png) no-repeat 0 0;
+    border-bottom:2px solid #c00a3b;position:relative}
+    .store_distribution_map h2,.store_info .title,.best_selling_goods h2{text-indent:-9999px}
+    .store_info .title{background-position:0 -52px}.best_selling_goods .title{background-position:0 -104px}
+    
+    .store_distribution_map .title span{position:absolute;left:260px;top:20px;color:#fff;font-size:20px;font-family:Tahoma;font-weight:bold}
+    .store_distribution_map .link{display:block;position:absolute;width:199px;height:29px;
+                                  background:url(/img/shop/link.jpg) 0 0 no-repeat;
+                                  margin-left:73px;margin-top:557px;z-index:2}
+.store_distribution_map .link:hover{background-position:0 -29px
+                                                                                                                  }
+
+
+
+.expr_info_float{ position:absolute;display:none;border:1px solid #CCC;border-radius:8px;background:white;width:200px;line-height:1.6;padding:10px;z-index:200;left:0;top:0}
+.expr_info_float .closenew{text-align:right;width:200px;margin-top:-8px}
+.expr_info_float .closenew a{color:#A00;font-size:14px;line-height:14px}
+.red:hover
+{
+    text-decoration: underline;
+    color: #FF9900;
+}
+.expr_info_float .title{color:red;overflow:hidden;border-bottom:1px dotted #999;margin-bottom:5px;background:0}

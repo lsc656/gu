@@ -1,0 +1,115 @@
+﻿
+var num = 0;
+var i = setInterval(function () {   //底部评论滚动事件
+    num++;
+    $(".page18 .center .content >ul").animate({ top: '-270' * num + '' }, 500);
+    var length = $(".page18 .center .content >ul").children('li').length;
+    if (num == length / 2) {
+        num = 0;
+        $(".page18 .center .content >ul").animate({ top: '0'}, 500);
+    }
+}, 5000);
+
+
+$(function () {
+    var timer = null;//定时器
+    var $nav = $(".nav");//导航
+    var $cityGroup = $(".cityGroup");   //所有城市集合UL
+    var $seeBtn = $(".seeAll div");  //查看全部按钮
+    $nav.on('mouseenter', 'li', function () {
+        var $this = $(this);
+        var thisIndex = $this.index();
+        var groupH = $cityGroup.children('li:eq(' + thisIndex + ')').height();  //当前显示的li高度
+        timer = setTimeout(function () {
+            $seeBtn.text("点击查看全部实体店"); //初始化按钮文字
+            $cityGroup.css("max-height", "960px");  //初始化集合UL最大高度
+            $cityGroup.children('li').css("max-height", "960px");
+            if ($this.hasClass('da1e3a')) { //导航hover效果切换
+                $this.addClass('hover').siblings().removeClass('hover');
+            } else {
+                $this.addClass('hover').siblings().removeClass('hover');
+            }
+            $cityGroup.height(groupH).children('li').stop().animate({
+                "left": -thisIndex * 1190
+            }, 500);;   //  停止动画
+
+            if (groupH >= 950) {    //超出则显示点击查看全部按钮
+                $cityGroup.css('height', 'auto').find(".seeAll").show();
+            } else {
+                $cityGroup.find(".seeAll").hide();
+            }
+        }, 500);
+    }).on('mouseout', 'li', function () {
+        clearTimeout(timer);
+    });
+
+    $seeBtn.click(function () {
+        var $this = $(this);
+
+        if ($this.text() == '点击查看全部实体店') {
+            $cityGroup.css("max-height", "inherit");    //取消最大高度 显示内容
+            $cityGroup.children('li').css("max-height", "inherit");
+            $this.text('点击收起部分实体店');
+        }else{
+            $cityGroup.css("max-height", "960px");  //设置最大高度 隐藏内容
+            $cityGroup.children('li').css("max-height", "960px");
+            $this.text('点击查看全部实体店');
+    }
+       
+    });
+
+    $(".page6").on('mousemove', '.img', function () {
+        $this = $(this);
+        $this.stop();
+        $this.fadeOut(700).siblings('.imgHover').fadeIn(700);
+    }).on('mouseleave', '.imgHover', function () {
+        $this = $(this);
+        $this.stop();
+        $this.fadeOut(700).siblings('.img').fadeIn(700);
+    });
+
+    $(".hr").css(
+        'left', ($(window).width() - $(".hr").width()) / 2
+        );
+
+    $(".page18 .left .title").on('hover', 'span', function () {
+        var $content=$(".page18 .left")
+        $this = $(this);
+        var index = $this.index();
+        $this.addClass("hover").siblings().removeClass('hover');
+        if (index == 0) {
+            $content.find('.content').children("ul:eq("+index+")").show().siblings().hide();
+        } else if (index == 1) {
+            $content.find('.content').children("ul:eq(" + index + ")").show().siblings().hide();
+        }
+    });
+
+    $(".store").css('line-height', $('.storeList').height() + 'px');
+
+    $(".page2").on('hover', 'li', function () {
+        var $childImg = $(this).find('img');
+        var $chilP = $(this).find('p');
+        var index = $(this).index();
+        switch (index) {
+            case 0: $childImg.attr('src', '/img/page2-1-hover_03.png'); break;
+            case 1: $childImg.attr('src', '/img/page2-2-hover_03.png'); break;
+            case 2: $childImg.attr('src', '/img/page2-3-hover_03.png'); break;
+            case 3: $childImg.attr('src', '/img/page2-4-hover_05.png'); break;
+            case 4: $childImg.attr('src', '/img/page2-4-hover_06.png'); break;
+        }
+        $chilP.css('color', '#da1e3a');
+    });
+    $(".page2").on('mouseleave', 'li', function () {
+        var $childImg = $(this).find('img');
+        var $chilP = $(this).find('p');
+        var index = $(this).index();
+       
+        switch (index) {
+            case 0: $childImg.attr('src', '/img/page2-1_03.png'); break;
+            case 1: $childImg.attr('src', '/img/page2-2_03.png'); break;
+            case 2: $childImg.attr('src', '/img/page2-3_03.png'); break;
+            case 3: $childImg.attr('src', '/img/page2-4_05.png'); break;
+        }
+        $chilP.css('color', '#222');
+    });
+})

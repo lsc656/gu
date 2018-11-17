@@ -1,0 +1,142 @@
+﻿$(function () {
+    $('.l-proframeslens li.m-prolens').on('click', function () {
+        if ($(this).attr('defaultlens') == 'other') {
+            $.dialog({ id: 'divuplens', title: '选择镜片', content: $("#upgrade").html(), lock: true, min: false, max: false, zIndex: 99999 });
+        } else {
+            $(this).addClass('focus').siblings().removeClass('focus');
+            var lensjson = jQuery.parseJSON($(this).attr("lensInfo"));
+            $(".setprice").html("￥" + lensjson.salePrice);
+            $(".yuanjia del").html("￥" + lensjson.marketPrice);
+            $(".taochanjia .shen").html("为您节省￥" + lensjson.delPrice);
+            $("#hidGroupLensID").val(lensjson.goodsID);
+            $showgroup = $("a.showgroup");
+            $showgroup.attr("data-lensid", lensjson.goodsID);
+            $showgroup.attr("href", "/glasses/set-" + $showgroup.attr("data-frameid") + "-" + $showgroup.attr("data-lensid") + ".html");
+        }
+    });
+
+    $(".filterlens .uplens_filter .filter_value").live('click', function () {
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            myfilter.push($(this).attr("filter"));
+        });
+        myfilter.push($(this).attr("filter"));
+        var frameid = $("#filterlens").attr("frameid");
+        var sort = $(".uplens_filter .uplens_filter_sort .sort.focus").attr("sort");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/FilterLens.ashx",
+            cache: false,
+            data: "frameid=" + frameid + "&sort=" + sort + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+                $("#filterlens").html(html);
+            }
+        });
+    });
+
+    $(".filterlens .uplens_filter .uplens_filter_sort .sort a").live('click', function () {
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            myfilter.push($(this).attr("filter"));
+        });
+        myfilter.push($(this).attr("filter"));
+        var frameid = $("#filterlens").attr("frameid");
+        var sort = $(this).attr("sort");
+        var pageindex = $(".uplens_filter_sort .pageshow").attr("pageindex");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/FilterLens.ashx",
+            cache: false,
+            data: "frameid=" + frameid + "&pageindex=" + pageindex + "&sort=" + sort + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+                $("#filterlens").html(html);
+            }
+        });
+    });
+
+    $(".filterlens .uplens_filter .uplens_filter_sort .sort .asc_desc").live('click', function () {
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            myfilter.push($(this).attr("filter"));
+        });
+        myfilter.push($(this).attr("filter"));
+        var frameid = $("#filterlens").attr("frameid");
+        var sort = $(this).attr("sort");
+        var pageindex = $(".uplens_filter_sort .pageshow").attr("pageindex");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/FilterLens.ashx",
+            cache: false,
+            data: "frameid=" + frameid + "&pageindex=" + pageindex + "&sort=" + sort + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+                $("#filterlens").html(html);
+            }
+        });
+    });
+
+    $(".filterlens .uplens_filter .uplens_filter_sort .lenspage").live('click', function () {
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            myfilter.push($(this).attr("filter"));
+        });
+        myfilter.push($(this).attr("filter"));
+        var frameid = $("#filterlens").attr("frameid");
+        var sort = $(".uplens_filter .uplens_filter_sort .sort.focus a").attr("sort");
+        var pageindex = $(this).attr("pageindex");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/FilterLens.ashx",
+            cache: false,
+            data: "frameid=" + frameid + "&pageindex=" + pageindex + "&sort=" + sort + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+                $("#filterlens").html(html);
+            }
+        });
+    });
+
+    $(".filterlens .filter_items li i").live('click', function () {
+        var removefilter = $(this).attr("filter");
+        var myfilter = [];
+        $(".filter_items li i").each(function () {
+            if ($(this).attr("filter") != removefilter) {
+                myfilter.push($(this).attr("filter"));
+            }
+        });
+        var frameid = $("#filterlens").attr("frameid");
+        var sort = $(".uplens_filter .uplens_filter_sort .sort.focus").attr("sort");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/FilterLens.ashx",
+            cache: false,
+            data: "frameid=" + frameid + "&sort=" + sort + "&myfilter=" + myfilter.join(""),
+            dataType: "html",
+            success: function (html) {
+                $("#filterlens").html(html);
+            }
+        });
+    });
+
+    $('.filterlens .uplens .upcheck').live('click', function () {
+        var otherlens = jQuery.parseJSON($(this).parent().attr('lensInfo'));        
+         
+        Setglass(otherlens)
+        //var lenshtml = [];
+        //lenshtml.push('<div class="goodsimg"><a class="glens" target="_blank" href="/' + otherlens.goodsID + '.html"><img src=' + otherlens.imgPath + ' alt=' + otherlens.goodsName + '/></a></div>');
+        //lenshtml.push('<div class="goodsname"><a class="glens" target="_blank" href="/' + otherlens.goodsID + '.html">' + otherlens.goodsName + '</a></div>');
+        //lenshtml.push('<div class="saleprice"><i>镜片：</i><i class="goodsprice">￥' + otherlens.lensPrice + '</i></div>');
+        //lenshtml.push('<div class="goodsalias">' + otherlens.alias + '</div>');
+        //lenshtml.push('<i class="checked"></i>');
+        //$choselens = $('.l-proframeslens');
+        //$lensspce = $choselens.find('li.m-prolens:eq(1)');
+        //$lensspce.addClass('focus').siblings().removeClass('focus');
+        //$lensspce.attr('lensInfo', $(this).parent().attr('lensInfo'));
+        //$lensspce.html(lenshtml.join(""));
+        //$lensspce.click();
+        closeAllDialog();
+    });
+
+});
