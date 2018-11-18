@@ -1,0 +1,48 @@
+/*列表*/
+.container{
+    position:relative;
+}
+.container>ul{
+    width:198px;
+    float:left;
+}
+.container>ul>li{
+    height:49px;
+    border:1px solid #ccc;
+    line-height:49px;
+}
+.container>ul>li>div:first-child{
+    width:40px;
+    margin-left:20px;
+}
+.container>ul>li>div:nth-child(3){
+    width:40px;
+    text-align:right;
+}
+.container>ul>li>div:last-child>img{
+    width:15px;
+}
+.container>ul>li>div:nth-child(2){
+    width:70px;
+}
+.container>ul>li:not(:last-child){
+    border-bottom:0;
+}
+.container>ul>li>div>a{
+    text-decoration:none;
+    color:#0b2e13;
+    padding-left:10px;
+}
+.container>ul>li>a:hover{
+    color:#B91C2B;
+}
+/*内容显示区域*/
+.container>div:nth-child(2){
+    height:490px;
+    width:770px;
+    border:1px solid #B91C2B;
+    border-left:0;
+    float:left;
+    position:relative;
+    left:-1px;
+}

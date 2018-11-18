@@ -68,7 +68,7 @@ height:30px;
 .container>div:last-child a:visited{
     color:#fff
 }
-.container>div:last-child>ul>li:first-child div{
+.container>div:last-child>ul>li:first-child span{
     display:inline-block;
     width:0px;
     height:0px;
@@ -80,4 +80,8 @@ height:30px;
 }
 .container>div:last-child ul li:first-child{
     background: #DA1E3A;
+    min-width:146px;
+}
+.container>div:last-child>ul>li:not(:first-child){
+    display:none;
 }
