@@ -15,7 +15,7 @@ $(".container>ul:first-child").on("mouseenter","li",function(){
     var remove=function(){
         $(".container>div:nth-child(2)").addClass("d-none").children().addClass("d-none").children().addClass("d-none")
         console.log( $(".container>ul>li"))
-        $(".container>ul:first-child>li").css();
+        $(".container>ul:first-child>li").removeAttr("style");
     }
     if(i!=-1){
         $(".container>ul:first-child").next().removeClass("d-none").children().removeClass("d-none")
