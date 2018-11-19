@@ -39,10 +39,88 @@
 /*内容显示区域*/
 .container>div:nth-child(2){
     height:490px;
-    width:770px;
-    border:1px solid #B91C2B;
-    border-left:0;
+    width:70%;
     float:left;
     position:relative;
     left:-1px;
+    display:none;
 }
+.container>div:nth-child(2)>div{
+    border:1px solid #B91C2B;
+    border-left:0;
+    height:100%;
+    width:100%;
+    opacity:0.9;
+}
+/*内容中每一行*/
+.container>div:nth-child(2)>div>div>div{
+    border-bottom:1px solid #ccc;
+    width:85%;
+    margin-left:10px;
+}
+/*清除每行中浮动的影响*/
+.container>div:nth-child(2)>div>div>div:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/*每行中的标题*/
+.container>div:nth-child(2)>div>div>div>div{
+    font-weight:bold;
+    font-size:0.8rem;
+    padding-top:10px;
+    text-align:left;
+    width:15%;
+    float:left;
+
+}
+/*每行中的内容部分*/
+.container>div:nth-child(2)>div>div>div>ul{
+    padding:10px 0;
+    width:80%;
+    float:left;
+    margin:0;
+    list-style:none;
+}
+.container>div:nth-child(2)>div>div>div>ul:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/*每行内容部分中的每项*/
+.container>div:nth-child(2)>div>div>div>ul>li{
+    float:left;
+    padding-left:10px;
+}
+/*每行中a标签的样式*/
+.container>div:nth-child(2)>div>div>div>ul>li>a{
+    text-decoration:none;
+    color:#454545;
+}
+.container>div:nth-child(2)>div>div>div>ul>li>a:hover{
+    color:#B91C2B;
+}
+/*除第一个div外，每个div最后一行的样式*/
+.container>div:nth-child(2)>div>div>div:last-child{
+    border:0;
+}
+.container>div:nth-child(2)>div>div>div:last-child>p>a{
+    display:inline-block;
+    text-decoration:none;
+    margin:10px 0 0 10px;
+    height:40px;
+    width:110px;
+    background-color: #A42A36;
+    text-align:center;
+    line-height:40px;
+    color:#fff;
+    font-weight:bold;
+}
+.container>div:nth-child(2)>div>div>div:last-child>p>a>span{
+    display:inline-block;
+    margin-left:5px;
+    width:0px;
+    border:5px solid #A42A36;
+    border-left-color:#fff;
+}
+
