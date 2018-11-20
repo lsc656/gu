@@ -1,36 +1,36 @@
-.container>div:not(:last-child) a:link{
+#header>div:not(:last-child) a:link{
     color:#404040;
 }
-.container>div:not(:last-child) a:visited{
+#header>div:not(:last-child) a:visited{
     color:#404040;
 }
-.container>div:not(:last-child) a:hover{
+#header>div:not(:last-child) a:hover{
     color:#000;
     text-decoration:none;
 }
 /*header第一行*/
-.container>div:first-child{
+#header>div:first-child{
 height:30px;
 }
-.container>div:first-child ul{
+#header>div:first-child ul{
     list-style:none;
     padding:0px;
 }
 
-.container>div:first-child ul>li{
+#header>div:first-child ul>li{
     padding:2px;
 }
-.container>div>ul:first-child>li{
+#header>div>ul:first-child>li{
     float:left;
 }
 /*图片和购物车*/
-.container>div>ul:last-child>li img{
+#header>div>ul:last-child>li img{
     height:17px;
     vertical-align:middle;
     padding-left:5px;
     padding-bottom:2px;
 }
-.container>div:first-child>ul:last-child>li:first-child{
+#header>div:first-child>ul:last-child>li:first-child{
     height:28px;
     width:110px;
     background: #DA1E3A;
@@ -39,49 +39,49 @@ height:30px;
     font-weight:bold;
     border-radius:2px;
 }
-.container>div>ul:after{
+#header>div>ul:after{
     content:"";
     display:block;
     clear:both;
 }
 /*header第二行*/
-.container>div:nth-child(2)>div:first-child>img{
+#header>div:nth-child(2)>div:first-child>img{
     width:206px;
 }
-.container>div:nth-child(2)>div:last-child>a>img{
+#header>div:nth-child(2)>div:last-child>a>img{
     height:36px;
 }
-.container>div:nth-child(2)>div:last-child input{
+#header>div:nth-child(2)>div:last-child input{
     line-height:34px;
 }
 /*header第三行*/
-.container>div:last-child>ul{
+#header>div:last-child>ul{
     height:40px;
     line-height:40px;
 }
-.container>div:last-child a:link{
+#header>div:last-child a:link{
     color:#fff
 }
-.container>div:last-child a:hover{
+#header>div:last-child a:hover{
     text-decoration:none;
 }
-.container>div:last-child a:visited{
+#header>div:last-child a:visited{
     color:#fff
 }
-.container>div:last-child>ul>li:first-child span{
+#header>div:last-child>ul>li:first-child span{
     display:inline-block;
     width:0px;
     height:0px;
     border:5px solid #DA1E3A;
     border-top:5px solid #fff;
 }
-.container>div:last-child ul li:not(:first-child):hover{
+#header>div:last-child ul li:not(:first-child):hover{
     background: #686868;
 }
-.container>div:last-child ul li:first-child{
+#header>div:last-child ul li:first-child{
     background: #DA1E3A;
     min-width:146px;
 }
-.container>div:last-child>ul>li:not(:first-child){
+#header>div:last-child>ul>li:not(:first-child){
     display:none;
 }
