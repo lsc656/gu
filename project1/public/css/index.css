@@ -3,7 +3,7 @@
     background-size:cover;
     background-position: center;
  }
-/*列表*/
+/********************************************列表******************************************************/
 #section{
     position:relative;
 }
@@ -43,7 +43,7 @@
 #section>ul:first-child>li>a:hover{
     color:#B91C2B;
 }
-/*内容显示区域*/
+/***************************************内容显示区域***************************************/
 #section>div:nth-child(2){
     height:490px;
     width:70%;
@@ -130,4 +130,52 @@
     border:5px solid #A42A36;
     border-left-color:#fff;
 }
-
+/***************************************floors***************************************/
+#floor{
+    margin-top:50px;
+}
+#floor>div{
+    margin-top:50px;
+}
+/*公有样式：楼层号和名称*/
+#floor>div>div:first-child>div:first-child>div{
+    background-color: #B81C2B;
+    height:35px;
+    width:50px;
+    transform:skewX(-30deg);
+    line-height:35px;
+    text-align:center;
+}
+#floor>div>div:first-child>div:first-child>div>span{
+    /*红色背景的楼层号*/
+    color:#fff;
+    font-size:1.3rem;
+    font-weight:bold;
+    transform:skewX(30deg);
+    padding:0 10px;
+}
+#floor>div>div:first-child>div>span:last-child{
+    /*楼层名称*/
+    color:#333;
+    font-size:1.3rem;
+    margin-left:5px;
+}
+/*1F*/
+#floor>div:first-child>div:nth-child(2)>ul{
+    margin-top:20px;
+    list-style:none;
+}
+#floor>div:first-child>div:nth-child(2)>ul:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+#floor>div:first-child>div:nth-child(2)>ul>li{
+    padding-left:15px;
+    padding-top:8px;
+    float:left;
+}
+#floor>div:first-child>div:nth-child(2)>ul>li>a{
+    text-decoration:none;
+    color:#222;
+}
