@@ -42,4 +42,7 @@ setInterval(function(){
             var m="url('../images/index/ca-"+ dept++ +".jpg')"
             return m
         });
-},2000)
+},2000);
+/*1.3button按钮*/
+//button按钮点击时显示所有，文字变为查看部分；再次点击时显示4个
+

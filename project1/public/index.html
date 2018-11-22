@@ -354,7 +354,7 @@
     <div id="floor" class="container">
         <!-- 所有floor下有两个大div，第一个为本行标题与右侧功能栏,d-flex around;第二个为显示主体部分-->
         <div>
-            <div class="d-flex justify-content-start">
+            <div class="d-flex justify-content-between">
             <!-- 标题与功能栏部分-->
                 <div>
                 <div class="d-inline-block"><span class="d-inline-block">1F</span></div>
@@ -439,7 +439,7 @@
                                 <a href="javascript:;" >预约到店</a>
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-3">
-                                <!-- 显示部分,默认4个，多余部分移到折叠部分-->
+                                <!-- 显示部分,默认4个，多余部分在点击按钮时请求过来-->
                                 <a href="javascript:;">杭州新塘路店</a>
                                 <div>
                                     <p>服务热线：400-675-2788</p>
@@ -466,9 +466,7 @@
                                 </div>
                                 <a href="javascript:;">预约到店</a>
                             </div>
-                            <!--被折叠部分，默认隐藏，点击按钮显示-->
                             <div class="col-sm-12 col-md-6 col-lg-3">
-                                <!-- 显示部分,默认4个，多余部分移到折叠部分-->
                                 <a href="javascript:;">杭州文晖路店</a>
                                 <div>
                                     <p>服务热线：400-675-2788</p>
@@ -478,7 +476,6 @@
                                 <a href="javascript:;" >预约到店</a>
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-3">
-                                <!-- 显示部分,默认4个，多余部分移到折叠部分-->
                                 <a href="javascript:;">杭州新塘路店</a>
                                 <div>
                                     <p>服务热线：400-675-2788</p>
@@ -508,20 +505,33 @@
                         </div>
                     </div>
                     <button>点击查看全部实体店</button>
+                    <!-- button按钮点击时显示所有，文字变为查看部分；再次点击时显示4个-->
                 </div>
             </div>
         </div>
         <div>
-            <!-- 1.1F-->
-            <div class="d-flex justify-content-start">
+            <!-- 2F-->
+            <div class="d-flex justify-content-between">
                 <!-- 标题与功能栏部分-->
                 <div>
-                    <div class="d-inline-block"><span class="d-inline-block">1F</span></div>
-                    <span class="d-inline-block">亿超眼镜全国实体店</span>
+                    <div class="d-inline-block"><span class="d-inline-block">2F</span></div>
+                    <span class="d-inline-block">新品上市</span>
+                </div>
+                <div>
+                    <a href="javascript:;">眼镜框</a><a href="javascript:;">太阳镜</a><a href="javascript:;">功能眼镜</a>
                 </div>
             </div>
-            <div>
+            <div class="d-flex">
                 <!-- 主体部分-->
+                <div class="mt-2">
+                    <div><img src="../images/index/2Fleft.jpg" alt=""/></div>
+                    <div class="d-flex flex-wrap">
+                        <div><img src="" alt=""/>
+                            <!-- 2F的小图片-->
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
         <div>

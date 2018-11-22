@@ -154,11 +154,21 @@
     transform:skewX(30deg);
     padding:0 10px;
 }
-#floor>div>div:first-child>div>span:last-child{
+#floor>div>div:first-child>div:first-child>span:last-child{
     /*楼层名称*/
     color:#333;
     font-size:1.3rem;
     margin-left:5px;
+}
+#floor>div>div:first-child>div:last-child>a{
+    /*楼层号右侧功能栏*/
+    text-decoration:none;
+    color:#333;
+    padding:4px;
+}
+#floor>div>div:first-child>div:last-child>a:hover{
+    color:#B81C2B;
+    border-bottom:2px solid #B81C2B;
 }
 /*1F*/
 #floor>div:first-child>div:nth-child(2)>ul{
@@ -183,13 +193,13 @@
 }
 #floor>div:first-child>div:nth-child(2)>ul>li:not(:first-child)>a{
     color:#222;
+    border-radius:5px;
 }
 #floor>div:first-child>div:nth-child(2)>ul>li:not(:first-child)>a:hover{
     color:#fff;
     background: #da1e3a;
     transition-duration:.5s;
     transition-timing-function:linear;
-    border-radius:5px;
 }
 
 #floor>div:first-child>div:nth-child(2)>div>div>div{
@@ -234,16 +244,26 @@
     float:right;
 }
 #floor>div:first-child>div:nth-child(2)>div>button{
+    color:#555;
     display:block;
     margin:-1px auto;
     border:1px solid #DDD;
-    border-top:#fff;
+    border-top:#ccc;
     padding:5px 15px 15px 15px;
     background: #fff;
-    transition-duration:.5s;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    transition-duration:.1s;
 }
 #floor>div:first-child>div:nth-child(2)>div>button:hover{
     cursor:pointer;
     background: #ddd;
-    color:#fffeff;
+    color:#000;
 }
+/*2F*/
+
+/*3F*/
+
+/*4F*/
+
+/*5F*/
