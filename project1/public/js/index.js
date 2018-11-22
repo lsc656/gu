@@ -1,6 +1,14 @@
 /**
  * Created by web on 2018/11/19.
  */
+$.ajax({
+    url:"http://localhost:3000/index",
+    type:"get",
+    dataType:"json",
+    success:function(res){
+        var {cities,details}=res;
+    }
+})
 /*1.1第一列悬浮导航*/
 $("#section>ul:first-child").on("mouseenter","li",function(){
     var i=$(this).index()+1;

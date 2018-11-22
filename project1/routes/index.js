@@ -5,10 +5,20 @@ const express=require("express");
 const pool=require("../pool")
 var router=express.Router();
 router.get("/",(req,res)=>{
-    var sql=select * from gu_index_productlist;
+		var output={
+			details:{},
+			cities:{}
+		}
+    var sql="select * from gu_index_productlist";
 		pool.query(sql,[],(err,result)=>{
 			if(err) console.log(err);
-			res.send(result)
+			output.details=result;
+			var sql="select * from gu_index_cities"
+			pool.query(sql,[],(err,result)=>{
+				if(err) console.log(err);
+				output.cities=result;
+				res.send(output)
+			})
 		})
 });
 module.exports=router;
