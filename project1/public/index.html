@@ -428,79 +428,15 @@
                     <!-- 每个地区店铺内容-->
                     <div>
                         <div class="row ">
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <!-- 显示部分,默认4个，多余部分移到折叠部分-->
-                                <a href="javascript:;">杭州文晖路店</a>
+                            <div v-for="ct of cities" class="col-sm-12 col-md-6 col-lg-3">
+                                <!-- 显示部分,默认4个，多余gt(4) d-n;点击button后，d-block-->
+                                <a href="javascript:;">{{ct["cit_title"]}}</a>
                                 <div>
-                                    <p>服务热线：400-675-2788</p>
-                                    <p>营业时间：10:20-20：00</p>
-                                    <p>门店地址：文晖路268号</p>
+                                    <p>服务热线：{{ct["cit_sup"]}}</p>
+                                    <p>营业时间：{{ct["cit_time"]}}</p>
+                                    <p>门店地址：{{ct["cit_add"]}}</p>
                                 </div>
                                 <a href="javascript:;" >预约到店</a>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <!-- 显示部分,默认4个，多余部分在点击按钮时请求过来-->
-                                <a href="javascript:;">杭州新塘路店</a>
-                                <div>
-                                    <p>服务热线：400-675-2788</p>
-                                    <p>营业时间：10:00-20：00</p>
-                                    <p>门店地址：新塘路220号(地铁4号线景芳五区站旁边)</p>
-                                </div>
-                                <a href="javascript:;">预约到店</a>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <a href="javascript:;">杭州紫金港店</a>
-                                <div>
-                                    <p>服务热线：400-675-2788</p>
-                                    <p>营业时间：10:00-20：00</p>
-                                    <p>门店地址：紫荆花北路紫金创意大厦405(浙大紫金港校区东门向北150米)</p>
-                                </div>
-                                <a href="javascript:;">预约到店</a>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <a href="javascript:;">杭州高技街店</a>
-                                <div>
-                                    <p>服务热线：0571-88963466</p>
-                                    <p>营业时间：10:00-20：00</p>
-                                    <p>门店地址：高技街61-1号(益乐路口财经学院后门旁)</p>
-                                </div>
-                                <a href="javascript:;">预约到店</a>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <a href="javascript:;">杭州文晖路店</a>
-                                <div>
-                                    <p>服务热线：400-675-2788</p>
-                                    <p>营业时间：10:20-20：00</p>
-                                    <p>门店地址：文晖路268号</p>
-                                </div>
-                                <a href="javascript:;" >预约到店</a>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <a href="javascript:;">杭州新塘路店</a>
-                                <div>
-                                    <p>服务热线：400-675-2788</p>
-                                    <p>营业时间：10:00-20：00</p>
-                                    <p>门店地址：新塘路220号(地铁4号线景芳五区站旁边)</p>
-                                </div>
-                                <a href="javascript:;">预约到店</a>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <a href="javascript:;">杭州紫金港店</a>
-                                <div>
-                                    <p>服务热线：400-675-2788</p>
-                                    <p>营业时间：10:00-20：00</p>
-                                    <p>门店地址：紫荆花北路紫金创意大厦405(浙大紫金港校区东门向北150米)</p>
-                                </div>
-                                <a href="javascript:;">预约到店</a>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <a href="javascript:;">杭州高技街店</a>
-                                <div>
-                                    <p>服务热线：0571-88963466</p>
-                                    <p>营业时间：10:00-20：00</p>
-                                    <p>门店地址：高技街61-1号(益乐路口财经学院后门旁)</p>
-                                </div>
-                                <a href="javascript:;">预约到店</a>
                             </div>
                         </div>
                     </div>

@@ -46,8 +46,8 @@ CREATE TABLE product_spectacle_lenses(
 CREATE TABLE gu_index_cities(
 	cit_cid SMALLINT PRIMARY KEY AUTO_INCREMENT,
 	cit_area SMALLINT,
-	cit_title SMALLINT,
-	cit_add VARCHAR(56),
+	cit_title VARCHAR(64),
+	cit_add VARCHAR(64),
 	cit_time VARCHAR(20),
 	cit_sup VARCHAR(20),
 	cit_href VARCHAR(128)
