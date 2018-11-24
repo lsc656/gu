@@ -1,8 +1,66 @@
+[v-cloak]{
+    display:none;
+}
 .bg-ca{
     background-image:url("../../images/index/ca-1.jpg");
     background-size:cover;
     background-position: center;
  }
+.row{
+    margin:0px;
+}
+.introcard{
+    /*2F-6F商品介绍小卡片*/
+    position:relative;
+    margin-bottom:15px;
+    background: #fff;
+    max-width:260px;
+    height:275px;
+    transition:.2s;
+    overflow:hidden;
+}
+.introcard:hover{
+    -webkit-box-shadow:2px 2px 1px 2px #e8e8e8;
+    -moz-box-shadow:2px 2px 1px 2px #e8e8e8;
+    box-shadow:2px 2px 1px 2px #e8e8e8;
+}
+.introcard>div:first-child{
+    /*商品主要显示*/
+    text-align:center;
+    font-size:1rem;
+}
+.introcard>div:first-child>img{
+    width:100%;
+}
+.introcard>div>p{
+    margin:0px;
+}
+.introcard>div:first-child>p:last-child{
+    /*价格*/
+    color:#B91C2B;
+}
+.introcard>div:nth-child(2){
+    height:40%;
+    width:100%;
+    position:absolute;
+    top:275px;
+    text-align:center;
+    color:#fff;
+    background: #B91C2B;
+    transition-duration:.2s;
+}
+/*3、6右侧查看全部*/
+.getAllRight{
+    width:105px;
+    line-height:35px;
+}
+#floor>div:nth-child(3)>div:first-child>div.getAllRight>a:hover,#floor>div:nth-child(6)>div:first-child>div.getAllRight>a:hover{
+    color:#B91C2B;
+}
+.getAllRight>a>img{
+    width:15px;
+    vertical-align:-7%;
+}
 /********************************************列表******************************************************/
 #section{
     position:relative;
@@ -133,9 +191,10 @@
 /***************************************floors***************************************/
 #floor{
     margin-top:50px;
+    padding:0px;
 }
 #floor>div{
-    margin-top:50px;
+    margin:10px 0px;
 }
 /*公有样式：楼层号和名称*/
 #floor>div>div:first-child>div:first-child>div{
@@ -166,7 +225,7 @@
     color:#333;
     padding:4px;
 }
-#floor>div>div:first-child>div:last-child>a:hover{
+#floor>div>div:first-child>div:last-child>a.active{
     color:#B81C2B;
     border-bottom:2px solid #B81C2B;
 }
@@ -194,16 +253,17 @@
 #floor>div:first-child>div:nth-child(2)>ul>li:not(:first-child)>a{
     color:#222;
     border-radius:5px;
+    transition-duration:.5s;
+    transition-timing-function:linear;
 }
 #floor>div:first-child>div:nth-child(2)>ul>li:not(:first-child)>a:hover{
     color:#fff;
     background: #da1e3a;
-    transition-duration:.5s;
-    transition-timing-function:linear;
 }
 
 #floor>div:first-child>div:nth-child(2)>div>div>div{
     padding-bottom:20px;
+    margin:0px;
     border-bottom:1px solid #ccc;
 }
 #floor>div:first-child>div:nth-child(2)>div>div>div>div{
@@ -211,6 +271,9 @@
     width:24%;
     min-width:266.39px;
     height:170px;
+}
+#floor>div:first-child>div:nth-child(2)>div>div>div>div:nth-child(4)~div{
+    display:none;
 }
 #floor>div:first-child>div:nth-child(2)>div>div>div>div:after{
     content:"";
@@ -261,9 +324,64 @@
     color:#000;
 }
 /*2F*/
+#floor>div:nth-child(2){
+    padding-top:20px;
+    background: #F5F5F5;
+}
+#floor>div:nth-child(2)>div:nth-child(2)>div>div{
+    padding:0 5px;
+}
+/*6F*/
+#floor>div:nth-child(6)>div:nth-child(2){
 
-/*3F*/
+}
 
-/*4F*/
-
-/*5F*/
+#floor>div:nth-child(6)>div:nth-child(2)>div{
+    padding:0 5px;
+}
+#floor>div:nth-child(6)>div:nth-child(2)>div>img{
+    width:100%;
+}
+#floor>div:nth-child(6)>div:nth-child(2)>div>p{
+    margin:0px;
+    padding:0px;
+    text-align:center;
+}
+#floor>div:nth-child(6)>div:nth-child(2)>div>p:nth-child(2){
+    margin-top:20px;
+}
+#floor>div:nth-child(6)>div:nth-child(2)>div>p>a{
+    text-decoration:none;
+}
+#floor>div:nth-child(6)>div:nth-child(2)>div>p:nth-child(2)>a{
+    color:#333;
+    font-size:1.2rem;
+}
+#floor>div:nth-child(6)>div:nth-child(2)>div>p:nth-child(2)>a:hover{
+    color:#B91C2B;
+}
+#floor>div:nth-child(6)>div:nth-child(2)>div>p:nth-child(3){
+    width:90%;
+    margin:0 auto;
+}
+#floor>div:nth-child(6)>div:nth-child(2)>div>p:nth-child(3)>a{
+    color:#a1a1a1;
+    font-size:0.8rem;
+}
+/*6F/B introcard*/
+#floor>div:nth-child(7)>div:nth-child(2)>div>div{
+    margin-top:20px;
+    height:340px;
+}
+#floor>div:nth-child(7)>div:nth-child(2)>div>div>div>p:nth-child(2){
+    font-size:.8rem;
+}
+#floor>div:nth-child(7)>div:nth-child(2)>div>div>div>p:nth-child(3){
+    padding-top:20px;
+}
+/*8F*/
+#floor>div:nth-child(9)>div:nth-child(2)>img{
+    margin-left:7px;
+    margin-bottom:7px;
+    max-width:220px;
+}
