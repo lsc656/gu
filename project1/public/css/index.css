@@ -414,9 +414,12 @@
     padding:5px 0;
     font-size:.8rem;
 }
-#f9center{
-    height:100%;
+#floor>div:nth-child(10)>div:not(:first-child)>div:nth-child(2){
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
 }
+#floor>div:nth-child(10)
+
 #f9center p{
     margin:0px;
 }
@@ -429,4 +432,21 @@
 }
 #f9center a:first-child:hover{
     color:#B91C2B;
+}
+#f9center .f9input{
+    width:50%;
+    line-height:20px;
+    border:none;
+}
+.f9input+button{
+    width:50%;
+    font-size:.5rem;
+    line-height:20px;
+    border:none;
+}
+#f9center>div:first-child{
+    margin-top:80px;
+}
+#f9center>a{
+    margin-top:20px;
 }
