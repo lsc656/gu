@@ -1,3 +1,6 @@
+#header{
+    padding:0px;
+}
 #header>div:not(:last-child) a:link{
     color:#404040;
 }
@@ -14,7 +17,6 @@ height:30px;
 }
 #header>div:first-child ul{
     list-style:none;
-    padding:0px;
 }
 
 #header>div:first-child ul>li{
@@ -24,6 +26,9 @@ height:30px;
     float:left;
 }
 /*图片和购物车*/
+#header>div>ul:last-child{
+    padding-right:0px;
+}
 #header>div>ul:last-child>li img{
     height:17px;
     vertical-align:middle;
@@ -55,9 +60,11 @@ height:30px;
     line-height:34px;
 }
 /*header第三行*/
+
 #header>div:last-child>ul{
     height:40px;
     line-height:40px;
+    padding-left:15px;
 }
 #header>div:last-child a:link{
     color:#fff
@@ -68,10 +75,11 @@ height:30px;
 #header>div:last-child a:visited{
     color:#fff
 }
+#header>div:last-child>ul>li:first-child{
+    width:197px;
+}
 #header>div:last-child>ul>li:first-child span{
     display:inline-block;
-    width:0px;
-    height:0px;
     border:5px solid #DA1E3A;
     border-top:5px solid #fff;
 }

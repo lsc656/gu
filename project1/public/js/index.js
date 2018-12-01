@@ -1,6 +1,7 @@
 /**
  * Created by web on 2018/11/19.
  */
+
 $(function(){
     $.ajax({
         url: "http://localhost:3000/index",
@@ -182,7 +183,6 @@ setInterval(function(){
             if(dept==5){
                 dept=1;
             }
-            //ע�⣺����·�������indexλ����css��һ��//
             var m="url('../images/index/ca-"+ dept++ +".jpg')"
             return m
         });

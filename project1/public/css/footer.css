@@ -1,60 +1,63 @@
-.container>div:not(:first-child) a{
+#footer>.container{
+    padding:0px;
+}
+#footer>.container>div:not(:first-child) a{
     color:#969696;
 }
-.container>div:not(:first-child) a:hover{
+#footer>.container>div:not(:first-child) a:hover{
     color:#B81C2B;
     text-decoration:none;
 }
 /*第一行*/
-.container>div:first-child>ul{
+#footer>.container>div:first-child>ul{
     background: #f6f6f6;
     font-size:0.7rem;
     border-bottom:1px solid #ccc;
 }
-.container>div:first-child>ul{
+#footer>.container>div:first-child>ul{
     height:155px;
     padding-top:35px;
     padding-bottom:35px;
 }
-.container>div:first-child>ul>li{
+#footer>.container>div:first-child>ul>li{
     text-align:center;
 }
-.container>div:first-child>ul>li:not(:last-child){
+#footer>.container>div:first-child>ul>li:not(:last-child){
     border-right:1px solid #ddd;
     padding-right:20px;
 }
-.container>div:first-child>ul>li>img+p{
+#footer>.container>div:first-child>ul>li>img+p{
     margin:0px;
     margin-top:15px;
 }
-.container>div:first-child>ul>li>p:nth-child(3){
+#footer>.container>div:first-child>ul>li>p:nth-child(3){
     color:#ccc;
 }
 /*第二行*/
-.container>div:nth-child(2){
+#footer>.container>div:nth-child(2){
     border-bottom:1px solid #ccc;
 }
-.container>div:nth-child(2)>ul{
+#footer>.container>div:nth-child(2)>ul{
     list-style-type:none;
     width:135px;
 }
-.container>div:nth-child(2)>ul>li{
+#footer>.container>div:nth-child(2)>ul>li{
     text-align:left;
     padding-right:15px;
 }
-.container>div:nth-child(2)>ul:not(:last-child){
+#footer>.container>div:nth-child(2)>ul:not(:last-child){
     border-right:1px solid #ccc;
 }
-.container>div:nth-child(2)>ul:last-child>li:not(:first-child)>div>div{
+#footer>.container>div:nth-child(2)>ul:last-child>li:not(:first-child)>div>div{
     padding-right:0.4rem;
     float:left;
 }
 
 /*第三行*/
-.container div:last-child{
+#footer>.container div:last-child{
     color:#969696;
 }
-.container>div:last-child>div>ul>li{
+#footer>.container>div:last-child>div>ul>li{
     float:left;
     padding-right:5px;
 }

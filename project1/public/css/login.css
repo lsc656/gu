@@ -1,0 +1,57 @@
+#section>div.row>div:nth-child(2){
+    border:1px solid #ccc;
+}
+#section>div.row>div:nth-child(2)>div:nth-child(2){
+    background: #FAFAFA;
+}
+#section>div.row>div:nth-child(2)>div:first-child>div:first-child{
+    font-size:1rem;
+    font-weight:bold;
+}
+#section>div.row>div:nth-child(2)>div:nth-child(2)>p:first-child{
+    border-top:1px solid #ccc;
+}
+#section>div.row>div:nth-child(2)>div:nth-child(2)>p{
+    margin:0px;
+    padding:5px 0 5px 40px;
+    font-size:0.8rem;
+}
+#section>div.row>div:nth-child(2)>div:nth-child(2)>p>a{
+    text-decoration:none;
+    color:#006697;
+}
+#section table{
+    border-collapse:separate;
+    border-spacing:10px;
+}
+#section table input{
+    box-shadow:0 1px 1px 1px #E5E5E5 inset;
+    border-top:1px solid #707070;
+    border-left:1px solid #707070;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    width:200px;
+}
+#section table button{
+    padding:5px 28px;
+    border:0px;
+    border-radius:5px;
+    background: #C20202;
+    color:#fff;
+    box-shadow:2px 2px 3px 1px #AD5454;
+    outline:0;
+}
+#section table button:active{
+    box-shadow: none;
+    color:#e9e9e9;
+    background: #77070B;
+    position:relative;
+    top:2px;
+    left:2px;
+}
+#section table button+a{
+    color:#999;
+    font-size:.8rem;
+    text-decoration: none;
+    margin-left:10px;
+}
