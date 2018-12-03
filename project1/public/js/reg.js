@@ -6,7 +6,7 @@ var inputupwd=false;
 $(function(){
     $("table button").attr("disabled","disabled")
 })
-$("#uname").on("keyup",function(){
+$("#uname").on("blur",function(){
     if(!$(this).val()){
         $("#uname").next().html('请输入邮箱/手机号码！').css("color","#DA1E3A");
         inputuname=false;
@@ -15,7 +15,7 @@ $("#uname").on("keyup",function(){
         inputuname=true;
     }
 })
-$("#section table>tbody>tr:not(:first-child)>td").on("blur","input",function(){
+$("#section table>tbody>tr:not(:first-child)>td").on("keyup","input",function(){
     if($("#upwd").val()!=$("#cpwd").val()){
         $("#cpwd").next().css("color","#DA1E3A");
         inputupwd=false;

@@ -1,4 +1,67 @@
-div.my-bar>a{
+#section div.my-bar>a{
     color:#333;
     text-decoration:none;
+}
+#section .my-bar>a:hover{
+    color:#B81C2B;
+}
+#section .left-bar{
+    width:15%;
+    border:1px solid #ccc;
+}
+#section .left-bar+div{
+    width:84%;
+}
+#section .left-bar>div>p:first-child{
+    background: #E5DEDB;
+    outline:none;
+    border:none;
+    padding:10px;
+    margin-bottom:5px;
+}
+#section .left-bar>div>p:first-child>a{
+    color:#000;
+    font-size:0.9rem;
+    text-decoration:none;
+}
+#section .left-bar>div>p:first-child>a:hover{
+    color:#b21f2d;
+}
+#section .left-bar>div>p:first-child>a>span{
+    display:inline-block;
+    width:0px;
+    border:5px solid #E5DEDB;
+    border-left-color:#000;
+    margin-right:5px;
+    vertical-align:middle;
+}
+#section .left-bar>div>div>div>p:first-child{
+    color:#333;
+    font-size:0.9rem;
+    font-weight:bold;
+    margin-bottom:0px;
+    padding-left:10px;
+    padding-top:10px;
+}
+#section .left-bar>div>div>div>ul:nth-child(2){
+    list-style-type:none;
+    display:flex;
+    flex-wrap:wrap;
+    padding:10px;
+    margin:0;
+}
+#section .left-bar>div>div>div:not(:last-child){/*ÏÂ·½ÐéÏß*/
+    border-bottom:1px dashed #ccc;
+
+}
+#section .left-bar>div>div>div>ul:nth-child(2)>li{
+    padding-right:10px;
+}
+#section .left-bar>div>div>div>ul:nth-child(2)>li>a{
+    color:#666;
+    text-decoration:none;
+    font-size:0.8rem;
+}
+#section .left-bar>div>div>div>ul:nth-child(2)>li>a:hover{
+    color:#C10909;
 }
