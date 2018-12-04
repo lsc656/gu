@@ -65,3 +65,39 @@
 #section .left-bar>div>div>div>ul:nth-child(2)>li>a:hover{
     color:#C10909;
 }
+#section .content-top>div{
+    border:1px solid #ccc;
+}
+#section .content-top>div:not(:first-child){
+    border-top:0;
+    color:#735a4d;
+
+}
+#section .content-top>div:first-child,#section .content-top>div{
+    padding:12px 14px;
+}
+#section .content-top>div:first-child>span:first-child{
+    font-weight:bold;
+}
+#section .content-top>div:nth-child(2)>div{
+    font-size:1.1rem;
+    font-weight:bold;
+}
+#section .content-top-title{
+    color:#A2938A;
+    width:10%;
+}
+#section .content-top-list{
+    width:89%;
+    margin:0px;
+}
+#section .content-top-list>li{
+    margin-left:50px;
+}
+#section .content-top-list>li>a{
+    color:#735A4D;
+    text-decoration:none;
+}
+#section .content-top-list>li>a:hover{
+    color:#C10909;
+}
