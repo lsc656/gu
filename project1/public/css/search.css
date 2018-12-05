@@ -101,3 +101,51 @@
 #section .content-top-list>li>a:hover{
     color:#C10909;
 }
+#section .left-bar+div>div{
+    margin-top:10px;
+}
+#section div.content-section{
+    border:1px solid #DCDCDC;
+}
+#section div.content-section>div:first-child{
+    background: #FBFBFB;
+}
+#section div.content-section>div:first-child>div{
+    padding:5px 10px;
+    margin-right:10px;
+    border-right:1px solid #ddd ;
+}
+#section div.content-section>div:first-child>div>a{
+    color:#333;
+    text-decoration: none;
+}
+#section div.content-section>div:first-child>div>a:hover{
+    color:#b21f2d;
+}
+#section div.content-section>div:first-child>div>a>span{
+    display:inline-block;
+    border:5px solid transparent;
+    border-top-color:#BBBBBB;
+    transform-origin: center 30%;
+}
+#section div.content-section>div:first-child>div>a>span.active{
+    transform:rotate(180deg);
+}
+#section div.content-section>div:first-child>div>a.u-checked{
+    color:#b21f2d;
+}
+#section div.content-section>div:nth-child(2){
+    border-top:1px solid #BBBBBB;
+    border-bottom:1px solid #bbbbbb;
+}
+
+
+
+
+
+
+
+#section div.content-section>div:nth-child(2)>div.content-section-item>div:nth-child(2)>div{
+    border:1px solid #ccc;
+    margin:5px;
+}
