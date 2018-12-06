@@ -19,9 +19,9 @@
         <a href="javascript:;">首页</a>&gt;<a href="javascript:;">眼镜框</a>
     </div>
     <div class="d-flex flex-column flex-md-row justify-content-around mt-3">
-        <div class="left-bar"><!-- 左侧导航-->
+        <div class="left-bar d-none d-md-block"><!-- 左侧导航-->
             <div>
-                <p><a href="javascript:;"><span></span>眼镜框</a></p><!-- #section .left-bar>div>p:first-child-->                   <div>
+                <p class="ititle"><a href="javascript:;"><span></span>眼镜框</a></p><!-- #section .left-bar>div>p:first-child-->                      <div class="active">
                     <div>
                         <p>品牌</p>
                         <ul>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>眼镜片</a></p><!-- #section .left-bar>div>p:first-child-->                   <div>
+                <p class="ititle"><a href="javascript:;"><span></span>眼镜片</a></p><!-- #section .left-bar>div>p:first-child-->                   <div>
                 <div>
                     <p>品牌</p>
                     <ul>
@@ -132,7 +132,7 @@
             </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>隐形眼镜</a></p><!-- #section .left-bar>div>p:first-child-->                 <div>
+                <p class="ititle"><a href="javascript:;"><span></span>隐形眼镜</a></p><!-- #section .left-bar>div>p:first-child-->                 <div>
                     <div>
                         <p>隐形分类</p>
                         <ul>
@@ -179,7 +179,7 @@
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>眼镜清洗</a></p>
+                <p  class="ititle"><a href="javascript:;"><span></span>眼镜清洗</a></p>
                 <div>
                     <div>
                         <p>品牌</p>
@@ -200,12 +200,12 @@
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>伴侣盒</a></p>
+                <p  class="ititle"><a href="javascript:;"><span></span>伴侣盒</a></p>
                 <div>
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>太阳镜</a></p>
+                <p  class="ititle"><a href="javascript:;"><span></span>太阳镜</a></p>
                 <div>
                     <div>
                         <p>品牌</p>
@@ -244,7 +244,7 @@
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>游泳产品</a></p>
+                <p class="ititle"><a href="javascript:;"><span></span>游泳产品</a></p>
                 <div>
                     <div>
                         <p>功能分类</p>
@@ -264,27 +264,27 @@
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>老花镜</a></p>
+                <p class="ititle"><a href="javascript:;"><span></span>老花镜</a></p>
                 <div>
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>防辐射眼镜</a></p>
+                <p class="ititle"><a href="javascript:;"><span></span>防辐射眼镜</a></p>
                 <div>
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>配件</a></p>
+                <p class="ititle"><a href="javascript:;"><span></span>配件</a></p>
                 <div>
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>湿巾</a></p>
+                <p class="ititle"><a href="javascript:;"><span></span>湿巾</a></p>
                 <div>
                 </div>
             </div>
             <div>
-                <p><a href="javascript:;"><span></span>钻石切边</a></p>
+                <p class="ititle"><a href="javascript:;"><span></span>钻石切边</a></p>
                 <div>
                     <div>
                         <p>适合人群</p>
@@ -402,24 +402,229 @@
                     <div><a href="javascript:;">新品 | <span></span></a></div>
                     <div><a href="javascript:;">价格 | <span></span></a></div>
                 </div>
-                <div class="d-flex flex-wrap flex-md-column flex-row justify-content-between"><!--#section div.content-section>div:nth-child(2)-->
+                <div class="d-flex flex-wrap flex-md-row flex-column justify-content-around"><!--#section div.content-section>div:nth-child(2)-->
                     <div class="content-section-item">
                         <div class="w-100 d-flex flex-column">
                             <div class="w-100 align-self-center">
                                 <img src="images/search/search-item-1.jpg" class="w-100 border" alt="">
                             </div>
                             <ul class="list-unstyled d-flex w-100">
-                                <li class="d-flex flex-column align-items-center"><span>12</span><img src="images/search/search-item-1.jpg" class="w-100" alt=""></li>
-                                <li class="d-flex flex-column align-items-center"><span>12</span><img src="images/search/search-item-2.jpg" class="w-100" alt=""></li>
-                                <li class="d-flex flex-column align-items-center"><span>12</span><img src="images/search/search-item-3.jpg" class="w-100" alt=""></li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span class="active"></span>
+                                    <div><img src="images/search/search-item-1.jpg" class="w-100 active" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-2.jpg" class="w-100" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-3.jpg" class="w-100" alt=""></div>
+                                </li>
                             </ul>
-                            <p><span>￥</span>358.00<del>￥716.00</del></p>
-                            <p><a href="javascript:;">亿超 纯钛 半框眼镜框 金色 商务男士 FB6112C01</a></p>
+                            <p class="m-0"><span>￥</span><span>358.00</span><del class="ml-3">￥716.00</del></p>
+                            <p class="m-0"><a href="javascript:;">亿超 纯钛 半框眼镜框 金色 商务男士 FB6112C01</a></p>
                         </div>
-                        <div class="d-flex p-1 w-100">
-                            <div><a href="javascript:;">预约到店购买</a></div>
-                            <div><a href="javascript:;">实体店</a></div>
-                            <div><a href="javascript:;">在线咨询</a></div>
+                        <div class="clearfix p-1 w-100 invisible">
+                            <div class="float-left"><a href="javascript:;">预约到店购买</a></div>
+                            <div class="float-left"><a href="javascript:;">实体店</a></div>
+                            <div class="float-left"><a href="javascript:;">在线咨询</a></div>
+                        </div>
+                    </div>
+                    <div class="content-section-item">
+                        <div class="w-100 d-flex flex-column">
+                            <div class="w-100 align-self-center">
+                                <img src="images/search/search-item-4.jpg" class="w-100 border" alt="">
+                            </div>
+                            <ul class="list-unstyled d-flex w-100">
+                                <li class="d-flex flex-column align-items-center">
+                                    <span class="active"></span>
+                                    <div><img src="images/search/search-item-4.jpg" class="w-100 active" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-5.jpg" class="w-100" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-6.jpg" class="w-100" alt=""></div>
+                                </li>
+                            </ul>
+                            <p class="m-0"><span>￥</span><span>489.00</span><del class="ml-3">￥1166.00</del></p>
+                            <p class="m-0"><a href="javascript:;">MODELE男女通用眼镜框12291  CB沉贵宝木</a></p>
+                        </div>
+                        <div class="clearfix p-1 w-100 invisible">
+                            <div class="float-left"><a href="javascript:;">预约到店购买</a></div>
+                            <div class="float-left"><a href="javascript:;">实体店</a></div>
+                            <div class="float-left"><a href="javascript:;">在线咨询</a></div>
+                        </div>
+                    </div>
+                    <div class="content-section-item">
+                        <div class="w-100 d-flex flex-column">
+                            <div class="w-100 align-self-center">
+                                <img src="images/search/search-item-1.jpg" class="w-100 border" alt="">
+                            </div>
+                            <ul class="list-unstyled d-flex w-100">
+                                <li class="d-flex flex-column align-items-center">
+                                    <span class="active"></span>
+                                    <div><img src="images/search/search-item-1.jpg" class="w-100 active" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-2.jpg" class="w-100" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-3.jpg" class="w-100" alt=""></div>
+                                </li>
+                            </ul>
+                            <p class="m-0"><span>￥</span><span>358.00</span><del class="ml-3">￥716.00</del></p>
+                            <p class="m-0"><a href="javascript:;">亿超 纯钛 半框眼镜框 金色 商务男士 FB6112C01</a></p>
+                        </div>
+                        <div class="clearfix p-1 w-100 invisible">
+                            <div class="float-left"><a href="javascript:;">预约到店购买</a></div>
+                            <div class="float-left"><a href="javascript:;">实体店</a></div>
+                            <div class="float-left"><a href="javascript:;">在线咨询</a></div>
+                        </div>
+                    </div>
+                    <div class="content-section-item">
+                        <div class="w-100 d-flex flex-column">
+                            <div class="w-100 align-self-center">
+                                <img src="images/search/search-item-4.jpg" class="w-100 border" alt="">
+                            </div>
+                            <ul class="list-unstyled d-flex w-100">
+                                <li class="d-flex flex-column align-items-center">
+                                    <span class="active"></span>
+                                    <div><img src="images/search/search-item-4.jpg" class="w-100 active" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-5.jpg" class="w-100" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-6.jpg" class="w-100" alt=""></div>
+                                </li>
+                            </ul>
+                            <p class="m-0"><span>￥</span><span>489.00</span><del class="ml-3">￥1166.00</del></p>
+                            <p class="m-0"><a href="javascript:;">MODELE男女通用眼镜框12291  CB沉贵宝木</a></p>
+                        </div>
+                        <div class="clearfix p-1 w-100 invisible">
+                            <div class="float-left"><a href="javascript:;">预约到店购买</a></div>
+                            <div class="float-left"><a href="javascript:;">实体店</a></div>
+                            <div class="float-left"><a href="javascript:;">在线咨询</a></div>
+                        </div>
+                    </div>
+                    <div class="content-section-item">
+                        <div class="w-100 d-flex flex-column">
+                            <div class="w-100 align-self-center">
+                                <img src="images/search/search-item-1.jpg" class="w-100 border" alt="">
+                            </div>
+                            <ul class="list-unstyled d-flex w-100">
+                                <li class="d-flex flex-column align-items-center">
+                                    <span class="active"></span>
+                                    <div><img src="images/search/search-item-1.jpg" class="w-100 active" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-2.jpg" class="w-100" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-3.jpg" class="w-100" alt=""></div>
+                                </li>
+                            </ul>
+                            <p class="m-0"><span>￥</span><span>358.00</span><del class="ml-3">￥716.00</del></p>
+                            <p class="m-0"><a href="javascript:;">亿超 纯钛 半框眼镜框 金色 商务男士 FB6112C01</a></p>
+                        </div>
+                        <div class="clearfix p-1 w-100 invisible">
+                            <div class="float-left"><a href="javascript:;">预约到店购买</a></div>
+                            <div class="float-left"><a href="javascript:;">实体店</a></div>
+                            <div class="float-left"><a href="javascript:;">在线咨询</a></div>
+                        </div>
+                    </div>
+                    <div class="content-section-item">
+                        <div class="w-100 d-flex flex-column">
+                            <div class="w-100 align-self-center">
+                                <img src="images/search/search-item-4.jpg" class="w-100 border" alt="">
+                            </div>
+                            <ul class="list-unstyled d-flex w-100">
+                                <li class="d-flex flex-column align-items-center">
+                                    <span class="active"></span>
+                                    <div><img src="images/search/search-item-4.jpg" class="w-100 active" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-5.jpg" class="w-100" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-6.jpg" class="w-100" alt=""></div>
+                                </li>
+                            </ul>
+                            <p class="m-0"><span>￥</span><span>489.00</span><del class="ml-3">￥1166.00</del></p>
+                            <p class="m-0"><a href="javascript:;">MODELE男女通用眼镜框12291  CB沉贵宝木</a></p>
+                        </div>
+                        <div class="clearfix p-1 w-100 invisible">
+                            <div class="float-left"><a href="javascript:;">预约到店购买</a></div>
+                            <div class="float-left"><a href="javascript:;">实体店</a></div>
+                            <div class="float-left"><a href="javascript:;">在线咨询</a></div>
+                        </div>
+                    </div>
+                    <div class="content-section-item">
+                        <div class="w-100 d-flex flex-column">
+                            <div class="w-100 align-self-center">
+                                <img src="images/search/search-item-1.jpg" class="w-100 border" alt="">
+                            </div>
+                            <ul class="list-unstyled d-flex w-100">
+                                <li class="d-flex flex-column align-items-center">
+                                    <span class="active"></span>
+                                    <div><img src="images/search/search-item-1.jpg" class="w-100 active" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-2.jpg" class="w-100" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-3.jpg" class="w-100" alt=""></div>
+                                </li>
+                            </ul>
+                            <p class="m-0"><span>￥</span><span>358.00</span><del class="ml-3">￥716.00</del></p>
+                            <p class="m-0"><a href="javascript:;">亿超 纯钛 半框眼镜框 金色 商务男士 FB6112C01</a></p>
+                        </div>
+                        <div class="clearfix p-1 w-100 invisible">
+                            <div class="float-left"><a href="javascript:;">预约到店购买</a></div>
+                            <div class="float-left"><a href="javascript:;">实体店</a></div>
+                            <div class="float-left"><a href="javascript:;">在线咨询</a></div>
+                        </div>
+                    </div>
+                    <div class="content-section-item">
+                        <div class="w-100 d-flex flex-column">
+                            <div class="w-100 align-self-center">
+                                <img src="images/search/search-item-4.jpg" class="w-100 border" alt="">
+                            </div>
+                            <ul class="list-unstyled d-flex w-100">
+                                <li class="d-flex flex-column align-items-center">
+                                    <span class="active"></span>
+                                    <div><img src="images/search/search-item-4.jpg" class="w-100 active" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-5.jpg" class="w-100" alt=""></div>
+                                </li>
+                                <li class="d-flex flex-column align-items-center">
+                                    <span></span>
+                                    <div><img src="images/search/search-item-6.jpg" class="w-100" alt=""></div>
+                                </li>
+                            </ul>
+                            <p class="m-0"><span>￥</span><span>489.00</span><del class="ml-3">￥1166.00</del></p>
+                            <p class="m-0"><a href="javascript:;">MODELE男女通用眼镜框12291  CB沉贵宝木</a></p>
+                        </div>
+                        <div class="clearfix p-1 w-100 invisible">
+                            <div class="float-left"><a href="javascript:;">预约到店购买</a></div>
+                            <div class="float-left"><a href="javascript:;">实体店</a></div>
+                            <div class="float-left"><a href="javascript:;">在线咨询</a></div>
                         </div>
                     </div>
                 </div>
@@ -427,7 +632,133 @@
 
                 </div>
             </div>
-            <div class="content-foot"></div>
+            <div class="content-foot">
+                <div class="content-foot-item">
+                    <div class="d-flex justify-content-between">
+                        <span>MODELE品牌眼镜评论</span>
+                        <a href="javascript:;">查看MODELE评论</a>
+                    </div>
+                    <div class="d-flex"><!-- #section div.content-foot div.content-foot-item>div:nth-child(2)-->
+                        <ul class="list-unstyled d-flex flex-wrap">
+                            <li class="p-2 d-flex justify-content-between">
+                                <div class=mt-1>
+                                    <img src="./images/search/search-item-1.jpg" class="w-100 border" alt=""/>
+                                </div>
+                                <p class="m-0">眼镜还不错，包装也挺好的，试戴一阶段再看吧</p>
+                            </li>
+                            <li class="p-2 d-flex justify-content-between">
+                                <div class="mt-1">
+                                    <img src="./images/search/search-item-2.jpg" class="w-100 border" alt=""/>
+                                </div>
+                                <p class="m-0">眼镜框还不错，鼻托很舒服，凉凉的，滑滑的，应该是玉石粉，还不错吧</p>
+                            </li>
+                            <li class="p-2 d-flex justify-content-between">
+                                <div class="mt-1">
+                                    <img src="./images/search/search-item-3.jpg" class="w-100 border" alt=""/>
+                                </div>
+                                <p class="m-0">眼镜是挺精致的，特别轻，第一眼看中了这个，去眼镜店试过，戴上去很舒服，后面看了几个也还不错，但是还是没舍得放弃这款，当时没下单，纠结了好久，回来后还是官网下单了。不过这款价格比店里其他的贵了好多，想想去其他眼镜店这个价格只能买到很普通的，我就狠心买下来了，不过是真心喜欢。</p>
+                            </li>
+                            <li class="p-2 d-flex justify-content-between">
+                                <div class="mt-1">
+                                    <img src="./images/search/search-item-4.jpg" class="w-100 border" alt=""/>
+                                </div>
+                                <p class="m-0">网上看着质感很足，实际眼镜稍微小一点，但是真心好轻啊，我都不太习惯了。昨天收到货时候还是有点落差的，因为感觉和图片有一定差距，不过细看是一致的，比较精致，同事都说好看，主要是轻，我感觉戴上去很舒服。我是提醒大家一句，看东西真的不能只看放大图片，尤其是淘宝上，这个还好质量比较满意</p>
+                            </li>
+
+                        </ul>
+                        <div class="border-left p-2"><p class="p-3 m-0">买家印象</p></div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between mt-2">
+                    <div class="content-foot-item">
+                        <div class="d-flex justify-content-between">
+                            <span>相关文章</span>
+                            <a href="javascript:;"></a>
+                        </div>
+                        <ul class="list-unstyled p-2 m-0">
+                            <li>
+                                <a href="javascript:;">木质眼镜哪个品牌好?MODELE(莫德)高雅木系列更可靠</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">MODELE莫德眼镜高雅木系列开启2018新潮流</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">眼镜设计品牌MODELE新品鉴赏</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">高端眼镜品牌MODELE莫德眼镜好吗?有哪些优点?</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">MODELE设计品牌强势入驻亿超眼镜</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-foot-item">
+                        <div class="d-flex justify-content-between">
+                            <span>相关关键词</span>
+                            <a href="javascript:;"></a>
+                        </div>
+                        <ul class="list-unstyled p-2 m-0 d-flex flex-wrap">
+                            <li class="mr-4">
+                                <a href="javascript:;">李维斯眼镜框</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">MODELE眼镜</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">优雅眼镜框</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">潮男眼镜框</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">眼镜框品牌排行</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">DG眼镜框</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">亿超高定双效防护镜片</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">学生眼镜片</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-foot-item">
+                        <div class="d-flex justify-content-between">
+                            <span>热门关键词</span>
+                            <a href="javascript:;"></a>
+                        </div>
+                        <ul class="list-unstyled p-2 m-0 d-flex flex-wrap">
+                            <li class="mr-4">
+                                <a href="javascript:;">亿超高定双效防护镜片</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">学生眼镜片</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">中小型眼镜店</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">儿童太阳镜</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">加盟创业的项目有哪些</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">2018时尚太阳镜</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">江门知名眼镜店</a>
+                            </li>
+                            <li class="mr-4">
+                                <a href="javascript:;">广州加盟连锁眼镜店</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

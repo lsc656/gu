@@ -1,3 +1,7 @@
+#section{
+    padding:0;
+    margin-bottom:10px;
+}
 #section div.my-bar>a{
     color:#333;
     text-decoration:none;
@@ -7,7 +11,12 @@
 }
 #section .left-bar{
     width:15%;
+}
+#section .left-bar>div{
     border:1px solid #ccc;
+}
+#section .left-bar>div:not(:first-child){
+    border-top:none;
 }
 #section .left-bar+div{
     width:84%;
@@ -34,6 +43,12 @@
     border-left-color:#000;
     margin-right:5px;
     vertical-align:middle;
+}
+#section .left-bar>div>div{
+    display:none;
+}
+#section .left-bar>div>div.active{
+    display:block;
 }
 #section .left-bar>div>div>div>p:first-child{
     color:#333;
@@ -136,14 +151,13 @@
 }
 #section div.content-section>div:nth-child(2){
     border-top:1px solid #BBBBBB;
-    border-bottom:1px solid #bbbbbb;
 }
 
 #section div.content-section>div:nth-child(2)>div.content-section-item{
     max-width:227px;
-    border:2px solid #555;
+    border:2px solid transparent;
 }
-#section div.content-section>div:nth-child(2)>div.content-section-item:hover{
+#section div.content-section>div:nth-child(2)>div.content-section-item.active{
     border-color: #b81c2b;
 }
 #section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>div{
@@ -157,10 +171,17 @@
     margin-right:3px;
     width:15%;
 }
-#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>ul>li>img{
+#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>ul>li>span{
+    border:4px solid transparent;
+}
+#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>ul>li>span.active{
+    border-bottom-color:#FF000D;
+}
+
+#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>ul>li>div>img{
     border:1px solid #e8e8e8;
 }
-#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>ul>li>img:hover{
+#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>ul>li>div>img.active{
     border:2px solid #f00;
 }
 #section div.content-section>div:nth-child(2)>div.content-section-item>div:nth-child(2){
@@ -180,4 +201,73 @@
 }
 #section div.content-section>div:nth-child(2)>div.content-section-item>div:nth-child(2)>div:last-child>a{
     color:#b81c2b;
+}
+#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>p:nth-child(3)>span{
+    color:#b21f2d;
+}
+#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>p:nth-child(3)>span:nth-child(2){
+    font-size:1.3rem;
+}
+#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>p:nth-child(3)>del{
+    color:#999999;
+}
+#section div.content-section>div:nth-child(2)>div.content-section-item>div:first-child>p:nth-child(4)>a{
+    text-decoration: none;
+    color:#333333;
+}
+#section div.content-foot div.content-foot-item{
+    border:1px solid #DCDCDC;
+}
+#section div.content-foot div.content-foot-item>div:first-child{
+    background: #F6F6F6;
+    padding:5px 22px;
+}
+#section div.content-foot div.content-foot-item>div:first-child>span,#section div.content-foot div.content-foot-item>div:first-child>a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+}
+#section div.content-foot div.content-foot-item>div:first-child>a:hover{
+    color:#b21f2d;
+}
+#section div.content-foot div.content-foot-item>div:nth-child(2){
+    padding:15px 20px;
+}
+#section div.content-foot>div.content-foot-item>div:nth-child(2)>ul{
+    width:70%;
+}
+#section div.content-foot>div.content-foot-item>div:nth-child(2)>ul>li{
+    width:49%;
+    border-bottom:1px dashed #F6F6F6;
+}
+#section div.content-foot>div.content-foot-item>div:nth-child(2)>ul>li>div{
+    width:15%;
+}
+#section div.content-foot>div.content-foot-item>div:nth-child(2)>ul>li>p{
+    width:80%;
+    font-size:1rem;
+    color:#333;
+    max-height:64.8906px;
+    overflow:hidden;
+}
+#section div.content-foot>div.content-foot-item>div:nth-child(2)>div{
+    width:29%;
+}
+#section div.content-foot>div>div.content-foot-item{
+    width:33%;
+}
+#section div.content-foot>div>div.content-foot-item>ul{
+    border-top:1px solid #ccc;
+}
+#section div.content-foot>div>div.content-foot-item>ul>li{
+    height:24px;
+    overflow:hidden;
+}
+#section div.content-foot>div>div.content-foot-item>ul>li>a{
+    text-decoration: none;
+    color:#333;
+    font-size:0.9rem;
+}
+#section div.content-foot>div>div.content-foot-item>ul>li>a:hover{
+    color:#b21f2d;
 }
