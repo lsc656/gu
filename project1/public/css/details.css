@@ -2,26 +2,42 @@
     padding:0px;
 }
 #section>div:first-child>p>a{
-    /*����*/
+    /*导航*/
     text-decoration:none;
     color:#333333;
 }
 #section div.row{
     margin:0;
 }
-#section div.m-point{
+#section div.m-point{/*被放大区域*/
     width:45%;
     height:45%;
-    background: #16f;
-    opacity:0.3;
+    background: #fff;
+    border:1px solid #DEE2E6;
+    opacity:0.4;
     top:0;
+    left:0;
 }
-#section div.mask{
+#section div.mask{/*要放大图上面的透明图层*/
     width:100%;
     height:100%;
-    background: #294;
-    opacity:0.2;
+    opacity:0;
     top:0;
+    left:0;
+}
+#section div.enlarged-image{/*右侧放大图*/
+    width:100%;
+    height:400px;
+    border:1px solid #DEE2E6;
+    overflow:hidden;
+    top:0;
+    left:0;
+    background: #fff;
+}
+#section div.enlarged-image>img{
+    position:absolute;
+    top:0;
+    left:0;
 }
 #section button.zoom-btn-prev,#section button.zoom-btn-next{
     border:none;
@@ -43,4 +59,13 @@
 }
 #section button.zoom-btn-next>span{
     border-left-color:#999;
+}
+#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div{
+    overflow:hidden;
+}
+#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul{
+    overflow:hidden;
+}
+#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul>li{
+    width:100px;
 }
