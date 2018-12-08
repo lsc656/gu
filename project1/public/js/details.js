@@ -24,7 +24,8 @@ $(function(){
     }else{
         canRight=true;
     }
-    $("#section>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child>div:nth-child(4)>p").addClass("active")
+    $("#section>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child>div:nth-child(4)>p").addClass("active");
+    $("#section>div:nth-child(2)>div:nth-child(3)>ul").children("li:first-child").addClass("active")
 });
 
 var $pmask=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child").on("mousemove","div.mask",function(e){
@@ -107,4 +108,13 @@ $("#section>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child>di
 })
 $("#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul>li img").on("mouseenter",function(){
     var a=$(this).css("border-color","#b21f2d").parent().parent().siblings().children().children().css("border-color","#c3c3c3");
+})
+
+$("#section>div:nth-child(2)>div:nth-child(3)>ul").on("click","li",function(){
+    $(this).addClass("active").siblings().removeClass("active");
+    $(this).children("a").addClass("active").parent().siblings().children("a").removeClass("active");
+    var $img=$("#section>div:nth-child(2)>div:nth-child(3)>div>div:first-child>img");
+    $img.attr("src",$(this).children("a").attr("data-dataset"))
+
+    $("#section>div:nth-child(2)>div:nth-child(3)>div>div>p>span").first().html($(this).children("a").attr("data-price"))
 })
