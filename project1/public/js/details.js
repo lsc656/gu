@@ -2,13 +2,29 @@
  * Created by web on 2018/12/6.
  */
 
-var $img=$("#section div.enlarged-image")/*右侧放大图的父元素*/
+var $img=$("#section div.enlarged-image");/*右侧放大图的父元素*/
+var $ul=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul");
+var $btnp=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)").children().first();
+var $btnn=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)").children().last();
+var canRight=false;
+var moved=0;
+var li_length=75;
 
 //初始隐藏m-point 和 右侧放大图
 $(function(){
     $img.hide();
     $("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child div.m-point").hide();
-})
+    //改变小图ul长度
+    var $ul=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul");
+    $ul.css("width",$ul.children().length*($ul.children().first().width()+20)+"px");
+    //初始禁用ul左侧按钮，右侧按钮查看长度
+    $btnp.attr("disabled","disabled");
+    if($ul.width()<=300){
+        $btnn.attr("disabled","disabled");
+    }else{
+        canRight=true;
+    }
+});
 
 var $pmask=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child").on("mousemove","div.mask",function(e){
     var $mask=$(this);
@@ -48,7 +64,7 @@ var $pmask=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:firs
             return -toLeft/$mask.width()*$img.width()+"px";
         }
     })
-})
+});
 
 
 $pmask.on("mouseenter","div.mask",function(){
@@ -57,4 +73,31 @@ $pmask.on("mouseenter","div.mask",function(){
 }).on("mouseleave","div.mask",function(){
     $(this).prev().hide();
     $img.hide();
-})
+});
+var $lg_img=$("#section div.enlarged-image").children();
+var $md_img=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child div.m-point").prev();
+
+//切换上方大图片src
+$ul.on("mouseenter","img",function(){
+    var $src=$(this)[0].src;
+    $lg_img.attr("src",$src);
+    $md_img.attr("src",$src);
+});
+//左右移动
+var maxMoved=$ul.children().length*($ul.children().first().width()+20)/li_length-4;
+$btnp.on("click",function(){
+    moved+=1;
+    $ul.css("margin-left",moved*li_length+"px");
+    $btnn.removeAttr("disabled");
+    if(moved==0){
+        $btnp.attr("disabled","disabled");
+    }
+});
+$btnn.on("click",function(){
+    moved+=-1;
+    $btnp.removeAttr("disabled");
+    $ul.css("margin-left",moved*li_length+"px");
+    if(moved==-maxMoved){
+        $btnn.attr("disabled","disabled");
+    }
+});

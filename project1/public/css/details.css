@@ -42,7 +42,7 @@
 #section button.zoom-btn-prev,#section button.zoom-btn-next{
     border:none;
     outline: 0;
-    width:15px;
+    width:10%;
     background: transparent;
 }
 #section button.zoom-btn-prev,#section button.zoom-btn-next:hover{
@@ -62,10 +62,21 @@
 }
 #section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div{
     overflow:hidden;
+    height:80px;
+    width:80%;
 }
 #section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul{
-    overflow:hidden;
+    height:100%;
+    margin:0px;
+    transition-duration:0.5s;
 }
 #section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul>li{
-    width:100px;
+    width:75px;
+    padding:10px;
+}
+#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul>li img{
+    border:1px solid #c3c3c3;
+}
+#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul>li img:hover{
+    border-color:#b21f2d;
 }
