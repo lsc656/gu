@@ -269,6 +269,9 @@
     color:#333;
     font-weight:bold;
 }
+#section>div:last-child>div:first-child{
+    width:190px;
+}
 #section>div:last-child>div:first-child>div:first-child{
     background: #F7F7F7;
     height:470px;
@@ -302,19 +305,46 @@
 #section>div:last-child>div:first-child>div:first-child>div:nth-child(3)>div:last-child:hover{
     background-position:0 -93px;
 }
-#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>ul{
-    background: #cecece;
+#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child{
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child>p{
+    flex-grow:1;
+    text-align:center;
+    background: #F7F7F7;
+    border-bottom:1px solid #ccc;
+}
+#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child>p.active{
+    border-bottom-color:transparent;
+    background: #fff;
+}
+#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child>p:first-child{
+    border-right:1px solid #ccc;
+}
+#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div{
+    border-left:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-right:1px solid #ccc;
+    padding:5px;
+}
+#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div>div:first-child{
     width:120px;
+    height:1.2rem;
     overflow:hidden;
 }
-#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>ul>li{
-}
-#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>ul>li>a{
+#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div>div:first-child>a{
     text-decoration: none;
-    display: inline-block;
+    width:200px;
+    height:100%;
     color:#323232;
 }
-#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>ul>li>span{
+#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div>div:nth-child(2)>img{
+    width:130px;
+    border:1px solid #ddd;
+}
+#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div>div:last-child{
     color:#b21f2d;
     font-weight:bold;
 }

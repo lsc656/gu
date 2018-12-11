@@ -25,7 +25,10 @@ $(function(){
         canRight=true;
     }
     $("#section>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child>div:nth-child(4)>p").addClass("active");
-    $("#section>div:nth-child(2)>div:nth-child(3)>ul").children("li:first-child").addClass("active")
+    $("#section>div:nth-child(2)>div:nth-child(3)>ul").children("li:first-child").addClass("active");
+    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child").addClass("d-block");
+    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child>p:first-child").addClass("active");
+    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div:first-child").addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block");
 });
 
 var $pmask=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child").on("mousemove","div.mask",function(e){
@@ -118,3 +121,14 @@ $("#section>div:nth-child(2)>div:nth-child(3)>ul").on("click","li",function(){
 
     $("#section>div:nth-child(2)>div:nth-child(3)>div>div>p>span").first().html($(this).children("a").attr("data-price"))
 })
+$("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child").on("click","p",function(e){
+    if($(this).html()=="相似款式"){
+        $(this).addClass("active").siblings().removeClass("active").parent().next().children("div:first-child").addClass("d-block").siblings().removeClass("d-block")
+    }else{
+        $(this).addClass("active").siblings().removeClass("active").parent().next().children("div:last-child").addClass("d-block").siblings().removeClass("d-block")
+    }
+})
+$("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div").on("mouseenter","div.c2-item",function(){
+    $(this).addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block").parent().siblings().removeClass("flex-column").children("div:first-child").removeClass("d-none").next().removeClass("d-block");
+})
+//$("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div.c2-item")
