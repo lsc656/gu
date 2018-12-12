@@ -131,4 +131,12 @@ $("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child").on
 $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div").on("mouseenter","div.c2-item",function(){
     $(this).addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block").parent().siblings().removeClass("flex-column").children("div:first-child").removeClass("d-none").next().removeClass("d-block");
 })
-//$("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div.c2-item")
+$(window).scroll(function(){
+    var $top=$(window).scrollTop();
+    if($top>892){
+        var $width=$("#section>div:last-child>div:nth-child(2)>div:nth-child(2)").css("width")
+        $("#section>div:last-child>div:nth-child(2)>div:first-child").addClass("position-fixed").css({"top":"0","width":$width})
+    }else{
+        $("#section>div:last-child>div:nth-child(2)>div:first-child").removeClass("position-fixed")
+    }
+})
