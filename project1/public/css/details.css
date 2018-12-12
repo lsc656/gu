@@ -369,7 +369,7 @@
 }
 #section>div:last-child>div:first-child>div:nth-child(4),#section>div:last-child>div:first-child>div:nth-child(5){
     border:1px solid #ddd;
-    border-top:0;
+    margin-top:10px;
 }
 #section>div:last-child>div:first-child>div:nth-child(4)>div,#section>div:last-child>div:first-child>div:nth-child(5)>div{
     color:#666;
@@ -377,4 +377,20 @@
     font-size:0.8rem;
     padding-bottom:0.5rem;
     border-bottom:1px solid #ddd;
+}
+#section>div:last-child>div:first-child>div:nth-child(4)>ul,#section>div:last-child>div:first-child>div:nth-child(5)>ul{
+    width:100%;
+    overflow:hidden;
+    margin:10px 0 5px 0;
+}
+#section>div:last-child>div:first-child>div:nth-child(4)>ul>li,#section>div:last-child>div:first-child>div:nth-child(5)>ul>li{
+    width:260px;
+    margin:5px 0;
+}
+#section>div:last-child>div:first-child>div:nth-child(4)>ul>li>a,#section>div:last-child>div:first-child>div:nth-child(5)>ul>li>a{
+    text-decoration: none;
+    color:#666;
+}
+#section>div:last-child>div:first-child>div:nth-child(4)>ul>li>a:hover,#section>div:last-child>div:first-child>div:nth-child(5)>ul>li>a:hover{
+    color:#b21f2d;
 }
