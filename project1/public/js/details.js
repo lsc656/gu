@@ -29,6 +29,7 @@ $(function(){
     $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child").addClass("d-block");
     $("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child>p:first-child").addClass("active");
     $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div:first-child").addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block");
+    $("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>p").css("width",$("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>div>a").css("width"))
 });
 
 var $pmask=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child").on("mousemove","div.mask",function(e){
