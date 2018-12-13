@@ -555,3 +555,17 @@
     border-bottom:1px solid #CACACA;
     padding:10px 30px;
 }
+#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div{
+    padding:20px;
+}
+#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div>div.content-item{
+    border:1px solid #CACACA;
+}
+#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div>div.content-item>div:first-child{
+    border-right:1px solid #CACACA;
+    background: #F8F8F8;
+}
+#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div>div.content-item>div:nth-child(2){
+    font-size:0.8rem;
+    color:#666;
+}

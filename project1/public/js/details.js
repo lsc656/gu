@@ -29,7 +29,38 @@ $(function(){
     $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child").addClass("d-block");
     $("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child>p:first-child").addClass("active");
     $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div:first-child").addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block");
-    $("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>p").css("width",$("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>div>a").css("width"))
+    $("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>p").css("width",$("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>div>a").css("width"));
+    $.ajax({
+        url:"http://127.0.0.1:3000/user/comment",
+        data:"pid=1&pno=1",
+        type:"get",
+        success:function(res){
+            res=res.data;
+            console.log(res);
+            var html="";
+            for(var i=0;i<res.length;i++){
+                html+=`<div class="d-flex content-item">
+                <div class="w-25 p-2 d-flex justify-content-center">
+                <div><img src="./images/details/avatar_none.jpg" class="w-100" alt=""/></div>
+                <div class="m-2">
+                <div>${res[i].cname}</div>
+                <div><img src="./images/details/member_level_1.png" alt=""/></div>
+                </div>
+                </div>
+                <div class="w-75 p-2">
+                <div class="d-flex justify-content-between">
+                <div>评分：<img src="./images/details/icon_star_5.gif" alt=""/></div>
+                <div>${res[i].ctime}</div>
+                </div>
+                <p class="pt-3">
+                <span class="text-danger">购物体验：</span>${res[i].content}
+                </p>
+                </div>
+                </div>`
+            }
+            $(html).replaceAll($("#section>div:last-child>div:nth-child(2)>div:nth-child(5) div.content-item"))
+        }
+    })
 });
 
 var $pmask=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child").on("mousemove","div.mask",function(e){
