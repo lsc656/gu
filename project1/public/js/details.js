@@ -10,29 +10,13 @@ var canRight=false;
 var moved=0;
 var li_length=75;
 
-//初始隐藏m-point 和 右侧放大图
-$(function(){
-    $img.hide();
-    $("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child div.m-point").hide();
-    //改变小图ul长度
-    var $ul=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul");
-    $ul.css("width",$ul.children().length*($ul.children().first().width()+20)+"px");
-    //初始禁用ul左侧按钮，右侧按钮查看长度
-    $btnp.attr("disabled","disabled");
-    if($ul.width()<=300){
-        $btnn.attr("disabled","disabled");
-    }else{
-        canRight=true;
+var getComment=function(pno){
+    if(!pno){
+        pno=1;
     }
-    $("#section>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child>div:nth-child(4)>p").addClass("active");
-    $("#section>div:nth-child(2)>div:nth-child(3)>ul").children("li:first-child").addClass("active");
-    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child").addClass("d-block");
-    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child>p:first-child").addClass("active");
-    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div:first-child").addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block");
-    $("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>p").css("width",$("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>div>a").css("width"));
     $.ajax({
         url:"http://127.0.0.1:3000/user/comment",
-        data:"pid=1&pno=1",
+        data:"pid=1&pno="+pno,
         type:"get",
         success:function(res){
             res=res.data;
@@ -58,9 +42,31 @@ $(function(){
                 </div>
                 </div>`
             }
-            $(html).replaceAll($("#section>div:last-child>div:nth-child(2)>div:nth-child(5) div.content-item"))
+            $(html).replaceAll("#section>div:last-child>div:nth-child(2)>div:nth-child(5) div.content-item")
         }
     })
+}
+//初始隐藏m-point 和 右侧放大图
+$(function(){
+    $img.hide();
+    $("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child div.m-point").hide();
+    //改变小图ul长度
+    var $ul=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:nth-child(2)>div>ul");
+    $ul.css("width",$ul.children().length*($ul.children().first().width()+20)+"px");
+    //初始禁用ul左侧按钮，右侧按钮查看长度
+    $btnp.attr("disabled","disabled");
+    if($ul.width()<=300){
+        $btnn.attr("disabled","disabled");
+    }else{
+        canRight=true;
+    }
+    $("#section>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child>div:nth-child(4)>p").addClass("active");
+    $("#section>div:nth-child(2)>div:nth-child(3)>ul").children("li:first-child").addClass("active");
+    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child").addClass("d-block");
+    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child>p:first-child").addClass("active");
+    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div:first-child").addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block");
+    $("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>p").css("width",$("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>div>a").css("width"));
+    getComment();
 });
 
 var $pmask=$("#section>div:first-child>div:nth-child(2)>div:first-child>div:first-child").on("mousemove","div.mask",function(e){
@@ -170,5 +176,21 @@ $(window).scroll(function(){
         $("#section>div:last-child>div:nth-child(2)>div:first-child").addClass("position-fixed").css({"top":"0","width":$width})
     }else{
         $("#section>div:last-child>div:nth-child(2)>div:first-child").removeClass("position-fixed")
+    }
+})
+$("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:first-child>ul").on("click","li",function(){
+    $(this).addClass("active").siblings().removeClass("active");
+    var $div=$("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)")
+    if($(this).index()==0 || $(this).index()==1){
+       $div.children().eq(0).addClass("active").siblings().removeClass("active");
+    }else if($(this).index()==2){
+        $div.children().eq(1).addClass("active").siblings().removeClass("active");
+    }else{
+        $div.children().eq(2).addClass("active").siblings().removeClass("active");
+    }
+})
+$("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(3)").on("click","div",function(){
+    if($(this).html()=="首页"){
+        getComment();
     }
 })
