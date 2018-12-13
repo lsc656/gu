@@ -4,6 +4,19 @@
 const express=require("express");
 const pool=require("../pool")
 var router=express.Router();
+router.post("/login",(req,res)=>{
+	var uname=req.body.uname;
+	var upwd=req.body.upwd;
+	var sql="SELECT * FROM gu_user WHERE uname=? AND upwd=?";
+	pool.query(sql,[uname,upwd],(err,result)=>{
+		if(err) throw err;
+		if(result.length>0){
+			res.send({code:1,data:result})
+		}else{
+			res.send({code:0,data:"用户名或密码错误"});
+		}
+	})
+})
 router.get("/comment",(req,res)=>{
 	var pno=parseInt(req.query.pno);
 	var pid=req.query.pid;
