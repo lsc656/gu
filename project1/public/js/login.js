@@ -33,7 +33,7 @@ $("#section table button").on("click",function(){
                 function clearmsg(){
                     var t = setTimeout(function(){
                         $("#msg").remove();
-                    },2000)
+                    },1000)
                 };
                 if(res.code==0){
                     alert(res.data)

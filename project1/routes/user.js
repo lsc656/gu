@@ -7,7 +7,10 @@ var router=express.Router();
 router.post("/login",(req,res)=>{
 	var uname=req.body.uname;
 	var upwd=req.body.upwd;
-	var sql="SELECT * FROM gu_user WHERE uname=? AND upwd=md5(?)";
+	if(!uname || !upwd){
+		return
+	}
+	var sql="SELECT uid,uname,tel,email,address FROM gu_user WHERE uname=? AND upwd=md5(?)";
 	pool.query(sql,[uname,upwd],(err,result)=>{
 		if(err) throw err;
 		if(result.length>0){
@@ -29,7 +32,23 @@ router.get("/comment",(req,res)=>{
 	var sql="SELECT cid,cname,ctime,content FROM gu_comment WHERE pid=? LIMIT ?,10";
 	pool.query(sql,[pid,start],(err,result)=>{
 		if(err) throw err;
-		res.send({code:1,data:result})
+		res.send({code:1,data:result});
 	})
 });
+router.post("/reg",(req,res)=>{
+	var uname=req.body.uname;
+	var upwd=req.body.upwd;
+	if(!uname || !upwd){
+		return
+	}
+	var sql=`INSERT INTO gu_user (uname,upwd) VALUES (?,md5(?))`;
+	pool.query(sql,[uname,upwd],(err,result)=>{
+		if(err) throw err;
+		if(result.affectedRows>0){
+			res.send({code:1,data:"注册成功"})
+		}else{
+			res.send({code:0,data:"注册失败"})
+		}
+	})
+})
 module.exports=router;

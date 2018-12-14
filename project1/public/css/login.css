@@ -55,21 +55,3 @@
     text-decoration: none;
     margin-left:10px;
 }
-#msg{
-    height: 5rem;
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    margin-top: -1rem;
-    line-height: 5rem;
-    width: 100%;
-}
-#msg span{
-    color: #fff;
-    background: rgba(194,2,2,0.6);
-    height: 5rem;
-    font-size:1.5rem;
-    display: inline-block;
-    padding: 0 3rem;
-    border-radius: 5px;
-}

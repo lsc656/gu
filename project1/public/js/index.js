@@ -187,5 +187,8 @@ setInterval(function(){
             return m
         });
 },2000);
+$("#section>ul:first-child").on("click","li>div:nth-child(2)",function(){
+    location.href="search.html"
+})
 
 

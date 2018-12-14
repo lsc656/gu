@@ -22,3 +22,6 @@ $("#section div.left-bar").on("click","p.ititle",function(){
         $(this).parent().siblings().children("div").removeClass("active")
     }
 })
+$("#section>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)").on("click","div.content-section-item",function(){
+    location.href="http://127.0.0.1:3000/details.html"
+})
