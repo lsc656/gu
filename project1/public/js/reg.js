@@ -32,6 +32,9 @@ $("#section table>tbody>tr>td>input").on("blur",function(){
         $("table button").attr("disabled","disabled");
     }
 })
+$("#section>div:nth-child(2)>div:nth-child(2)>p:first-child>button").on("click",function(){
+    location.href="login.html"
+})
 $("table button").on("click",function(){
-
+    console.log(`点了`)
 })
