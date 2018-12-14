@@ -42,7 +42,7 @@ var getComment=function(pno){
                 </div>
                 </div>`
             }
-            $("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div:first-child").html($(html))
+            $("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div:first-child").html($(html))
         }
     })
 }
@@ -62,10 +62,10 @@ $(function(){
     }
     $("#section>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child>div:nth-child(4)>p").addClass("active");
     $("#section>div:nth-child(2)>div:nth-child(3)>ul").children("li:first-child").addClass("active");
-    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child").addClass("d-block");
-    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child>p:first-child").addClass("active");
-    $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div:first-child").addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block");
-    $("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>p").css("width",$("#section>div:last-child>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>div>a").css("width"));
+    $("#section>div:nth-child(3)>div:first-child>div:nth-child(2)>div:nth-child(2)>div:first-child").addClass("d-block");
+    $("#section>div:nth-child(3)>div:first-child>div:nth-child(2)>div:first-child>p:first-child").addClass("active");
+    $("#section>div:nth-child(3)>div:first-child>div:nth-child(2)>div:nth-child(2)>div>div:first-child").addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block");
+    $("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>p").css("width",$("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(4)>div:nth-child(4)>div>a").css("width"));
     getComment();
 });
 
@@ -159,30 +159,30 @@ $("#section>div:nth-child(2)>div:nth-child(3)>ul").on("click","li",function(){
 
     $("#section>div:nth-child(2)>div:nth-child(3)>div>div>p>span").first().html($(this).children("a").attr("data-price"))
 })
-$("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child").on("click","p",function(e){
+$("#section>div:nth-child(3)>div:first-child>div:nth-child(2)>div:first-child").on("click","p",function(e){
     if($(this).html()=="相似款式"){
         $(this).addClass("active").siblings().removeClass("active").parent().next().children("div:first-child").addClass("d-block").siblings().removeClass("d-block")
     }else{
         $(this).addClass("active").siblings().removeClass("active").parent().next().children("div:last-child").addClass("d-block").siblings().removeClass("d-block")
     }
 })
-$("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div").on("mouseenter","div.c2-item",function(){
+$("#section>div:nth-child(3)>div:first-child>div:nth-child(2)>div:nth-child(2)>div").on("mouseenter","div.c2-item",function(){
     $(this).addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block").parent().siblings().removeClass("flex-column").children("div:first-child").removeClass("d-none").next().removeClass("d-block");
 })
 /*商品详情...立即购买*/
 $(window).scroll(function(){
     var $top=$(window).scrollTop();
     if($top>892){
-        var $width=$("#section>div:last-child>div:nth-child(2)>div:nth-child(2)").css("width")
-        $("#section>div:last-child>div:nth-child(2)>div:first-child").addClass("position-fixed").css({"top":"0","width":$width})
+        var $width=$("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(2)").css("width")
+        $("#section>div:nth-child(3)>div:nth-child(2)>div:first-child").addClass("position-fixed").css({"top":"0","width":$width})
     }else{
-        $("#section>div:last-child>div:nth-child(2)>div:first-child").removeClass("position-fixed")
+        $("#section>div:nth-child(3)>div:nth-child(2)>div:first-child").removeClass("position-fixed")
     }
 })
 /*好评、中评、差评切换*/
-$("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:first-child>ul").on("click","li",function(){
+$("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(5)>div:first-child>ul").on("click","li",function(){
     $(this).addClass("active").siblings().removeClass("active");
-    var $div=$("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)")
+    var $div=$("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)")
     if($(this).index()==0 || $(this).index()==1){
         $div.children().eq(0).addClass("active").siblings().removeClass("active");
     }else if($(this).index()==2){
@@ -192,7 +192,7 @@ $("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:first-child>ul"
     }
 })
 /*页码&评论内容*/
-$("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div:nth-child(4)").on("click","div",function(){
+$("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div:nth-child(4)").on("click","div",function(){
     var $dpage=parseInt($(this).attr("data-page"));
     function setActive(){
         $(this).addClass("active").siblings().removeClass("active");
@@ -206,4 +206,8 @@ $("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>di
     }else if($(this).html()=="末页"){
         setActive.call($(this).parent().children().eq(3));
     }
+})
+/*实体店：鼠标移入背景变色*/
+$("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(6)>div:nth-child(2)").on("mouseenter","div.col-5",function(){
+    $(this).children().eq(0).addClass("active").parent().parent().siblings().children("div.col-5").children("div:first-child").removeClass("active");
 })
