@@ -42,7 +42,7 @@ var getComment=function(pno){
                 </div>
                 </div>`
             }
-            $(html).replaceAll("#section>div:last-child>div:nth-child(2)>div:nth-child(5) div.content-item")
+            $("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div:first-child").html($(html))
         }
     })
 }
@@ -169,6 +169,7 @@ $("#section>div:last-child>div:first-child>div:nth-child(2)>div:first-child").on
 $("#section>div:last-child>div:first-child>div:nth-child(2)>div:nth-child(2)>div").on("mouseenter","div.c2-item",function(){
     $(this).addClass("flex-column").children("div:first-child").addClass("d-none").next().addClass("d-block").parent().siblings().removeClass("flex-column").children("div:first-child").removeClass("d-none").next().removeClass("d-block");
 })
+/*商品详情...立即购买*/
 $(window).scroll(function(){
     var $top=$(window).scrollTop();
     if($top>892){
@@ -178,19 +179,31 @@ $(window).scroll(function(){
         $("#section>div:last-child>div:nth-child(2)>div:first-child").removeClass("position-fixed")
     }
 })
+/*好评、中评、差评切换*/
 $("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:first-child>ul").on("click","li",function(){
     $(this).addClass("active").siblings().removeClass("active");
     var $div=$("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)")
     if($(this).index()==0 || $(this).index()==1){
-       $div.children().eq(0).addClass("active").siblings().removeClass("active");
+        $div.children().eq(0).addClass("active").siblings().removeClass("active");
     }else if($(this).index()==2){
         $div.children().eq(1).addClass("active").siblings().removeClass("active");
     }else{
         $div.children().eq(2).addClass("active").siblings().removeClass("active");
     }
 })
-$("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(3)").on("click","div",function(){
+/*页码&评论内容*/
+$("#section>div:last-child>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>div:nth-child(4)").on("click","div",function(){
+    var $dpage=parseInt($(this).attr("data-page"));
+    function setActive(){
+        $(this).addClass("active").siblings().removeClass("active");
+    }
+    if(parseInt($(this).html())){
+        setActive.call($(this));
+    }
+    getComment($dpage);
     if($(this).html()=="首页"){
-        getComment();
+        setActive.call($(this).parent().children().eq(1));
+    }else if($(this).html()=="末页"){
+        setActive.call($(this).parent().children().eq(3));
     }
 })
