@@ -20,7 +20,6 @@ var getComment=function(pno){
         type:"get",
         success:function(res){
             res=res.data;
-            console.log(res);
             var html="";
             for(var i=0;i<res.length;i++){
                 html+=`<div class="d-flex content-item">
@@ -178,6 +177,14 @@ $(window).scroll(function(){
     }else{
         $("#section>div:nth-child(3)>div:nth-child(2)>div:first-child").removeClass("position-fixed")
     }
+    /*右侧fixed*/
+    $("#section>div:nth-child(4)").css("left",function(){
+        return $("#section>div:nth-child(3)").width()+parseInt($("#section").css("margin-left"))+"px"
+    })
+    /*右侧fixed2*/
+    $("#section>div:nth-child(5)").css("left",function(){
+        return $("#section>div:nth-child(3)").width()+$("#section>div:nth-child(4)").width()+parseInt($("#section").css("margin-left"))+"px"
+    })
 })
 /*好评、中评、差评切换*/
 $("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(5)>div:first-child>ul").on("click","li",function(){
@@ -210,4 +217,27 @@ $("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(5)>div:nth-child(2)>
 /*实体店：鼠标移入背景变色*/
 $("#section>div:nth-child(3)>div:nth-child(2)>div:nth-child(6)>div:nth-child(2)").on("mouseenter","div.col-5",function(){
     $(this).children().eq(0).addClass("active").parent().parent().siblings().children("div.col-5").children("div:first-child").removeClass("active");
+})
+/*右侧fixed*/
+$("#section>div:nth-child(4)").css("left",function(){
+    return $("#section>div:nth-child(3)").width()+parseInt($("#section").css("margin-left"))+"px"
+})
+/*右侧fixed2*/
+$("#section>div:nth-child(5)").css("left",function(){
+    return $("#section>div:nth-child(3)").width()+$("#section>div:nth-child(4)").width()+parseInt($("#section").css("margin-left"))+"px"
+})
+/*二维码/电话显示*/
+$("#section>div:nth-child(4)").on("mouseenter","div",function(){
+    if($(this).index()==3){
+        $("#section>div:nth-child(5)").children().eq(0).addClass("active")
+    }else if($(this).index()==4){
+        $("#section>div:nth-child(5)").children().eq(1).addClass("active")
+    }
+})
+$("#section>div:nth-child(4)").on("mouseleave","div",function(){
+    if($(this).index()==3){
+        $("#section>div:nth-child(5)").children().eq(0).removeClass("active")
+    }else if($(this).index()==4){
+        $("#section>div:nth-child(5)").children().eq(1).removeClass("active")
+    }
 })

@@ -5,8 +5,9 @@ USE gu;
 /*用户表*/
 CREATE TABLE gu_user(
 	uid SMALLINT PRIMARY KEY AUTO_INCREMENT,
-	tel CHAR(11) UNIQUE,
-	email VARCHAR(32) UNIQUE,
+	uname VARCHAR(20),
+	tel VARCHAR(20) UNIQUE,
+	email VARCHAR(32),
 	upwd VARCHAR(32) NOT NULL,
 	address VARCHAR(100)
 );
@@ -225,3 +226,8 @@ INSERT INTO gu_comment VALUES
 (null,"fdgd",now(),"大红色挺喜欢，刚开始担心hold不住，不过还好，搭配好很有范",1),
 (null,"aa",now(),"眼镜挺不错的，颜色非常抢眼，朋友说我变自信了哈哈哈",1);
 
+/*****************用户******************/
+INSERT INTO gu_user VALUES
+(null,"abcdefg",15121213165,"w4e6q@qwu.com",md5(123456),"hausidhusad"),
+(null,"123g",1511223165,"w123125@r.com",md5(123456),"hausidhusad"),
+(null,"a1232g",187121213165,"iuo@sda.com",md5(123456),"hausidhusad");
